@@ -22,7 +22,7 @@ function Homepage() {
             <div className="row">
 
               <div className="col-md-4 m-auto">
-                <img src="/images/profile.png" alt="" className="img-fluid rounded mx-auto d-block w-75" style={{}} />
+                <img src="/images/profile.jpg" alt="" className="img-fluid rounded mx-auto d-block w-75" style={{}} />
               </div>
 
               <div className="overview col-md-8">
