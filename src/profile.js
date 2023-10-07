@@ -56,6 +56,13 @@ export const studies = [
 export const experiences = [
 
     {
+        title: "Analista digitador",
+        description:
+            "Análisis y captación en el sistema de la información procedente de los censos de población y vivienda realizados por la contraloría general de la républica. Actividades de soporte y asistencias técnicas.",
+        from: 2023,
+        to: "",
+    },
+    {
         title: "Soporte técnico",
         description:
             "Encargado de laboratorio de computo, en el centro especializado en lenguas de la universidad tecnológica de Panamá, centro regional de Veraguas",
