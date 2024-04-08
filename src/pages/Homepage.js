@@ -42,11 +42,16 @@ function Homepage() {
                   <BsTelephone /> Teléfono: +507 6446-2963
                 </p>
 
-                <a href="mailto:ddge07@gmail.com?subject=Contacto programador" className="btn btn-outline-light">
-                  Contactar
-                </a>
-                
-                <DownloadButton />
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  
+                  <a href="mailto:ddge07@gmail.com?subject=Contacto programador" className="btn btn-outline-light"
+                  style={{ marginRight: '1rem' }}>
+                    Contactar
+                  </a>
+
+                  <DownloadButton />
+
+                </div>
 
               </div>
 
