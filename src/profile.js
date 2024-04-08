@@ -54,7 +54,13 @@ export const studies = [
 ];
 
 export const experiences = [
-
+    {
+        title: "Analista programador",
+        description:
+            "Analista programador en Tigo Panamá, departamanento desarrollo core.",
+        from: 2023,
+        to: 2024,
+    },
     {
         title: "Analista digitador",
         description:
@@ -67,7 +73,7 @@ export const experiences = [
         description:
             "Encargado de laboratorio de computo, en el centro especializado en lenguas de la universidad tecnológica de Panamá, centro regional de Veraguas",
         from: 2017,
-        to: 2018,
+        to: "",
     },
     {
         title: "Práctica profesional bachiller",
@@ -107,7 +113,7 @@ export const projects = [
         description:
             "Aplicación para almacenar enlaces o links desarrollada con React en el Frontend y Firebase en el Backend",
         image: "Firebase.png",
-        link: "https://fb-crud-react-dg.web.app/"
+        link: "https://fb-crud-react-dg.firebaseapp.com/"
     },
 ];
 
