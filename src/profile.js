@@ -57,7 +57,7 @@ export const experiences = [
     {
         title: "Analista programador",
         description:
-            "Analista programador en Tigo Panamá, departamanento desarrollo core.",
+            "Analista programador en Tigo Panamá, área de desarrollo core.",
         from: 2023,
         to: 2024,
     },

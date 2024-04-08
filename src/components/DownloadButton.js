@@ -7,7 +7,7 @@ const DownloadButton = () => {
         const pdfUrl = 'https://raw.githubusercontent.com/DanielDGe/danieldge.github.io/main/src/assets/cv.pdf';
         const link = document.createElement('a');
         link.href = pdfUrl;
-        link.setAttribute('download', 'mi_curriculum.pdf');
+        link.setAttribute('download', 'CV - Daniel García 2024.pdf');
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
