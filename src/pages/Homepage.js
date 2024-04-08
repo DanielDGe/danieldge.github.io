@@ -6,6 +6,8 @@ import { BsTelephone } from "react-icons/bs/index";
 
 import { skills, studies, experiences, projects } from "../profile";
 
+import DownloadButton from '../components/DownloadButton';
+
 function Homepage() {
 
   return (
@@ -43,7 +45,8 @@ function Homepage() {
                 <a href="mailto:ddge07@gmail.com?subject=Contacto programador" className="btn btn-outline-light">
                   Contactar
                 </a>
-
+                
+                <DownloadButton />
 
               </div>
 
