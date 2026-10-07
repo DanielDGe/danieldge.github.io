@@ -31,7 +31,7 @@ El objetivo es lograr un portafolio que represente tanto la capacidad técnica c
 
 ## Estado actual
 
-**Estado del proyecto:** En desarrollo — Fase 2 implementada, pendiente validación local  
+**Estado del proyecto:** En desarrollo — Fase 2 completada  
 **Sitio público actual:** Portafolio legacy  
 **Rama fuente actual:** `main`  
 **Rama activa de desarrollo:** `feature/portfolio-redesign-2026`  
@@ -91,7 +91,7 @@ El rediseño conservará el repositorio y la URL pública actuales, pero reempla
 
 ## Fase 2 — Modernización de la base técnica
 
-**Estado:** 🟨 Implementada — pendiente validación local
+**Estado:** ✅ Completada
 
 ### Tareas
 
@@ -106,19 +106,21 @@ El rediseño conservará el repositorio y la URL pública actuales, pero reempla
   - assets
   - datos / contenido
   - estilos
-- [ ] Confirmar en local que el desarrollo funciona con:
+- [x] Confirmar en local que el desarrollo funciona con:
   - `npm install`
   - `npm run dev`
-- [ ] Confirmar en local que el build de producción funciona con:
+- [x] Confirmar en local que el build de producción funciona con:
   - `npm run build`
-- [ ] Confirmar en local que el análisis estático funciona con:
+- [x] Confirmar en local que el análisis estático funciona con:
   - `npm run lint`
 
 ### Criterios de cierre
 
-- La aplicación moderna basada en Vite funciona correctamente en local.
-- El build finaliza sin errores.
-- La nueva implementación ya no depende del código legacy de CRA.
+- [x] La aplicación moderna basada en Vite funciona correctamente en local.
+- [x] El build finaliza sin errores.
+- [x] El análisis estático finaliza sin warnings ni errores.
+- [x] La nueva implementación ya no depende del código legacy de CRA.
+- [x] La instalación limpia queda en 24 paquetes y 0 vulnerabilidades reportadas por npm durante la validación local.
 
 ---
 
@@ -387,7 +389,12 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
 - Se añadió Oxlint como análisis estático siguiendo la plantilla actual de Vite.
 - Se añadió una pantalla temporal de validación técnica; no representa el diseño final del portafolio.
 - Se definió el requisito de Node: `^20.19.0 || >=22.12.0`.
-- Queda pendiente la validación local de `npm install`, `npm run dev`, `npm run build` y `npm run lint`.
+- Validación local completada correctamente:
+  - `npm install`: 24 paquetes, 0 vulnerabilidades.
+  - `npm run dev`: Vite levantado correctamente en `http://localhost:5173/`.
+  - `npm run lint`: 0 warnings y 0 errores.
+  - `npm run build`: build de producción generado correctamente en `dist/`.
+- La Fase 2 queda oficialmente completada.
 - Producción continúa aislada en la rama `gh-pages`.
 
 ## 2026-10-07 — Fase 1
