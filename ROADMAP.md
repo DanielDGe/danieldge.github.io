@@ -31,9 +31,11 @@ El objetivo es lograr un portafolio que represente tanto la capacidad técnica c
 
 ## Estado actual
 
-**Estado del proyecto:** Planificación  
+**Estado del proyecto:** En desarrollo — Fase 1 completada  
 **Sitio público actual:** Portafolio legacy  
 **Rama fuente actual:** `main`  
+**Rama activa de desarrollo:** `feature/portfolio-redesign-2026`  
+**Rama de respaldo legacy:** `legacy-portfolio-2022`  
 **Rama de despliegue actual:** `gh-pages`  
 **Stack objetivo:** React + Vite  
 **Despliegue objetivo:** GitHub Actions + GitHub Pages
@@ -64,20 +66,26 @@ El rediseño conservará el repositorio y la URL pública actuales, pero reempla
 
 ## Fase 1 — Preparación del repositorio
 
-**Estado:** ⬜ Pendiente
+**Estado:** ✅ Completada
 
 ### Tareas
 
-- [ ] Crear `legacy-portfolio-2022` desde el estado actual del código legacy.
-- [ ] Crear `feature/portfolio-redesign-2026`.
-- [ ] Confirmar que `gh-pages` permanece sin cambios.
-- [ ] Confirmar que el sitio público actual sigue funcionando.
-- [ ] Establecer la nueva rama feature como rama activa de desarrollo.
+- [x] Crear `legacy-portfolio-2022` desde el estado actual del código legacy.
+- [x] Crear `feature/portfolio-redesign-2026`.
+- [x] Confirmar que `gh-pages` permanece sin cambios.
+- [x] Confirmar que el sitio público actual no recibe cambios durante esta etapa.
+- [x] Establecer la nueva rama feature como rama activa de desarrollo.
 
 ### Criterios de cierre
 
-- El código legacy queda preservado de forma segura.
-- Podemos desarrollar la nueva versión sin afectar el portafolio actual en producción.
+- [x] El código legacy queda preservado de forma segura.
+- [x] Podemos desarrollar la nueva versión sin afectar el portafolio actual en producción.
+
+### Referencias de seguridad
+
+- Punto de partida preservado en `legacy-portfolio-2022`: `b0d5d942313296d7dd78cfff292c3ca458d92d6c`.
+- Rama de desarrollo creada desde el mismo punto: `feature/portfolio-redesign-2026`.
+- `gh-pages` permanece en `f6eec248277541457f900576f32552c3d00d9c4a` y no fue modificada.
 
 ---
 
@@ -366,6 +374,16 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
 ---
 
 # Registro de progreso
+
+## 2026-10-07
+
+- Se completó la Fase 1 — Preparación del repositorio.
+- Se creó `legacy-portfolio-2022` para preservar el estado anterior del portafolio.
+- Se creó `feature/portfolio-redesign-2026` como rama activa para construir la nueva versión.
+- Ambas ramas se crearon desde el commit `b0d5d942313296d7dd78cfff292c3ca458d92d6c`.
+- Se verificó que `gh-pages` continúa apuntando a `f6eec248277541457f900576f32552c3d00d9c4a`.
+- No se modificó ningún archivo compilado ni contenido de la rama de producción.
+- El siguiente paso es la Fase 2 — Modernización de la base técnica con React + Vite.
 
 ## 2026-10-06
 
