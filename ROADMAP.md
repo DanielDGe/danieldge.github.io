@@ -31,7 +31,7 @@ El objetivo es lograr un portafolio que represente tanto la capacidad técnica c
 
 ## Estado actual
 
-**Estado del proyecto:** En desarrollo — Fase 2 completada  
+**Estado del proyecto:** En desarrollo — Fase 3 implementada, pendiente validación local  
 **Sitio público actual:** Portafolio legacy  
 **Rama fuente actual:** `main`  
 **Rama activa de desarrollo:** `feature/portfolio-redesign-2026`  
@@ -126,40 +126,41 @@ El rediseño conservará el repositorio y la URL pública actuales, pero reempla
 
 ## Fase 3 — Sistema visual y estructura de la experiencia
 
-**Estado:** ⬜ Pendiente
+**Estado:** 🟨 Implementada — pendiente validación local
 
 ### Secciones previstas
 
-- [ ] Navegación
-- [ ] Hero
-- [ ] Sobre mí
-- [ ] Experiencia
-- [ ] Stack tecnológico
-- [ ] Proyectos destacados
-- [ ] Formación
-- [ ] Contacto
-- [ ] Footer
+- [x] Navegación
+- [x] Hero
+- [x] Sobre mí
+- [x] Experiencia
+- [x] Stack tecnológico
+- [x] Proyectos destacados
+- [x] Formación
+- [x] Contacto
+- [x] Footer
 
 ### Requisitos visuales y de experiencia
 
-- [ ] Estética moderna y profesional orientada a ingeniería de software.
-- [ ] Diseño responsive para escritorio, tablet y móvil.
-- [ ] Modo claro y oscuro.
-- [ ] Tipografía y jerarquía visual claras.
-- [ ] Animaciones y movimiento sutiles que aporten vida sin distraer.
-- [ ] Cards, espaciados, bordes y colores de acento coherentes.
-- [ ] Microinteracciones agradables en botones, enlaces, navegación y tarjetas.
-- [ ] Navegación intuitiva y predecible.
-- [ ] Estados hover/focus/active cuidados.
-- [ ] Evitar efectos excesivos, ruido visual o elementos decorativos sin propósito.
-- [ ] Buscar al menos algunos detalles visuales memorables que den carácter propio al portafolio.
-- [ ] Validar cada sección desde la perspectiva de experiencia de usuario, no solo desde la implementación técnica.
+- [x] Estética moderna y profesional orientada a ingeniería de software.
+- [x] Diseño responsive para escritorio, tablet y móvil.
+- [x] Modo claro y oscuro.
+- [x] Tipografía y jerarquía visual claras.
+- [x] Animaciones y movimiento sutiles que aporten vida sin distraer.
+- [x] Cards, espaciados, bordes y colores de acento coherentes.
+- [x] Microinteracciones agradables en botones, enlaces, navegación y tarjetas.
+- [x] Navegación intuitiva y predecible.
+- [x] Estados hover/focus/active cuidados.
+- [x] Evitar efectos excesivos, ruido visual o elementos decorativos sin propósito.
+- [x] Buscar al menos algunos detalles visuales memorables que den carácter propio al portafolio.
+- [x] Validar cada sección desde la perspectiva de experiencia de usuario, no solo desde la implementación técnica.
 
 ### Criterios de cierre
 
-- La estructura general y el lenguaje visual están definidos.
-- Todas las secciones principales cuentan con una estructura aprobada.
-- El diseño se percibe coherente, moderno, agradable y diferenciador.
+- [x] La estructura general y el lenguaje visual están implementados.
+- [x] Todas las secciones principales cuentan con una estructura funcional.
+- [ ] Validar en local que el diseño se percibe coherente, moderno, agradable y diferenciador.
+- [ ] Validar comportamiento responsive, navegación, tema claro/oscuro y microinteracciones antes de cerrar la fase.
 
 ---
 
@@ -378,6 +379,22 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
 ---
 
 # Registro de progreso
+
+## 2026-10-07 — Fase 3
+
+- Se implementó el primer sistema visual real del nuevo portafolio.
+- Se reemplazó la pantalla temporal de validación técnica por la estructura completa del sitio.
+- Se añadió navegación sticky con indicador de sección activa y menú responsive.
+- Se añadió una barra superior de progreso de lectura.
+- Se implementó tema claro/oscuro con persistencia local y respeto por la preferencia del sistema.
+- Se implementaron Hero, Sobre mí, Experiencia, Stack, Proyectos, Formación, Contacto y Footer.
+- Se añadieron componentes reutilizables para navegación, encabezados de sección, iconografía, chips tecnológicos y tarjetas de proyecto.
+- Se añadieron microinteracciones, estados hover/focus, fondos ambientales, cards y movimiento sutil.
+- Se mantuvo soporte para `prefers-reduced-motion`.
+- Se eliminó la pantalla temporal utilizada para validar la Fase 2.
+- El contenido profesional mostrado todavía es provisional y será afinado en las Fases 4 y 5.
+- Queda pendiente la validación local visual, responsive y funcional antes de cerrar oficialmente la fase.
+- Producción continúa aislada en `gh-pages`.
 
 ## 2026-10-07 — Fase 2
 
