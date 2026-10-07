@@ -24,16 +24,7 @@ La versión pública anterior permanece aislada en `gh-pages` mientras se constr
 - Node.js `^20.19.0 || >=22.12.0`
 - npm compatible con la versión instalada de Node
 
-Comprueba tu versión con:
-
-```bash
-node -v
-npm -v
-```
-
 ## Desarrollo local
-
-Después de descargar los cambios de la rama:
 
 ```bash
 npm install
@@ -52,9 +43,11 @@ npm run build
 npm run preview
 ```
 
-## Nota sobre package-lock.json
+## Fase visual actual
 
-El lockfile antiguo de Create React App se eliminó deliberadamente durante la migración. La primera ejecución de `npm install` genera un nuevo `package-lock.json` correspondiente a la base Vite.
+La Fase 3 implementa la estructura completa de la experiencia: navegación, hero, secciones profesionales, tema claro/oscuro, responsive y microinteracciones.
+
+El contenido profesional todavía se considera provisional y será afinado durante las Fases 4 y 5.
 
 ## Roadmap
 
