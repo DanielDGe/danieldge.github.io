@@ -31,7 +31,7 @@ El objetivo es lograr un portafolio que represente tanto la capacidad técnica c
 
 ## Estado actual
 
-**Estado del proyecto:** En desarrollo — Fase 1 completada  
+**Estado del proyecto:** En desarrollo — Fase 2 implementada, pendiente validación local  
 **Sitio público actual:** Portafolio legacy  
 **Rama fuente actual:** `main`  
 **Rama activa de desarrollo:** `feature/portfolio-redesign-2026`  
@@ -91,26 +91,28 @@ El rediseño conservará el repositorio y la URL pública actuales, pero reempla
 
 ## Fase 2 — Modernización de la base técnica
 
-**Estado:** ⬜ Pendiente
+**Estado:** 🟨 Implementada — pendiente validación local
 
 ### Tareas
 
-- [ ] Reemplazar Create React App por Vite.
-- [ ] Mantener React como framework frontend.
-- [ ] Eliminar archivos y dependencias obsoletas de CRA.
-- [ ] Eliminar de la nueva implementación la configuración antigua de despliegue mediante el paquete npm `gh-pages`.
-- [ ] Eliminar la integración obsoleta de Bootstrap / jQuery / Popper.
-- [ ] Definir una estructura limpia para:
+- [x] Reemplazar Create React App por Vite.
+- [x] Mantener React como framework frontend.
+- [x] Eliminar archivos y dependencias obsoletas de CRA.
+- [x] Eliminar de la nueva implementación la configuración antigua de despliegue mediante el paquete npm `gh-pages`.
+- [x] Eliminar la integración obsoleta de Bootstrap / jQuery / Popper.
+- [x] Definir una estructura limpia para:
   - componentes
   - secciones
   - assets
   - datos / contenido
   - estilos
-- [ ] Confirmar que el desarrollo local funciona con:
+- [ ] Confirmar en local que el desarrollo funciona con:
   - `npm install`
   - `npm run dev`
-- [ ] Confirmar que el build de producción funciona con:
+- [ ] Confirmar en local que el build de producción funciona con:
   - `npm run build`
+- [ ] Confirmar en local que el análisis estático funciona con:
+  - `npm run lint`
 
 ### Criterios de cierre
 
@@ -375,7 +377,20 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
 
 # Registro de progreso
 
-## 2026-10-07
+## 2026-10-07 — Fase 2
+
+- Se reemplazó la base Create React App por React + Vite.
+- Se actualizó React a 19.3 y Vite a 8.3.
+- Se eliminó la dependencia de `react-scripts`, `gh-pages`, Bootswatch, Bootstrap heredado, jQuery, Popper, Animate.css, React Router y archivos plantilla de CRA.
+- Se eliminó el `package-lock.json` legacy para no conservar el árbol de 1478 dependencias antiguo; `npm install` generará el lock moderno durante la validación local.
+- Se estableció una estructura base con `components`, `sections`, `data`, `styles` y `assets`.
+- Se añadió Oxlint como análisis estático siguiendo la plantilla actual de Vite.
+- Se añadió una pantalla temporal de validación técnica; no representa el diseño final del portafolio.
+- Se definió el requisito de Node: `^20.19.0 || >=22.12.0`.
+- Queda pendiente la validación local de `npm install`, `npm run dev`, `npm run build` y `npm run lint`.
+- Producción continúa aislada en la rama `gh-pages`.
+
+## 2026-10-07 — Fase 1
 
 - Se completó la Fase 1 — Preparación del repositorio.
 - Se creó `legacy-portfolio-2022` para preservar el estado anterior del portafolio.
