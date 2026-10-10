@@ -393,6 +393,9 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
 - Stack reorganizado por Backend & APIs, Frontend, Datos & integración y Seguridad & delivery.
 - Formación actualizada con Licenciatura en Desarrollo de Software, Profesorado, Especialización y Maestría en Ingeniería de Software y Maestría en Docencia Superior en curso.
 - Contacto actualizado para priorizar GitHub, LinkedIn y correo electrónico.
+- Se eliminó del contenido visible cualquier texto interno sobre decisiones de privacidad; esas reglas permanecen únicamente documentadas en el roadmap.
+- Se precisó el nombre del Profesorado de Segunda Enseñanza con especialización en Desarrollo de Software.
+- Se reserva para la Fase 6 la incorporación de logos por tecnología y animaciones/microinteracciones adicionales, después de cerrar la presentación de proyectos en la Fase 5.
 - Se mantiene fuera del sitio el número de teléfono, documentos personales y el antiguo CV descargable.
 - La cuadrícula de formación se adaptó a cuatro bloques y la de contacto a tres canales.
 - Queda pendiente la validación local de contenido, presentación y privacidad antes de cerrar oficialmente la fase.
