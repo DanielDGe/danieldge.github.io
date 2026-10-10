@@ -133,7 +133,7 @@ svg {
 
 .section {
   position: relative;
-  padding: 6.5rem 0;
+  padding: 5.25rem 0 5.75rem;
 }
 
 .section--surface::before {
@@ -1369,7 +1369,7 @@ svg {
   }
 
   .section {
-    padding: 5rem 0;
+    padding: 4.25rem 0 4.75rem;
   }
 
   .hero {
