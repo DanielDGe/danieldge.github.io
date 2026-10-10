@@ -31,7 +31,7 @@ El objetivo es lograr un portafolio que represente tanto la capacidad técnica c
 
 ## Estado actual
 
-**Estado del proyecto:** En desarrollo — Fase 3 implementada, pendiente validación local  
+**Estado del proyecto:** En desarrollo — Fase 3 completada  
 **Sitio público actual:** Portafolio legacy  
 **Rama fuente actual:** `main`  
 **Rama activa de desarrollo:** `feature/portfolio-redesign-2026`  
@@ -126,7 +126,7 @@ El rediseño conservará el repositorio y la URL pública actuales, pero reempla
 
 ## Fase 3 — Sistema visual y estructura de la experiencia
 
-**Estado:** 🟨 Implementada — pendiente validación local
+**Estado:** ✅ Completada
 
 ### Secciones previstas
 
@@ -159,8 +159,8 @@ El rediseño conservará el repositorio y la URL pública actuales, pero reempla
 
 - [x] La estructura general y el lenguaje visual están implementados.
 - [x] Todas las secciones principales cuentan con una estructura funcional.
-- [ ] Validar en local que el diseño se percibe coherente, moderno, agradable y diferenciador.
-- [ ] Validar comportamiento responsive, navegación, tema claro/oscuro y microinteracciones antes de cerrar la fase.
+- [x] Validar en local que el diseño se percibe coherente, moderno, agradable y diferenciador.
+- [x] Validar comportamiento responsive, navegación, tema claro/oscuro y microinteracciones antes de cerrar la fase.
 
 ---
 
@@ -400,6 +400,8 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
   - segundo ajuste del ritmo vertical para acercar el inicio de cada sección al header sin perder respiración visual;
   - corrección definitiva del scroll por anclas: ahora se calcula la altura real del header y el padding superior de cada sección para posicionar el título visible cerca del menú fijo.
 - Queda pendiente la validación local visual, responsive y funcional antes de cerrar oficialmente la fase.
+- Validación visual y funcional confirmada por Daniel.
+- La Fase 3 queda oficialmente completada.
 - Producción continúa aislada en `gh-pages`.
 
 ## 2026-10-07 — Fase 2
