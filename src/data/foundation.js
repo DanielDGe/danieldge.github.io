@@ -119,7 +119,7 @@ export const educationPreview = [
   },
   {
     level: 'Docencia',
-    title: 'Profesorado de Segunda Enseñanza',
+    title: 'Profesorado de Segunda Enseñanza con especialización en Desarrollo de Software',
     description:
       'Especialización en Desarrollo de Software, complementando la formación técnica con fundamentos pedagógicos.',
   },
