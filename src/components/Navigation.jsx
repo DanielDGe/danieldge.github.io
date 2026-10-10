@@ -15,7 +15,7 @@ function Navigation({ activeSection, theme, onToggleTheme }) {
     }
 
     const headerOffset = 82
-    const sectionLeadOffset = id === 'inicio' ? 0 : 52
+    const sectionLeadOffset = id === 'inicio' ? 0 : 24
     const top =
       target.getBoundingClientRect().top +
       globalThis.scrollY -
