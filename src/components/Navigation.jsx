@@ -5,6 +5,32 @@ import Icon from './Icon'
 function Navigation({ activeSection, theme, onToggleTheme }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  const handleSectionNavigation = (event, id) => {
+    event.preventDefault()
+
+    const target = globalThis.document.getElementById(id)
+
+    if (!target) {
+      return
+    }
+
+    const headerOffset = 82
+    const sectionLeadOffset = id === 'inicio' ? 0 : 52
+    const top =
+      target.getBoundingClientRect().top +
+      globalThis.scrollY -
+      headerOffset +
+      sectionLeadOffset
+
+    globalThis.scrollTo({
+      top,
+      behavior: 'smooth',
+    })
+
+    globalThis.history.replaceState(null, '', '#' + id)
+    setIsMenuOpen(false)
+  }
+
   useEffect(() => {
     const handleResize = () => {
       if (globalThis.innerWidth > 900) {
@@ -37,14 +63,18 @@ function Navigation({ activeSection, theme, onToggleTheme }) {
               key={id}
               className={activeSection === id ? 'site-nav__link is-active' : 'site-nav__link'}
               href={'#' + id}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={(event) => handleSectionNavigation(event, id)}
               aria-current={activeSection === id ? 'location' : undefined}
             >
               {label}
             </a>
           ))}
 
-          <a className="site-nav__contact" href="#contacto" onClick={() => setIsMenuOpen(false)}>
+          <a
+            className="site-nav__contact"
+            href="#contacto"
+            onClick={(event) => handleSectionNavigation(event, 'contacto')}
+          >
             Hablemos
             <Icon name="arrowUpRight" size={16} />
           </a>
