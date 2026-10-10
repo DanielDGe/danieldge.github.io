@@ -10,10 +10,10 @@ function HeroSection() {
         <div className="hero__content">
           <div className="availability">
             <span className="availability__dot" aria-hidden="true" />
-            Portfolio redesign · 2026
+            Software Engineer · Analista Programador
           </div>
 
-          <p className="hero__kicker">SOFTWARE ENGINEER · FULL-STACK DEVELOPMENT</p>
+          <p className="hero__kicker">JAVA 17 · SPRING BOOT · REACT · SYSTEMS INTEGRATION</p>
 
           <h1>
             Construyo software que conecta
@@ -21,8 +21,9 @@ function HeroSection() {
           </h1>
 
           <p className="hero__description">
-            Ingeniería de software aplicada a productos empresariales, integración de
-            sistemas y experiencias web pensadas para ser claras, confiables y agradables.
+            Desarrollo aplicaciones empresariales de extremo a extremo, con experiencia en
+            backend, frontend, APIs, microservicios e integración de sistemas. Mi enfoque combina
+            solidez técnica, mantenibilidad y una experiencia clara para el usuario.
           </p>
 
           <div className="hero__actions">
@@ -36,9 +37,9 @@ function HeroSection() {
           </div>
 
           <div className="hero__signals" aria-label="Áreas principales">
-            <span>APIs & Microservices</span>
-            <span>Systems Integration</span>
-            <span>Full-Stack</span>
+            <span>Backend & APIs</span>
+            <span>Architecture & Integration</span>
+            <span>Full-Stack Development</span>
           </div>
         </div>
 
