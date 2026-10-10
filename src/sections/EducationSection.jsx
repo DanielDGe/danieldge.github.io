@@ -7,8 +7,8 @@ function EducationSection() {
       <div className="content-shell">
         <SectionHeading
           eyebrow="05 · FORMACIÓN"
-          title="Aprender también forma parte del trabajo."
-          description="Una trayectoria académica que combina desarrollo de software, ingeniería y formación orientada a la docencia superior."
+          title="Una base técnica reforzada por ingeniería y docencia."
+          description="Mi formación combina desarrollo de software, ingeniería de software y educación superior, ampliando tanto la profundidad técnica como la forma de analizar, documentar y comunicar soluciones."
         />
 
         <div className="education-grid">
