@@ -991,8 +991,8 @@ svg {
 .project-card--task-manager {
   display: grid;
   grid-column: 1 / -1;
-  grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
-  min-height: 560px;
+  grid-template-columns: minmax(0, 0.76fr) minmax(0, 1.24fr);
+  min-height: 480px;
 }
 
 .project-card--fleetpulse {
@@ -1138,6 +1138,18 @@ svg {
   margin-top: auto;
 }
 
+.project-card--task-manager .project-card__body {
+  gap: 1.05rem;
+}
+
+.project-card--task-manager .project-card__highlights {
+  gap: 0.48rem;
+}
+
+.project-card--task-manager .project-card__technologies {
+  margin-top: 0.15rem;
+}
+
 .project-card__private-note {
   margin: -0.35rem 0 0;
   color: var(--muted);
@@ -1205,6 +1217,7 @@ svg {
 
 .project-card--task-manager .project-visual {
   min-height: 100%;
+  max-height: 480px;
   border-right: 1px solid var(--line);
   border-bottom: 0;
 }
@@ -1715,7 +1728,8 @@ svg {
   }
 
   .project-card--task-manager .project-visual {
-    min-height: 320px;
+    min-height: 260px;
+    max-height: 320px;
     border-right: 0;
     border-bottom: 1px solid var(--line);
   }
@@ -1802,7 +1816,8 @@ svg {
 
   .project-visual,
   .project-card--task-manager .project-visual {
-    min-height: 220px;
+    min-height: 200px;
+    max-height: 240px;
   }
 
   .project-card__body {
