@@ -14,16 +14,23 @@ function Navigation({ activeSection, theme, onToggleTheme }) {
       return
     }
 
-    const headerOffset = 82
-    const sectionLeadOffset = id === 'inicio' ? 0 : 24
+    const header = globalThis.document.querySelector('.site-header')
+    const headerHeight = header?.getBoundingClientRect().height ?? 76
+    const sectionPaddingTop =
+      Number.parseFloat(globalThis.getComputedStyle(target).paddingTop) || 0
+    const desiredGap = 18
+
     const top =
-      target.getBoundingClientRect().top +
-      globalThis.scrollY -
-      headerOffset +
-      sectionLeadOffset
+      id === 'inicio'
+        ? 0
+        : target.getBoundingClientRect().top +
+          globalThis.scrollY +
+          sectionPaddingTop -
+          headerHeight -
+          desiredGap
 
     globalThis.scrollTo({
-      top,
+      top: Math.max(0, top),
       behavior: 'smooth',
     })
 
