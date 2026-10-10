@@ -397,7 +397,8 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
   - mayor contraste y definición en modo claro;
   - reducción moderada del espaciado vertical entre secciones;
   - corrección del posicionamiento al navegar desde el menú para evitar espacios superiores excesivos;
-  - segundo ajuste del ritmo vertical para acercar el inicio de cada sección al header sin perder respiración visual.
+  - segundo ajuste del ritmo vertical para acercar el inicio de cada sección al header sin perder respiración visual;
+  - corrección definitiva del scroll por anclas: ahora se calcula la altura real del header y el padding superior de cada sección para posicionar el título visible cerca del menú fijo.
 - Queda pendiente la validación local visual, responsive y funcional antes de cerrar oficialmente la fase.
 - Producción continúa aislada en `gh-pages`.
 
