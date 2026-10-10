@@ -36,6 +36,12 @@ function Icon({ name, size = 20 }) {
         <circle cx="4" cy="4" r="2" />
       </svg>
     ),
+    mail: (
+      <svg {...commonProps}>
+        <rect width="18" height="14" x="3" y="5" rx="2" />
+        <path d="m3 7 9 6 9-6" />
+      </svg>
+    ),
     menu: (
       <svg {...commonProps}>
         <path d="M4 7h16M4 12h16M4 17h16" />
