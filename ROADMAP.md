@@ -31,7 +31,7 @@ El objetivo es lograr un portafolio que represente tanto la capacidad técnica c
 
 ## Estado actual
 
-**Estado del proyecto:** En desarrollo — Fase 4 implementada, pendiente validación local  
+**Estado del proyecto:** En desarrollo — Fase 5 implementada, pendiente validación local  
 **Sitio público actual:** Portafolio legacy  
 **Rama fuente actual:** `main`  
 **Rama activa de desarrollo:** `feature/portfolio-redesign-2026`  
@@ -166,7 +166,7 @@ El rediseño conservará el repositorio y la URL pública actuales, pero reempla
 
 ## Fase 4 — Actualización del contenido profesional
 
-**Estado:** 🟨 Implementada — pendiente validación local
+**Estado:** ✅ Completada
 
 ### Perfil
 
@@ -223,36 +223,40 @@ No utilizar barras de porcentaje para representar nivel de conocimientos.
 
 ### Criterios de cierre
 
-- [ ] Validar en local que el contenido representa correctamente el perfil profesional de Daniel en 2026.
-- [ ] Confirmar que no quedan datos obsoletos ni información personal innecesariamente expuesta.
+- [x] Validar en local que el contenido representa correctamente el perfil profesional de Daniel en 2026.
+- [x] Confirmar que no quedan datos obsoletos ni información personal innecesariamente expuesta.
 
 ---
 
 ## Fase 5 — Proyectos destacados
 
-**Estado:** ⬜ Pendiente
+**Estado:** 🟨 Implementada — pendiente validación local
 
 ### Proyectos prioritarios
 
 #### Task Manager Full Stack
 
-- [ ] Añadir como proyecto público principal.
-- [ ] Java 17 / Spring Boot / React / PostgreSQL.
-- [ ] Mencionar Keycloak, OpenID Connect, JWT, Flyway, Docker y pruebas automatizadas cuando sea útil.
-- [ ] Enlazar repositorio público.
+- [x] Añadir como proyecto público principal.
+- [x] Java 17 / Spring Boot / React / PostgreSQL.
+- [x] Mencionar Keycloak, OpenID Connect, JWT, Flyway, Docker y pruebas automatizadas cuando sea útil.
+- [x] Enlazar repositorio público.
+- [x] Mostrar captura real de la aplicación disponible en el repositorio.
 
 #### FleetPulse
 
-- [ ] Añadir como proyecto privado destacado.
-- [ ] Describir arquitectura y tecnologías sin exponer código fuente privado.
-- [ ] ASP.NET Core / Angular / MQTT / SignalR / PostgreSQL / PostGIS / observabilidad.
-- [ ] No enlazar el repositorio privado.
+- [x] Añadir como proyecto privado destacado.
+- [x] Describir arquitectura y tecnologías sin exponer código fuente privado.
+- [x] ASP.NET Core / Angular / MQTT / SignalR / PostgreSQL / PostGIS / observabilidad.
+- [x] No enlazar el repositorio privado.
+- [x] Añadir preview visual abstracto de telemetría sin utilizar material privado.
 
 #### Portafolio Digital — Evaluación en Educación Superior
 
-- [ ] Añadir como proyecto actual desarrollado con React / Vite / Material UI.
-- [ ] Mencionar navegación responsive, temas, progreso de lectura y visor PDF personalizado.
-- [ ] Enlazar el repositorio mientras permanezca público.
+- [x] Añadir como proyecto actual desarrollado con React / Vite / Material UI.
+- [x] Mencionar navegación responsive, temas y estructura de evidencias académicas.
+- [x] Enlazar el repositorio mientras permanezca público.
+- [x] Enlazar el sitio publicado en GitHub Pages.
+- [x] Añadir preview visual propio sin reutilizar documentos o evidencias académicas.
 
 #### Portafolio profesional
 
@@ -265,8 +269,9 @@ No utilizar barras de porcentaje para representar nivel de conocimientos.
 
 ### Criterios de cierre
 
-- Los proyectos destacados representan la capacidad técnica actual y no ejercicios antiguos.
-- La presentación de cada proyecto ayuda a entender rápidamente qué problema resuelve, qué tecnologías utiliza y qué aporta Daniel.
+- [ ] Validar en local que los proyectos destacados representan la capacidad técnica actual y no ejercicios antiguos.
+- [ ] Validar que la presentación permite entender rápidamente problema, arquitectura, tecnologías y aportes.
+- [ ] Revisar responsive, enlaces públicos y carga de la captura de Task Manager.
 
 ---
 
@@ -379,6 +384,31 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
 ---
 
 # Registro de progreso
+
+## 2026-10-10 — Fase 5
+
+- La sección de proyectos dejó de ser una colección de tarjetas genéricas y pasó a presentarse como casos técnicos.
+- Task Manager se estableció como proyecto principal:
+  - captura real de la aplicación;
+  - autenticación Keycloak/OpenID Connect y API JWT;
+  - aislamiento multiusuario;
+  - Flyway, Docker Compose, Testcontainers y CI con GitHub Actions;
+  - flujo resumido React → Keycloak → Spring Boot API → PostgreSQL.
+- FleetPulse se documentó a partir de su arquitectura real sin enlazar ni exponer el repositorio privado:
+  - ASP.NET Core, Angular, MQTT, SignalR, PostGIS, Redis y observabilidad;
+  - preview visual abstracto de telemetría para evitar material privado.
+- Portafolio Digital se actualizó como proyecto frontend/UX:
+  - React, Vite, Material UI, React Router y Framer Motion;
+  - navegación responsive, temas y organización de evidencias;
+  - enlaces al repositorio público y al sitio en GitHub Pages;
+  - preview visual propio sin reutilizar evidencias académicas.
+- Se añadió el componente reutilizable `ProjectVisual` para previews de proyecto.
+- `ProjectCard` ahora muestra resumen, aportes técnicos, flujo de arquitectura, stack, estado y acciones.
+- Se rediseñó el layout: Task Manager funciona como caso principal y los otros dos proyectos como casos complementarios.
+- Se añadieron ajustes responsive específicos para esta sección.
+- La Fase 4 queda oficialmente completada tras la validación local y los refinamientos de contenido realizados por Daniel.
+- La Fase 5 queda implementada y pendiente de validación local antes de cerrarla.
+- Producción continúa aislada en `gh-pages`.
 
 ## 2026-10-10 — Fase 4
 
