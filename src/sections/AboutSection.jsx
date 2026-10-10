@@ -7,18 +7,21 @@ function AboutSection() {
       <div className="content-shell">
         <SectionHeading
           eyebrow="01 · PERFIL"
-          title="Tecnología con criterio de producto."
-          description="Más que escribir código, me interesa entender el problema, diseñar una solución mantenible y cuidar cómo la experimenta la persona que la utiliza."
+          title="Ingeniería de software con visión de extremo a extremo."
+          description="Soy Ingeniero de Software y Analista Programador. Trabajo en el desarrollo y mantenimiento de aplicaciones empresariales, combinando backend, frontend e integración de sistemas."
         />
 
         <div className="about-layout">
           <div className="about-statement">
             <p className="about-statement__lead">
-              Mi trabajo se mueve entre backend, frontend e integración de sistemas.
+              Mi stack principal hoy gira alrededor de Java 17, Spring Boot y React.
             </p>
             <p>
-              Esa visión de extremo a extremo me permite conectar reglas de negocio,
-              servicios, datos e interfaz sin perder de vista el objetivo real del producto.
+              He participado en APIs REST, microservicios, mensajería con RabbitMQ,
+              autenticación y autorización con Keycloak, bases de datos relacionales y
+              despliegues con Docker. Me interesa seguir creciendo en arquitectura de
+              aplicaciones e integración de sistemas, sin perder de vista la experiencia
+              final del usuario.
             </p>
 
             <div className="about-statement__signature">
