@@ -9,7 +9,7 @@ function TechSection() {
         <SectionHeading
           eyebrow="03 · STACK"
           title="Herramientas elegidas por lo que permiten construir."
-          description="Sin porcentajes arbitrarios: el stack se presenta por áreas de trabajo y contexto de uso."
+          description="Stack tecnológico con el que construyo, integro y mantengo soluciones de software."
         />
 
         <div className="tech-grid">
