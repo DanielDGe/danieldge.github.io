@@ -2062,13 +2062,16 @@ svg {
   }
 
   .security-flow {
-    grid-template-columns: 1fr auto 1fr;
-    row-gap: 0.55rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.35rem;
   }
 
-  .security-flow__node:nth-of-type(5),
-  .security-flow__node:nth-of-type(7) {
+  .security-flow__connector {
     display: none;
+  }
+
+  .security-flow__node {
+    padding: 0.5rem;
   }
 
   .project-card__body {
