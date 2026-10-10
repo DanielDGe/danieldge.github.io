@@ -77,13 +77,37 @@ export const techGroups = [
 
 export const projectPreview = [
   {
-    id: 'task-manager',
+    id: 'fleetpulse',
     number: '01',
+    type: 'Real Time · Event Driven',
+    title: 'FleetPulse',
+    tagline: 'Monitoreo inteligente de flotas con telemetría y actualizaciones en tiempo real.',
+    description:
+      'Proyecto activo y en evolución orientado a sistemas distribuidos. Integra simulación de vehículos, mensajería MQTT, procesamiento de telemetría, actualizaciones en tiempo real y visualización operativa en un dashboard Angular.',
+    highlights: [
+      'Dashboard de control con métricas de flota, estado de vehículos y datos en vivo.',
+      'Mapa de flota con seguimiento, selección de vehículos y recorrido histórico.',
+      'Backend ASP.NET Core con MQTT, SignalR, PostgreSQL/TimescaleDB, PostGIS y Redis.',
+      'Arquitectura preparada para observabilidad, pruebas de integración y crecimiento incremental.',
+    ],
+    architecture: ['Vehicle simulator', 'MQTT', 'ASP.NET Core', 'SignalR', 'Angular'],
+    technologies: ['ASP.NET Core', 'Angular', 'TypeScript', 'MQTT', 'SignalR', 'PostGIS', 'Redis'],
+    status: 'Proyecto activo · En desarrollo',
+    visual: {
+      kind: 'fleet',
+      label: 'Preview del dashboard de monitoreo en tiempo real de FleetPulse',
+    },
+    privateNote: 'El proyecto continúa en desarrollo; se muestra su arquitectura sin publicar el repositorio privado.',
+    links: [],
+  },
+  {
+    id: 'task-manager',
+    number: '02',
     type: 'Full Stack · Security',
     title: 'Task Manager',
-    tagline: 'Gestión de tareas multiusuario con seguridad real de extremo a extremo.',
+    tagline: 'Seguridad, aislamiento multiusuario y backend completo por encima de una interfaz deliberadamente simple.',
     description:
-      'Aplicación full stack con autenticación centralizada, API protegida y aislamiento de datos por usuario, construida sobre una arquitectura preparada para pruebas, migraciones y ejecución contenerizada.',
+      'Proyecto full stack enfocado en autenticación centralizada, protección de APIs, persistencia relacional, pruebas automatizadas y ejecución contenerizada.',
     highlights: [
       'Keycloak + OpenID Connect con API protegida mediante JWT.',
       'Aislamiento multiusuario y persistencia relacional con PostgreSQL.',
@@ -93,9 +117,8 @@ export const projectPreview = [
     technologies: ['Java 17', 'Spring Boot', 'React', 'PostgreSQL', 'Keycloak'],
     status: 'Proyecto público',
     visual: {
-      kind: 'image',
-      src: 'https://raw.githubusercontent.com/DanielDGe/01-task-manager/master/docs/screenshots/task-manager.png',
-      alt: 'Interfaz principal de Task Manager',
+      kind: 'security',
+      label: 'Flujo de autenticación y arquitectura de Task Manager',
     },
     links: [
       {
@@ -104,30 +127,6 @@ export const projectPreview = [
         icon: 'github',
       },
     ],
-  },
-  {
-    id: 'fleetpulse',
-    number: '02',
-    type: 'Real Time · Event Driven',
-    title: 'FleetPulse',
-    tagline: 'Telemetría, geolocalización y eventos para monitoreo de flotas en tiempo real.',
-    description:
-      'Plataforma de aprendizaje orientada a sistemas distribuidos. Vehículos simulados publican telemetría por MQTT; el backend procesa los eventos y el dashboard refleja ubicaciones y alertas en tiempo real.',
-    highlights: [
-      'Backend en ASP.NET Core y dashboard Angular con actualizaciones mediante SignalR.',
-      'Comunicación orientada a eventos con MQTT y simulador de telemetría vehicular.',
-      'Persistencia temporal y geoespacial con TimescaleDB/PostgreSQL y PostGIS.',
-      'Observabilidad planteada con OpenTelemetry, Prometheus y Grafana.',
-    ],
-    architecture: ['Vehicle simulator', 'MQTT', 'ASP.NET Core', 'SignalR', 'Angular'],
-    technologies: ['ASP.NET Core', 'Angular', 'TypeScript', 'MQTT', 'SignalR', 'PostGIS', 'Redis'],
-    status: 'Caso técnico · Repositorio privado',
-    visual: {
-      kind: 'fleet',
-      label: 'Representación de telemetría y monitoreo de flota en tiempo real',
-    },
-    privateNote: 'La arquitectura se presenta sin exponer código fuente ni información privada.',
-    links: [],
   },
   {
     id: 'portfolio-education',
