@@ -393,6 +393,10 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
 - Se mantuvo soporte para `prefers-reduced-motion`.
 - Se eliminó la pantalla temporal utilizada para validar la Fase 2.
 - El contenido profesional mostrado todavía es provisional y será afinado en las Fases 4 y 5.
+- Se aplicó un primer refinamiento visual tras revisión local:
+  - mayor contraste y definición en modo claro;
+  - reducción moderada del espaciado vertical entre secciones;
+  - corrección del posicionamiento al navegar desde el menú para evitar espacios superiores excesivos.
 - Queda pendiente la validación local visual, responsive y funcional antes de cerrar oficialmente la fase.
 - Producción continúa aislada en `gh-pages`.
 
