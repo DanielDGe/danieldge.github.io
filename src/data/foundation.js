@@ -83,15 +83,14 @@ export const projectPreview = [
     title: 'Task Manager',
     tagline: 'Gestión de tareas multiusuario con seguridad real de extremo a extremo.',
     description:
-      'Aplicación full stack diseñada para practicar una arquitectura cercana a un entorno productivo: autenticación centralizada, API protegida, persistencia relacional, migraciones, pruebas automatizadas y ejecución contenerizada.',
+      'Aplicación full stack con autenticación centralizada, API protegida y aislamiento de datos por usuario, construida sobre una arquitectura preparada para pruebas, migraciones y ejecución contenerizada.',
     highlights: [
-      'Autenticación con Keycloak y OpenID Connect; API protegida mediante JWT.',
-      'Aislamiento de datos: cada usuario accede únicamente a sus propias tareas.',
-      'Pruebas unitarias, de controlador e integración con PostgreSQL mediante Testcontainers.',
-      'CI con GitHub Actions, migraciones Flyway y entorno completo con Docker Compose.',
+      'Keycloak + OpenID Connect con API protegida mediante JWT.',
+      'Aislamiento multiusuario y persistencia relacional con PostgreSQL.',
+      'Testcontainers, Flyway, Docker Compose y CI con GitHub Actions.',
     ],
     architecture: ['React + Vite', 'Keycloak', 'Spring Boot API', 'PostgreSQL'],
-    technologies: ['Java 17', 'Spring Boot', 'React', 'PostgreSQL', 'Keycloak', 'Flyway', 'Docker'],
+    technologies: ['Java 17', 'Spring Boot', 'React', 'PostgreSQL', 'Keycloak'],
     status: 'Proyecto público',
     visual: {
       kind: 'image',
