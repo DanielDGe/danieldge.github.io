@@ -407,6 +407,7 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
 - Se rediseñó el layout: Task Manager funciona como caso principal y los otros dos proyectos como casos complementarios.
 - Se añadieron ajustes responsive específicos para esta sección.
 - La Fase 4 queda oficialmente completada tras la validación local y los refinamientos de contenido realizados por Daniel.
+- Se refinó Task Manager tras la primera revisión visual: menos texto, tres aportes clave, stack visible reducido y una proporción de captura/contenido más equilibrada para evitar sobrecarga visual.
 - La Fase 5 queda implementada y pendiente de validación local antes de cerrarla.
 - Producción continúa aislada en `gh-pages`.
 
