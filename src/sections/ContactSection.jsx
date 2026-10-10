@@ -31,9 +31,6 @@ function ContactSection() {
             ))}
           </div>
 
-          <p className="contact-card__privacy">
-            Solo canales profesionales: sin teléfono público, documentos personales ni CV descargable.
-          </p>
         </div>
       </div>
     </section>
