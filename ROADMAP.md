@@ -31,7 +31,7 @@ El objetivo es lograr un portafolio que represente tanto la capacidad técnica c
 
 ## Estado actual
 
-**Estado del proyecto:** En desarrollo — Fase 3 completada  
+**Estado del proyecto:** En desarrollo — Fase 4 implementada, pendiente validación local  
 **Sitio público actual:** Portafolio legacy  
 **Rama fuente actual:** `main`  
 **Rama activa de desarrollo:** `feature/portfolio-redesign-2026`  
@@ -166,14 +166,14 @@ El rediseño conservará el repositorio y la URL pública actuales, pero reempla
 
 ## Fase 4 — Actualización del contenido profesional
 
-**Estado:** ⬜ Pendiente
+**Estado:** 🟨 Implementada — pendiente validación local
 
 ### Perfil
 
-- [ ] Actualizar titular e introducción profesional.
-- [ ] Reflejar el perfil actual de Ingeniero de Software / Analista Programador.
-- [ ] Destacar experiencia backend y frontend.
-- [ ] Destacar interés en arquitectura e integración de sistemas.
+- [x] Actualizar titular e introducción profesional.
+- [x] Reflejar el perfil actual de Ingeniero de Software / Analista Programador.
+- [x] Destacar experiencia backend y frontend.
+- [x] Destacar interés en arquitectura e integración de sistemas.
 
 ### Tecnologías actuales
 
@@ -201,30 +201,30 @@ No utilizar barras de porcentaje para representar nivel de conocimientos.
 
 ### Experiencia
 
-- [ ] ZTECH SOLUTIONS | Grupo ZM S.A.
-- [ ] Tigo Panamá.
-- [ ] Experiencia de soporte técnico en la Universidad Tecnológica de Panamá.
-- [ ] Mantener descripciones profesionales sin exponer información interna o sensible de proyectos laborales.
+- [x] ZTECH SOLUTIONS | Grupo ZM S.A.
+- [x] Tigo Panamá.
+- [x] Experiencia de soporte técnico en la Universidad Tecnológica de Panamá.
+- [x] Mantener descripciones profesionales sin exponer información interna o sensible de proyectos laborales.
 
 ### Formación
 
-- [ ] Licenciatura en Desarrollo de Software.
-- [ ] Especialización en Ingeniería de Software.
-- [ ] Maestría en Ingeniería de Software.
-- [ ] Maestría en Docencia Superior — en curso.
-- [ ] Profesorado y formación previa relevante cuando aporte valor.
+- [x] Licenciatura en Desarrollo de Software.
+- [x] Especialización en Ingeniería de Software.
+- [x] Maestría en Ingeniería de Software.
+- [x] Maestría en Docencia Superior — en curso.
+- [x] Profesorado y formación previa relevante cuando aporte valor.
 
 ### Privacidad
 
-- [ ] Eliminar el número de teléfono público.
-- [ ] Evitar exponer documentos personales innecesarios.
-- [ ] No restaurar el antiguo PDF descargable del CV.
-- [ ] Priorizar LinkedIn / GitHub / correo electrónico como vías de contacto.
+- [x] Eliminar el número de teléfono público.
+- [x] Evitar exponer documentos personales innecesarios.
+- [x] No restaurar el antiguo PDF descargable del CV.
+- [x] Priorizar LinkedIn / GitHub / correo electrónico como vías de contacto.
 
 ### Criterios de cierre
 
-- El contenido representa correctamente el perfil profesional de Daniel en 2026.
-- No quedan datos obsoletos ni información personal innecesariamente expuesta.
+- [ ] Validar en local que el contenido representa correctamente el perfil profesional de Daniel en 2026.
+- [ ] Confirmar que no quedan datos obsoletos ni información personal innecesariamente expuesta.
 
 ---
 
@@ -379,6 +379,24 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
 ---
 
 # Registro de progreso
+
+## 2026-10-10 — Fase 4
+
+- Se sustituyó el contenido provisional por el perfil profesional actualizado de 2026.
+- Hero actualizado para reflejar el perfil de Software Engineer / Analista Programador y el stack principal Java 17, Spring Boot y React.
+- Perfil actualizado con enfoque en backend, frontend, microservicios, APIs, RabbitMQ, Keycloak, bases de datos, Docker, arquitectura e integración de sistemas.
+- Experiencia profesional actualizada con:
+  - ZTECH SOLUTIONS | Grupo ZM S.A. — Analista Programador, junio de 2024 a la actualidad.
+  - Tigo Panamá — Analista Programador, 2023 a 2024.
+  - Universidad Tecnológica de Panamá — soporte técnico, 2017.
+- Las descripciones laborales se mantuvieron a nivel profesional sin exponer nombres internos de proyectos, sistemas o información sensible.
+- Stack reorganizado por Backend & APIs, Frontend, Datos & integración y Seguridad & delivery.
+- Formación actualizada con Licenciatura en Desarrollo de Software, Profesorado, Especialización y Maestría en Ingeniería de Software y Maestría en Docencia Superior en curso.
+- Contacto actualizado para priorizar GitHub, LinkedIn y correo electrónico.
+- Se mantiene fuera del sitio el número de teléfono, documentos personales y el antiguo CV descargable.
+- La cuadrícula de formación se adaptó a cuatro bloques y la de contacto a tres canales.
+- Queda pendiente la validación local de contenido, presentación y privacidad antes de cerrar oficialmente la fase.
+- Producción continúa aislada en `gh-pages`.
 
 ## 2026-10-07 — Fase 3
 
