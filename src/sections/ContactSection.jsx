@@ -11,8 +11,8 @@ function ContactSection() {
 
           <SectionHeading
             eyebrow="06 · CONTACTO"
-            title="¿Construimos algo que valga la pena usar?"
-            description="Si quieres conversar sobre desarrollo de software, integración de sistemas o una oportunidad profesional, puedes encontrarme aquí."
+            title="Conversemos sobre software, integración y nuevas oportunidades."
+            description="Puedes contactarme por LinkedIn, GitHub o correo electrónico para conversar sobre desarrollo de software, arquitectura de aplicaciones, integración de sistemas u oportunidades profesionales."
           />
 
           <div className="contact-links">
@@ -21,8 +21,8 @@ function ContactSection() {
                 className="contact-link"
                 key={link.label}
                 href={link.href}
-                target="_blank"
-                rel="noreferrer"
+                target={link.external ? '_blank' : undefined}
+                rel={link.external ? 'noreferrer' : undefined}
               >
                 <span className="contact-link__icon"><Icon name={link.icon} size={21} /></span>
                 <span><small>{link.label}</small><strong>{link.value}</strong></span>
@@ -32,7 +32,7 @@ function ContactSection() {
           </div>
 
           <p className="contact-card__privacy">
-            Contacto profesional sin publicar teléfono ni documentos personales.
+            Solo canales profesionales: sin teléfono público, documentos personales ni CV descargable.
           </p>
         </div>
       </div>
