@@ -12,65 +12,65 @@ export const focusAreas = [
     number: '01',
     title: 'Backend & APIs',
     description:
-      'Servicios robustos, reglas de negocio, seguridad e integración con sistemas empresariales.',
+      'Java 17, Spring Boot, APIs REST y lógica de negocio para aplicaciones empresariales mantenibles.',
   },
   {
     number: '02',
-    title: 'Integración',
+    title: 'Arquitectura & integración',
     description:
-      'Mensajería, comunicación entre servicios y flujos de datos que conectan plataformas distintas.',
+      'Microservicios, mensajería y comunicación con sistemas externos para conectar procesos y datos.',
   },
   {
     number: '03',
     title: 'Frontend & UX',
     description:
-      'Interfaces claras y funcionales que convierten procesos complejos en experiencias simples.',
+      'React, Material UI y Angular para construir interfaces claras, intuitivas y orientadas al usuario.',
   },
 ]
 
 export const experiencePreview = [
   {
-    period: 'Actualidad',
+    period: 'Jun 2024 · Actualidad',
     title: 'Analista Programador',
-    eyebrow: 'Software empresarial',
+    eyebrow: 'ZTECH SOLUTIONS · GRUPO ZM S.A.',
     description:
-      'Desarrollo y evolución de aplicaciones, APIs, integraciones y funcionalidades de negocio en entornos empresariales.',
+      'Desarrollo y mantenimiento evolutivo de aplicaciones empresariales, trabajando en backend y frontend con Java 17, Spring Boot y React. Participación en APIs REST, microservicios, integración con sistemas externos, mensajería, seguridad, bases de datos y resolución de incidencias.',
   },
   {
-    period: 'Trayectoria',
-    title: 'Desarrollo Full Stack',
-    eyebrow: 'Backend + Frontend',
+    period: '2023 · 2024',
+    title: 'Analista Programador',
+    eyebrow: 'TIGO PANAMÁ · DESARROLLO CORE',
     description:
-      'Experiencia trabajando en distintas capas del producto, desde datos y servicios hasta interfaces orientadas al usuario.',
+      'Participación en el desarrollo y mantenimiento de funcionalidades del área core, trabajando con aplicaciones empresariales e integración de sistemas en un entorno de telecomunicaciones.',
   },
   {
-    period: 'Fundamentos',
-    title: 'Soporte y tecnología',
-    eyebrow: 'Resolución de problemas',
+    period: '2017',
+    title: 'Soporte técnico',
+    eyebrow: 'UNIVERSIDAD TECNOLÓGICA DE PANAMÁ',
     description:
-      'Una base práctica en soporte técnico que fortaleció el análisis, diagnóstico y enfoque hacia soluciones confiables.',
+      'Encargado de laboratorio de cómputo en el Centro Especializado en Lenguas del Centro Regional de Veraguas, brindando soporte de software y hardware, atención de incidencias y asistencia técnica a usuarios.',
   },
 ]
 
 export const techGroups = [
   {
     title: 'Backend & APIs',
-    description: 'Lógica de negocio, servicios e integración.',
+    description: 'Servicios, lógica de negocio y APIs empresariales.',
     items: ['Java 17', 'Spring Boot', 'C#', 'ASP.NET Core', 'Node.js'],
   },
   {
     title: 'Frontend',
-    description: 'Experiencias web modernas y mantenibles.',
-    items: ['React', 'Angular', 'TypeScript', 'JavaScript', 'Material UI'],
+    description: 'Interfaces modernas, mantenibles y orientadas al usuario.',
+    items: ['React', 'Material UI', 'Angular', 'TypeScript', 'JavaScript'],
   },
   {
-    title: 'Datos & mensajería',
-    description: 'Persistencia, comunicación y procesamiento.',
-    items: ['PostgreSQL', 'MariaDB', 'MySQL', 'Oracle', 'RabbitMQ'],
+    title: 'Datos & integración',
+    description: 'Persistencia, mensajería y comunicación entre sistemas.',
+    items: ['PostgreSQL', 'MariaDB', 'MySQL', 'Oracle', 'MongoDB', 'RabbitMQ'],
   },
   {
     title: 'Seguridad & delivery',
-    description: 'Identidad, contenedores y flujo de entrega.',
+    description: 'Identidad, contenedores, control de versiones y automatización.',
     items: ['Keycloak', 'Docker', 'Git', 'GitLab', 'GitHub Actions', 'Maven'],
   },
 ]
@@ -112,19 +112,28 @@ export const projectPreview = [
 
 export const educationPreview = [
   {
-    level: 'Posgrado',
-    title: 'Maestría en Ingeniería de Software',
-    description: 'Formación avanzada en ingeniería, arquitectura, análisis y construcción de software.',
+    level: 'Grado',
+    title: 'Licenciatura en Desarrollo de Software',
+    description:
+      'Universidad Tecnológica de Panamá. Formación base en análisis, diseño, programación y construcción de soluciones de software.',
   },
   {
-    level: 'Especialización',
-    title: 'Ingeniería de Software',
-    description: 'Profundización en prácticas, procesos y fundamentos de la disciplina.',
+    level: 'Docencia',
+    title: 'Profesorado de Segunda Enseñanza',
+    description:
+      'Especialización en Desarrollo de Software, complementando la formación técnica con fundamentos pedagógicos.',
   },
   {
-    level: 'En curso',
+    level: 'Posgrado · Completado',
+    title: 'Especialización y Maestría en Ingeniería de Software',
+    description:
+      'Universidad Tecnológica de Panamá. Formación avanzada en ingeniería de software, arquitectura, análisis, calidad y diseño de soluciones.',
+  },
+  {
+    level: 'Posgrado · En curso',
     title: 'Maestría en Docencia Superior',
-    description: 'Complemento de la experiencia tecnológica con formación orientada a educación universitaria.',
+    description:
+      'ISAE Universidad. Formación orientada a la educación superior, evaluación, investigación y práctica docente universitaria.',
   },
 ]
 
@@ -134,11 +143,20 @@ export const socialLinks = [
     value: '@DanielDGe',
     href: 'https://github.com/DanielDGe',
     icon: 'github',
+    external: true,
   },
   {
     label: 'LinkedIn',
     value: 'danielgarcia-dev',
     href: 'https://www.linkedin.com/in/danielgarcia-dev',
     icon: 'linkedin',
+    external: true,
+  },
+  {
+    label: 'Correo',
+    value: 'ddge07@gmail.com',
+    href: 'mailto:ddge07@gmail.com?subject=Contacto%20profesional',
+    icon: 'mail',
+    external: false,
   },
 ]
