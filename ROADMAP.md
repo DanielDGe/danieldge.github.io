@@ -236,7 +236,7 @@ No utilizar barras de porcentaje para representar nivel de conocimientos.
 
 #### Task Manager Full Stack
 
-- [x] Añadir como proyecto público principal.
+- [x] Añadir como proyecto público complementario.
 - [x] Java 17 / Spring Boot / React / PostgreSQL.
 - [x] Mencionar Keycloak, OpenID Connect, JWT, Flyway, Docker y pruebas automatizadas cuando sea útil.
 - [x] Enlazar repositorio público.
@@ -244,7 +244,7 @@ No utilizar barras de porcentaje para representar nivel de conocimientos.
 
 #### FleetPulse
 
-- [x] Añadir como proyecto privado destacado.
+- [x] Añadir como proyecto privado principal y destacado.
 - [x] Describir arquitectura y tecnologías sin exponer código fuente privado.
 - [x] ASP.NET Core / Angular / MQTT / SignalR / PostgreSQL / PostGIS / observabilidad.
 - [x] No enlazar el repositorio privado.
@@ -388,15 +388,15 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
 ## 2026-10-10 — Fase 5
 
 - La sección de proyectos dejó de ser una colección de tarjetas genéricas y pasó a presentarse como casos técnicos.
-- Task Manager se estableció como proyecto principal:
-  - captura real de la aplicación;
-  - autenticación Keycloak/OpenID Connect y API JWT;
-  - aislamiento multiusuario;
-  - Flyway, Docker Compose, Testcontainers y CI con GitHub Actions;
-  - flujo resumido React → Keycloak → Spring Boot API → PostgreSQL.
-- FleetPulse se documentó a partir de su arquitectura real sin enlazar ni exponer el repositorio privado:
-  - ASP.NET Core, Angular, MQTT, SignalR, PostGIS, Redis y observabilidad;
-  - preview visual abstracto de telemetría para evitar material privado.
+- FleetPulse se estableció como proyecto principal por ser el caso con mayor riqueza visual y técnica y continuar en desarrollo:
+  - dashboard de control inspirado en la interfaz real del proyecto;
+  - métricas de flota, datos en vivo, mapa, vehículos y rutas representados en el preview;
+  - ASP.NET Core, Angular, MQTT, SignalR, PostGIS, Redis y arquitectura orientada a eventos;
+  - el repositorio continúa privado y no se enlaza.
+- Task Manager pasó a ser un caso técnico complementario:
+  - se eliminó el protagonismo de la captura de una interfaz deliberadamente sencilla;
+  - el preview ahora representa el flujo React → Keycloak → Spring Boot → PostgreSQL;
+  - autenticación Keycloak/OpenID Connect, API JWT, aislamiento multiusuario, Flyway, Docker Compose, Testcontainers y CI.
 - Portafolio Digital se actualizó como proyecto frontend/UX:
   - React, Vite, Material UI, React Router y Framer Motion;
   - navegación responsive, temas y organización de evidencias;
@@ -404,10 +404,10 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
   - preview visual propio sin reutilizar evidencias académicas.
 - Se añadió el componente reutilizable `ProjectVisual` para previews de proyecto.
 - `ProjectCard` ahora muestra resumen, aportes técnicos, flujo de arquitectura, stack, estado y acciones.
-- Se rediseñó el layout: Task Manager funciona como caso principal y los otros dos proyectos como casos complementarios.
+- Se rediseñó el layout: FleetPulse funciona como caso principal y Task Manager + Portafolio Digital como casos complementarios.
 - Se añadieron ajustes responsive específicos para esta sección.
 - La Fase 4 queda oficialmente completada tras la validación local y los refinamientos de contenido realizados por Daniel.
-- Se refinó Task Manager tras la primera revisión visual: menos texto, tres aportes clave, stack visible reducido y una proporción de captura/contenido más equilibrada para evitar sobrecarga visual.
+- Tras una segunda revisión visual se cambió la jerarquía: FleetPulse pasa a liderar la sección y Task Manager deja de apoyarse en una captura poco representativa de su fortaleza técnica.
 - La Fase 5 queda implementada y pendiente de validación local antes de cerrarla.
 - Producción continúa aislada en `gh-pages`.
 
