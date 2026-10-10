@@ -33,23 +33,23 @@
 :root[data-theme='light'] {
   color: #102034;
   background: #f4f8fc;
-  --bg: #f4f8fc;
-  --surface: rgba(255, 255, 255, 0.82);
+  --bg: #eef4fa;
+  --surface: rgba(255, 255, 255, 0.94);
   --surface-solid: #ffffff;
-  --surface-soft: rgba(17, 51, 86, 0.035);
+  --surface-soft: rgba(17, 51, 86, 0.055);
   --text: #102034;
   --text-strong: #07111f;
-  --muted: #5a7087;
-  --muted-strong: #40576f;
-  --line: rgba(45, 81, 120, 0.13);
-  --line-strong: rgba(45, 81, 120, 0.24);
+  --muted: #526a82;
+  --muted-strong: #334d68;
+  --line: rgba(45, 81, 120, 0.16);
+  --line-strong: rgba(45, 81, 120, 0.28);
   --accent: #0b9fda;
   --accent-2: #6675ee;
   --accent-3: #079b6b;
   --accent-soft: rgba(11, 159, 218, 0.08);
   --shadow: 0 24px 70px rgba(45, 81, 120, 0.1);
   --shadow-soft: 0 16px 40px rgba(45, 81, 120, 0.08);
-  --header-bg: rgba(244, 248, 252, 0.82);
+  --header-bg: rgba(238, 244, 250, 0.9);
 }
 
 * {
@@ -58,7 +58,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 110px;
+  scroll-padding-top: 78px;
 }
 
 body {
@@ -133,7 +133,7 @@ svg {
 
 .section {
   position: relative;
-  padding: 8rem 0;
+  padding: 6.5rem 0;
 }
 
 .section--surface::before {
@@ -693,7 +693,7 @@ svg {
   display: grid;
   grid-template-columns: 0.82fr 1.18fr;
   gap: clamp(3rem, 7vw, 7rem);
-  margin-top: 4rem;
+  margin-top: 3.25rem;
 }
 
 .about-statement__lead {
@@ -816,7 +816,7 @@ svg {
 }
 
 .timeline {
-  margin-top: 4rem;
+  margin-top: 3.25rem;
   border-top: 1px solid var(--line);
 }
 
@@ -879,7 +879,7 @@ svg {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  margin-top: 4rem;
+  margin-top: 3.25rem;
 }
 
 .tech-card {
@@ -960,7 +960,7 @@ svg {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 1rem;
-  margin-top: 4rem;
+  margin-top: 3.25rem;
 }
 
 .project-card {
@@ -1085,7 +1085,7 @@ svg {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  margin-top: 4rem;
+  margin-top: 3.25rem;
 }
 
 .education-card {
@@ -1369,7 +1369,7 @@ svg {
   }
 
   .section {
-    padding: 6rem 0;
+    padding: 5rem 0;
   }
 
   .hero {
@@ -1521,4 +1521,22 @@ svg {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
   }
+}
+
+
+:root[data-theme='light'] .section--surface::before {
+  background: linear-gradient(
+    180deg,
+    rgba(218, 230, 242, 0.5),
+    rgba(255, 255, 255, 0.72),
+    rgba(218, 230, 242, 0.34)
+  );
+}
+
+:root[data-theme='light'] .focus-card,
+:root[data-theme='light'] .tech-card,
+:root[data-theme='light'] .education-card,
+:root[data-theme='light'] .project-card,
+:root[data-theme='light'] .contact-card {
+  box-shadow: 0 18px 42px rgba(45, 81, 120, 0.1);
 }
