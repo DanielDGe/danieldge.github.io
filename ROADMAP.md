@@ -396,7 +396,8 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
 - Se aplicó un primer refinamiento visual tras revisión local:
   - mayor contraste y definición en modo claro;
   - reducción moderada del espaciado vertical entre secciones;
-  - corrección del posicionamiento al navegar desde el menú para evitar espacios superiores excesivos.
+  - corrección del posicionamiento al navegar desde el menú para evitar espacios superiores excesivos;
+  - segundo ajuste del ritmo vertical para acercar el inicio de cada sección al header sin perder respiración visual.
 - Queda pendiente la validación local visual, responsive y funcional antes de cerrar oficialmente la fase.
 - Producción continúa aislada en `gh-pages`.
 
