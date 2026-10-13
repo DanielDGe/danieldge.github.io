@@ -29,9 +29,13 @@ function Navigation({ activeSection, theme, onToggleTheme }) {
           headerHeight -
           desiredGap
 
+    const prefersReducedMotion = globalThis.matchMedia(
+      '(prefers-reduced-motion: reduce)',
+    ).matches
+
     globalThis.scrollTo({
       top: Math.max(0, top),
-      behavior: 'smooth',
+      behavior: prefersReducedMotion ? 'auto' : 'smooth',
     })
 
     globalThis.history.replaceState(null, '', '#' + id)
@@ -45,14 +49,30 @@ function Navigation({ activeSection, theme, onToggleTheme }) {
       }
     }
 
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setIsMenuOpen(false)
+      }
+    }
+
     globalThis.addEventListener('resize', handleResize)
-    return () => globalThis.removeEventListener('resize', handleResize)
+    globalThis.addEventListener('keydown', handleKeyDown)
+
+    return () => {
+      globalThis.removeEventListener('resize', handleResize)
+      globalThis.removeEventListener('keydown', handleKeyDown)
+    }
   }, [])
 
   return (
     <header className="site-header">
       <div className="site-header__inner">
-        <a className="brand" href="#inicio" aria-label="Daniel García — Inicio">
+        <a
+          className="brand"
+          href="#inicio"
+          aria-label="Daniel García — Inicio"
+          onClick={(event) => handleSectionNavigation(event, 'inicio')}
+        >
           <span className="brand__mark" aria-hidden="true">DG</span>
           <span className="brand__text">
             <strong>Daniel García</strong>
