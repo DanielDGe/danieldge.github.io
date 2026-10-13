@@ -240,7 +240,7 @@ No utilizar barras de porcentaje para representar nivel de conocimientos.
 - [x] Java 17 / Spring Boot / React / PostgreSQL.
 - [x] Mencionar Keycloak, OpenID Connect, JWT, Flyway, Docker y pruebas automatizadas cuando sea útil.
 - [x] Enlazar repositorio público.
-- [x] Mostrar captura real de la aplicación disponible en el repositorio.
+- [x] Representar visualmente la arquitectura y el flujo de seguridad del proyecto en lugar de destacar una interfaz deliberadamente sencilla.
 
 #### FleetPulse
 
@@ -264,8 +264,8 @@ No utilizar barras de porcentaje para representar nivel de conocimientos.
 
 ### Mejoras posteriores
 
-- [ ] Añadir screenshots de proyectos.
-- [ ] Añadir demos cortas / GIF cuando realmente mejoren la experiencia.
+- [ ] Evaluar screenshots o demos cortas únicamente cuando aporten valor real y exista material visual representativo.
+- [ ] Evitar incorporar recursos visuales por obligación si una representación técnica comunica mejor el proyecto.
 
 ### Criterios de cierre
 
@@ -396,14 +396,15 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
   - ASP.NET Core, Angular, MQTT, SignalR, PostGIS, Redis y arquitectura orientada a eventos;
   - el repositorio continúa privado y no se enlaza.
 - Task Manager pasó a ser un caso técnico complementario:
-  - se eliminó el protagonismo de la captura de una interfaz deliberadamente sencilla;
-  - el preview ahora representa el flujo React → Keycloak → Spring Boot → PostgreSQL;
+  - se descartó el uso de la captura como recurso principal porque su interfaz es deliberadamente sencilla;
+  - el preview representa el flujo React → Keycloak → Spring Boot → PostgreSQL;
   - autenticación Keycloak/OpenID Connect, API JWT, aislamiento multiusuario, Flyway, Docker Compose, Testcontainers y CI.
 - Portafolio Digital se actualizó como proyecto frontend/UX:
   - React, Vite, Material UI, React Router y Framer Motion;
   - navegación responsive, temas y organización de evidencias;
   - enlaces al repositorio público y al sitio en GitHub Pages;
   - preview visual propio sin reutilizar evidencias académicas.
+- Los recursos visuales de proyectos quedan sujetos a criterio de valor: se usarán screenshots o demos solo cuando representen bien el trabajo y mejoren la experiencia.
 - Se añadió el componente reutilizable `ProjectVisual` para previews de proyecto.
 - `ProjectCard` ahora muestra resumen, aportes técnicos, flujo de arquitectura, stack, estado y acciones.
 - Se rediseñó el layout: FleetPulse funciona como caso principal y Task Manager + Portafolio Digital como casos complementarios.
