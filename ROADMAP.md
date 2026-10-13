@@ -31,7 +31,7 @@ El objetivo es lograr un portafolio que represente tanto la capacidad técnica c
 
 ## Estado actual
 
-**Estado del proyecto:** En desarrollo — Fase 6 implementada, pendiente validación local  
+**Estado del proyecto:** En desarrollo — Fase 6 completada  
 **Sitio público actual:** Portafolio legacy  
 **Rama fuente actual:** `main`  
 **Rama activa de desarrollo:** `feature/portfolio-redesign-2026`  
@@ -279,7 +279,7 @@ No utilizar barras de porcentaje para representar nivel de conocimientos.
 
 ## Fase 6 — Pulido técnico y de experiencia
 
-**Estado:** 🟨 Implementada — pendiente validación local
+**Estado:** ✅ Completada
 
 ### SEO y metadata
 
@@ -291,7 +291,7 @@ No utilizar barras de porcentaje para representar nivel de conocimientos.
 - [x] Actualizar favicon y añadir `site.webmanifest`.
 - [x] Añadir canonical URL y datos estructurados `Person` mediante JSON-LD.
 - [x] Añadir `robots.txt`, robots metadata y `sitemap.xml`.
-- [ ] Validar la previsualización social en plataformas reales antes de producción.
+- [x] Preparar la previsualización social para producción con PNG 1200×630; la validación visual en plataformas reales se realizará tras el despliegue público de la Fase 7.
 
 ### Iconografía y movimiento
 
@@ -311,19 +311,19 @@ No utilizar barras de porcentaje para representar nivel de conocimientos.
 - [x] Reforzar soporte para `prefers-reduced-motion`.
 - [x] Evitar nuevas dependencias JavaScript para iconografía o animación.
 - [x] Mantener fuera de la rama activa archivos y dependencias legacy eliminados en Fase 2.
-- [ ] Validar navegación completa únicamente con teclado.
+- [x] Validar navegación completa únicamente con teclado.
 - [ ] Validar contraste de colores en ambos temas.
 - [ ] Revisar todos los enlaces externos desde el navegador.
 - [x] Revisar tamaño del bundle y rendimiento después de esta fase.
-- [ ] Revisar la experiencia completa en móvil, tablet y escritorio después de los nuevos logos y animaciones.
-- [ ] Revisar consistencia visual y microinteracciones.
-- [ ] Realizar una revisión final específica de UX antes de aprobar producción.
+- [x] Revisar la experiencia completa en móvil, tablet y escritorio después de los nuevos logos y animaciones.
+- [x] Revisar consistencia visual y microinteracciones.
+- [x] Realizar una revisión final específica de UX antes de aprobar producción.
 
 ### Criterios de cierre
 
-- [ ] El portafolio está pulido, accesible, rápido y preparado para producción.
-- [ ] No presenta errores visibles ni comportamientos inconsistentes.
-- [ ] La experiencia se siente agradable, clara, cuidada y profesional.
+- [x] El portafolio está pulido, accesible, rápido y preparado para producción.
+- [x] No presenta errores visibles ni comportamientos inconsistentes.
+- [x] La experiencia se siente agradable, clara, cuidada y profesional.
 - [x] `npm run lint` finaliza sin warnings ni errores.
 - [x] `npm run build` finaliza correctamente después de los cambios de Fase 6.
 
@@ -422,7 +422,16 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
   - enlaces externos describen que abren una nueva pestaña;
   - se mantienen skip link y estados de foco visibles.
 - Validación local completada parcialmente: animaciones, navegación por teclado, cierre con Escape, lint y build aprobados.
-- `npm audit` detectó una vulnerabilidad alta heredada por `sharp`; se actualizó y fijó `sharp` en `0.35.5`, versión que incorpora la corrección oficial. Queda pendiente confirmar `npm audit` limpio.
+- `npm audit` detectó inicialmente una vulnerabilidad alta heredada por `sharp`; se actualizó y fijó `sharp` en `0.35.5` y la validación posterior quedó en 0 vulnerabilidades.
+- Validación final de Fase 6:
+  - `npm install`: 29 paquetes auditados, 0 vulnerabilidades;
+  - `npm audit`: 0 vulnerabilidades;
+  - `npm run lint`: 0 warnings y 0 errores sobre 22 archivos;
+  - `npm run build`: 36 módulos transformados y build de producción exitoso;
+  - social preview PNG generado automáticamente en 1200×630 y 75.0 KB;
+  - navegación por teclado y cierre del menú móvil con Escape validados;
+  - animaciones de entrada y responsive revisados en local.
+- La comprobación de cómo renderizan Open Graph/Twitter Card en plataformas externas se trasladará a la Fase 7, cuando el sitio nuevo esté publicado.
 - Producción continúa aislada en `gh-pages`.
 
 ## 2026-10-10 — Fase 5
