@@ -22,7 +22,12 @@ function ContactSection() {
                 key={link.label}
                 href={link.href}
                 target={link.external ? '_blank' : undefined}
-                rel={link.external ? 'noreferrer' : undefined}
+                rel={link.external ? 'me noreferrer' : undefined}
+                aria-label={
+                  link.external
+                    ? link.label + ': ' + link.value + ' (abre en una nueva pestaña)'
+                    : link.label + ': ' + link.value
+                }
               >
                 <span className="contact-link__icon"><Icon name={link.icon} size={21} /></span>
                 <span><small>{link.label}</small><strong>{link.value}</strong></span>
