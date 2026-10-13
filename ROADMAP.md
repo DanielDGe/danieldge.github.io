@@ -31,7 +31,7 @@ El objetivo es lograr un portafolio que represente tanto la capacidad técnica c
 
 ## Estado actual
 
-**Estado del proyecto:** En desarrollo — Fase 5 completada  
+**Estado del proyecto:** En desarrollo — Fase 6 implementada, pendiente validación local  
 **Sitio público actual:** Portafolio legacy  
 **Rama fuente actual:** `main`  
 **Rama activa de desarrollo:** `feature/portfolio-redesign-2026`  
@@ -279,39 +279,52 @@ No utilizar barras de porcentaje para representar nivel de conocimientos.
 
 ## Fase 6 — Pulido técnico y de experiencia
 
-**Estado:** ⬜ Pendiente
+**Estado:** 🟨 Implementada — pendiente validación local
 
 ### SEO y metadata
 
-- [ ] Reemplazar el título genérico `Portfolio`.
-- [ ] Añadir una meta description relevante.
-- [ ] Añadir metadata Open Graph.
-- [ ] Añadir imagen social preview.
-- [ ] Actualizar favicon y metadata de la aplicación.
-- [ ] Revisar robots metadata.
+- [x] Definir título profesional `Daniel García | Software Engineer`.
+- [x] Añadir una meta description específica y relevante.
+- [x] Añadir metadata Open Graph y Twitter Card.
+- [x] Añadir imagen social preview propia en formato SVG 1200×630.
+- [x] Actualizar favicon y añadir `site.webmanifest`.
+- [x] Añadir canonical URL y datos estructurados `Person` mediante JSON-LD.
+- [x] Añadir `robots.txt`, robots metadata y `sitemap.xml`.
+- [ ] Validar la previsualización social en plataformas reales antes de producción.
+
+### Iconografía y movimiento
+
+- [x] Incorporar logos en el stack tecnológico sin añadir una dependencia pesada al bundle.
+- [x] Añadir fallback visual cuando un logo remoto no esté disponible.
+- [x] Cargar logos SVG de forma diferida con `loading="lazy"` y `decoding="async"`.
+- [x] Añadir animaciones progresivas al entrar contenido en viewport mediante `IntersectionObserver`.
+- [x] Mantener las animaciones desacopladas de los estados hover existentes.
+- [x] Desactivar movimiento no esencial cuando el sistema solicita `prefers-reduced-motion`.
 
 ### Calidad
 
-- [ ] Revisar accesibilidad.
-- [ ] Navegación completa por teclado.
-- [ ] HTML semántico.
-- [ ] Contraste de colores.
-- [ ] Soporte para `prefers-reduced-motion` cuando corresponda.
-- [ ] Optimizar imágenes y assets.
-- [ ] Revisar todos los enlaces externos.
-- [ ] Eliminar código muerto y assets obsoletos.
-- [ ] Eliminar archivos de plantilla y tests obsoletos de CRA.
-- [ ] Revisar tamaño del bundle y rendimiento.
-- [ ] Validar estados de carga, error y ausencia de contenido cuando apliquen.
-- [ ] Revisar la experiencia completa en móvil, tablet y escritorio.
+- [x] Mantener HTML semántico con `header`, `nav`, `main`, `section`, `article` y `footer`.
+- [x] Mejorar comportamiento por teclado: cierre del menú móvil con Escape y navegación sin movimiento forzado cuando se reduce animación.
+- [x] Añadir etiquetas accesibles a enlaces externos que abren una nueva pestaña.
+- [x] Mantener enlace de salto al contenido y estados `:focus-visible`.
+- [x] Reforzar soporte para `prefers-reduced-motion`.
+- [x] Evitar nuevas dependencias JavaScript para iconografía o animación.
+- [x] Mantener fuera de la rama activa archivos y dependencias legacy eliminados en Fase 2.
+- [ ] Validar navegación completa únicamente con teclado.
+- [ ] Validar contraste de colores en ambos temas.
+- [ ] Revisar todos los enlaces externos desde el navegador.
+- [ ] Revisar tamaño del bundle y rendimiento después de esta fase.
+- [ ] Revisar la experiencia completa en móvil, tablet y escritorio después de los nuevos logos y animaciones.
 - [ ] Revisar consistencia visual y microinteracciones.
 - [ ] Realizar una revisión final específica de UX antes de aprobar producción.
 
 ### Criterios de cierre
 
-- El portafolio está pulido, accesible, rápido y preparado para producción.
-- No presenta errores visibles ni comportamientos inconsistentes.
-- La experiencia se siente agradable, clara, cuidada y profesional.
+- [ ] El portafolio está pulido, accesible, rápido y preparado para producción.
+- [ ] No presenta errores visibles ni comportamientos inconsistentes.
+- [ ] La experiencia se siente agradable, clara, cuidada y profesional.
+- [ ] `npm run lint` finaliza sin warnings ni errores.
+- [ ] `npm run build` finaliza correctamente después de los cambios de Fase 6.
 
 ---
 
@@ -386,6 +399,29 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
 ---
 
 # Registro de progreso
+
+## 2026-10-13 — Fase 6
+
+- SEO y metadata:
+  - título y descripción profesional refinados;
+  - canonical URL, Open Graph, Twitter Card y JSON-LD;
+  - favicon propio, manifest, robots y sitemap;
+  - social preview vectorial 1200×630.
+- Stack tecnológico:
+  - logos Devicon cargados como SVG de forma diferida;
+  - fallback visual automático si un recurso externo falla;
+  - microinteracción sutil en hover sin añadir dependencias al bundle.
+- Movimiento:
+  - nuevo hook `useRevealOnScroll` basado en `IntersectionObserver`;
+  - entrada progresiva para encabezados, experiencia, stack, proyectos, formación y contacto;
+  - respeto explícito por `prefers-reduced-motion`.
+- Accesibilidad:
+  - menú móvil puede cerrarse con Escape;
+  - el scroll programático deja de ser suave si el usuario reduce movimiento;
+  - enlaces externos describen que abren una nueva pestaña;
+  - se mantienen skip link y estados de foco visibles.
+- La Fase 6 queda implementada y pendiente de validación local de visuales, teclado, enlaces, rendimiento, lint y build.
+- Producción continúa aislada en `gh-pages`.
 
 ## 2026-10-10 — Fase 5
 
