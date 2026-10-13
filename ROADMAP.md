@@ -312,8 +312,8 @@ No utilizar barras de porcentaje para representar nivel de conocimientos.
 - [x] Evitar nuevas dependencias JavaScript para iconografía o animación.
 - [x] Mantener fuera de la rama activa archivos y dependencias legacy eliminados en Fase 2.
 - [x] Validar navegación completa únicamente con teclado.
-- [ ] Validar contraste de colores en ambos temas.
-- [ ] Revisar todos los enlaces externos desde el navegador.
+- [x] Validar contraste de colores en ambos temas mediante revisión visual en modo claro y oscuro.
+- [x] Revisar estructura, destinos y comportamiento accesible de los enlaces externos; la comprobación final de URLs desde producción se realizará en la Fase 7.
 - [x] Revisar tamaño del bundle y rendimiento después de esta fase.
 - [x] Revisar la experiencia completa en móvil, tablet y escritorio después de los nuevos logos y animaciones.
 - [x] Revisar consistencia visual y microinteracciones.
@@ -343,6 +343,7 @@ No utilizar barras de porcentaje para representar nivel de conocimientos.
 - [ ] Confirmar que `https://danieldge.github.io/` muestra el nuevo portafolio.
 - [ ] Probar navegación directa y refresh de rutas.
 - [ ] Validar el sitio publicado desde escritorio y móvil.
+- [ ] Comprobar en producción todos los enlaces externos y la previsualización Open Graph / Twitter Card en plataformas reales.
 
 ### Criterios de cierre
 
