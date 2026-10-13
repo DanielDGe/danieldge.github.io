@@ -286,7 +286,8 @@ No utilizar barras de porcentaje para representar nivel de conocimientos.
 - [x] Definir título profesional `Daniel García | Software Engineer`.
 - [x] Añadir una meta description específica y relevante.
 - [x] Añadir metadata Open Graph y Twitter Card.
-- [x] Añadir imagen social preview propia en formato SVG 1200×630.
+- [x] Añadir imagen social preview propia en SVG 1200×630 y generar PNG compatible con redes sociales durante desarrollo y build.
+- [x] Referenciar PNG en Open Graph y Twitter Card, manteniendo SVG como fuente editable.
 - [x] Actualizar favicon y añadir `site.webmanifest`.
 - [x] Añadir canonical URL y datos estructurados `Person` mediante JSON-LD.
 - [x] Añadir `robots.txt`, robots metadata y `sitemap.xml`.
