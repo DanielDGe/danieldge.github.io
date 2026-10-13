@@ -409,6 +409,7 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
 - La Fase 4 queda oficialmente completada tras la validación local y los refinamientos de contenido realizados por Daniel.
 - Tras una segunda revisión visual se cambió la jerarquía: FleetPulse pasa a liderar la sección y Task Manager deja de apoyarse en una captura poco representativa de su fortaleza técnica.
 - Se aplicó un ajuste final de densidad y legibilidad: FleetPulse se resumió a tres aportes clave, se eliminó texto redundante y se aumentó la legibilidad de arquitectura y chips tecnológicos en todas las tarjetas.
+- Tras la validación móvil se redujo globalmente el padding vertical de las secciones en pantallas de hasta 680 px para evitar espacios excesivos entre el final de una sección y el inicio de la siguiente, manteniendo intacto el ritmo de escritorio.
 - La Fase 5 queda implementada y pendiente de validación local antes de cerrarla.
 - Producción continúa aislada en `gh-pages`.
 
