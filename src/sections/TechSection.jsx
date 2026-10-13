@@ -23,7 +23,9 @@ function TechSection() {
                 </div>
               </div>
               <div className="tech-card__items">
-                {group.items.map((item) => <TechPill key={item}>{item}</TechPill>)}
+                {group.items.map((item) => (
+                  <TechPill key={item} withLogo>{item}</TechPill>
+                ))}
               </div>
             </article>
           ))}
