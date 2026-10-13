@@ -83,21 +83,19 @@ export const projectPreview = [
     title: 'FleetPulse',
     tagline: 'Monitoreo inteligente de flotas con telemetría y actualizaciones en tiempo real.',
     description:
-      'Proyecto activo y en evolución orientado a sistemas distribuidos. Integra simulación de vehículos, mensajería MQTT, procesamiento de telemetría, actualizaciones en tiempo real y visualización operativa en un dashboard Angular.',
+      'Proyecto activo de monitoreo de flotas que combina telemetría, mensajería MQTT y actualizaciones en tiempo real sobre un dashboard Angular.',
     highlights: [
-      'Dashboard de control con métricas de flota, estado de vehículos y datos en vivo.',
-      'Mapa de flota con seguimiento, selección de vehículos y recorrido histórico.',
-      'Backend ASP.NET Core con MQTT, SignalR, PostgreSQL/TimescaleDB, PostGIS y Redis.',
-      'Arquitectura preparada para observabilidad, pruebas de integración y crecimiento incremental.',
+      'Dashboard con métricas, estado de vehículos y datos en vivo.',
+      'Mapa de flota con seguimiento y recorrido histórico.',
+      'Backend ASP.NET Core con SignalR, PostgreSQL/TimescaleDB, PostGIS y Redis.',
     ],
-    architecture: ['Vehicle simulator', 'MQTT', 'ASP.NET Core', 'SignalR', 'Angular'],
-    technologies: ['ASP.NET Core', 'Angular', 'TypeScript', 'MQTT', 'SignalR', 'PostGIS', 'Redis'],
+    architecture: ['Simulator', 'MQTT', 'ASP.NET Core', 'SignalR', 'Angular'],
+    technologies: ['ASP.NET Core', 'Angular', 'MQTT', 'SignalR', 'PostGIS', 'Redis'],
     status: 'Proyecto activo · En desarrollo',
     visual: {
       kind: 'fleet',
       label: 'Preview del dashboard de monitoreo en tiempo real de FleetPulse',
     },
-    privateNote: 'El proyecto continúa en desarrollo; se muestra su arquitectura sin publicar el repositorio privado.',
     links: [],
   },
   {
@@ -135,12 +133,11 @@ export const projectPreview = [
     title: 'Portafolio Digital',
     tagline: 'Una experiencia académica diseñada para organizar evidencias, reflexión y aprendizaje.',
     description:
-      'Aplicación web desarrollada para la asignatura Sistemas de Evaluación aplicados a la Educación Superior. Convierte documentos, actividades y evidencias en un recorrido visual organizado y accesible.',
+      'Aplicación web académica que organiza documentos, actividades y evidencias dentro de una experiencia visual responsive y accesible.',
     highlights: [
-      'React + Vite con Material UI y navegación responsive mediante React Router.',
+      'React + Vite con Material UI y navegación mediante React Router.',
       'Modo claro/oscuro persistente y transiciones con Framer Motion.',
-      'Estructura por experiencias de aprendizaje, evidencias, metacognición y referencias.',
-      'Publicación en GitHub Pages con una experiencia preparada para escritorio y móvil.',
+      'Estructura de evidencias, aprendizaje y metacognición publicada en GitHub Pages.',
     ],
     architecture: ['React', 'Material UI', 'React Router', 'GitHub Pages'],
     technologies: ['React', 'Vite', 'Material UI', 'React Router', 'Framer Motion'],
