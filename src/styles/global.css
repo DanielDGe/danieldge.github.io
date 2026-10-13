@@ -932,13 +932,55 @@ svg {
   transition:
     border-color var(--transition),
     color var(--transition),
-    background var(--transition);
+    background var(--transition),
+    transform var(--transition);
+}
+
+.tech-pill--with-logo {
+  gap: 0.48rem;
+  min-height: 36px;
+  padding: 0.42rem 0.68rem 0.42rem 0.48rem;
+  background:
+    linear-gradient(135deg, rgba(74, 203, 255, 0.045), transparent 70%),
+    var(--surface-soft);
+}
+
+.tech-logo {
+  display: grid;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 6px;
+}
+
+.tech-logo img {
+  display: block;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  transition: transform var(--transition);
+}
+
+.tech-logo--fallback {
+  border: 1px solid var(--line);
+  background: var(--surface-solid);
+  color: var(--accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.52rem;
+  font-weight: 850;
+  letter-spacing: -0.03em;
 }
 
 .tech-pill:hover {
   border-color: rgba(74, 203, 255, 0.28);
   background: var(--accent-soft);
   color: var(--text-strong);
+  transform: translateY(-1px);
+}
+
+.tech-pill--with-logo:hover .tech-logo img {
+  transform: scale(1.08);
 }
 
 .projects-heading {
@@ -2143,6 +2185,20 @@ svg {
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  .reveal-enabled .reveal-item {
+    opacity: 0;
+    translate: 0 18px;
+    transition:
+      opacity 560ms cubic-bezier(0.2, 0.8, 0.2, 1),
+      translate 560ms cubic-bezier(0.2, 0.8, 0.2, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  .reveal-enabled .reveal-item.is-visible {
+    opacity: 1;
+    translate: 0 0;
+  }
+
   .hero__content {
     animation: reveal-up 700ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
   }
@@ -2215,6 +2271,10 @@ svg {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   *,
   *::before,
   *::after {
