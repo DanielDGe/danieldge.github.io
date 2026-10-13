@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Daniel García — Software Engineer</title>
+  <desc id="desc">Portafolio profesional de Daniel García, enfocado en Java, Spring Boot, React, APIs, microservicios e integración de sistemas.</desc>
+  <defs>
+    <radialGradient id="glow1" cx="0" cy="0" r="1" gradientTransform="translate(1040 80) rotate(135) scale(430)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4ACBFF" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#4ACBFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0" cy="0" r="1" gradientTransform="translate(180 620) rotate(-45) scale(470)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7D82FF" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#7D82FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="80" y1="250" x2="980" y2="430" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4ACBFF"/>
+      <stop offset="1" stop-color="#7D82FF"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#94B4D8" stroke-opacity=".07"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#07111F"/>
+  <rect width="1200" height="630" fill="url(#glow1)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <rect x="82" y="72" width="64" height="64" rx="16" fill="#0E1D30" stroke="#4ACBFF" stroke-opacity=".55" stroke-width="2"/>
+  <text x="114" y="113" text-anchor="middle" fill="#4ACBFF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="800">DG</text>
+  <text x="166" y="102" fill="#FFFFFF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="800">Daniel García</text>
+  <text x="166" y="136" fill="#9EB0C6" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24">Software Engineer · Full-Stack Development</text>
+
+  <text x="82" y="282" fill="#FFFFFF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="64" font-weight="800">Construyo software que conecta</text>
+  <text x="82" y="362" fill="url(#accent)" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="64" font-weight="800">sistemas, datos y experiencias.</text>
+
+  <text x="84" y="438" fill="#BDC9D8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="25">Java 17 · Spring Boot · React · APIs · Microservices · Systems Integration</text>
+
+  <rect x="780" y="492" width="330" height="88" rx="18" fill="#0E1D30" stroke="#94B4D8" stroke-opacity=".18"/>
+  <text x="810" y="526" fill="#4ACBFF" font-family="ui-monospace,Consolas,monospace" font-size="21">build('reliable')</text>
+  <text x="810" y="558" fill="#5CE6B2" font-family="ui-monospace,Consolas,monospace" font-size="21">integrate('systems')</text>
+
+  <text x="84" y="570" fill="#9EB0C6" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24">danieldge.github.io</text>
+</svg>
