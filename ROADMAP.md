@@ -31,7 +31,7 @@ El objetivo es lograr un portafolio que represente tanto la capacidad técnica c
 
 ## Estado actual
 
-**Estado del proyecto:** En desarrollo — Fase 5 implementada, pendiente validación local  
+**Estado del proyecto:** En desarrollo — Fase 5 completada  
 **Sitio público actual:** Portafolio legacy  
 **Rama fuente actual:** `main`  
 **Rama activa de desarrollo:** `feature/portfolio-redesign-2026`  
@@ -230,7 +230,7 @@ No utilizar barras de porcentaje para representar nivel de conocimientos.
 
 ## Fase 5 — Proyectos destacados
 
-**Estado:** 🟨 Implementada — pendiente validación local
+**Estado:** ✅ Completada
 
 ### Proyectos prioritarios
 
@@ -269,9 +269,11 @@ No utilizar barras de porcentaje para representar nivel de conocimientos.
 
 ### Criterios de cierre
 
-- [ ] Validar en local que los proyectos destacados representan la capacidad técnica actual y no ejercicios antiguos.
-- [ ] Validar que la presentación permite entender rápidamente problema, arquitectura, tecnologías y aportes.
-- [ ] Revisar responsive, enlaces públicos y carga de la captura de Task Manager.
+- [x] Validar en local que los proyectos destacados representan la capacidad técnica actual y no ejercicios antiguos.
+- [x] Validar que la presentación permite entender rápidamente problema, arquitectura, tecnologías y aportes.
+- [x] Revisar responsive y enlaces públicos en escritorio y móvil.
+- [x] Confirmar análisis estático sin warnings ni errores.
+- [x] Confirmar build de producción exitoso.
 
 ---
 
@@ -410,7 +412,12 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
 - Tras una segunda revisión visual se cambió la jerarquía: FleetPulse pasa a liderar la sección y Task Manager deja de apoyarse en una captura poco representativa de su fortaleza técnica.
 - Se aplicó un ajuste final de densidad y legibilidad: FleetPulse se resumió a tres aportes clave, se eliminó texto redundante y se aumentó la legibilidad de arquitectura y chips tecnológicos en todas las tarjetas.
 - Tras la validación móvil se redujo globalmente el padding vertical de las secciones en pantallas de hasta 680 px para evitar espacios excesivos entre el final de una sección y el inicio de la siguiente, manteniendo intacto el ritmo de escritorio.
-- La Fase 5 queda implementada y pendiente de validación local antes de cerrarla.
+- Validación final completada:
+  - revisión visual aprobada en escritorio y móvil;
+  - ritmo vertical móvil ajustado globalmente;
+  - `npm run lint`: 0 warnings y 0 errores sobre 20 archivos;
+  - `npm run build`: 34 módulos transformados y build de producción generado correctamente con Vite 8.3.3.
+- La Fase 5 queda oficialmente completada.
 - Producción continúa aislada en `gh-pages`.
 
 ## 2026-10-10 — Fase 4
