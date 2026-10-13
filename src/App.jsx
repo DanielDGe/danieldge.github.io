@@ -1,6 +1,7 @@
 import Navigation from './components/Navigation'
 import ScrollProgress from './components/ScrollProgress'
 import useActiveSection from './hooks/useActiveSection'
+import useRevealOnScroll from './hooks/useRevealOnScroll'
 import useTheme from './hooks/useTheme'
 import AboutSection from './sections/AboutSection'
 import ContactSection from './sections/ContactSection'
@@ -24,6 +25,8 @@ const trackedSections = [
 function App() {
   const { theme, toggleTheme } = useTheme()
   const activeSection = useActiveSection(trackedSections)
+
+  useRevealOnScroll()
 
   return (
     <>
