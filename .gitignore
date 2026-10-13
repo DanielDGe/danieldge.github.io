@@ -28,3 +28,6 @@ coverage/
 
 # Vite
 .vite/
+
+# Imagen social generada automáticamente desde SVG
+/public/social-preview.png
