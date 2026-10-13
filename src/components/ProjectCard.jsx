@@ -55,6 +55,7 @@ function ProjectCard({ project }) {
                   href={link.href}
                   target="_blank"
                   rel="noreferrer"
+                  aria-label={link.label + ' de ' + project.title + ' (abre en una nueva pestaña)'}
                 >
                   <Icon name={link.icon} size={16} />
                   {link.label}
