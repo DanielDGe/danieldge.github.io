@@ -314,7 +314,7 @@ No utilizar barras de porcentaje para representar nivel de conocimientos.
 - [ ] Validar navegación completa únicamente con teclado.
 - [ ] Validar contraste de colores en ambos temas.
 - [ ] Revisar todos los enlaces externos desde el navegador.
-- [ ] Revisar tamaño del bundle y rendimiento después de esta fase.
+- [x] Revisar tamaño del bundle y rendimiento después de esta fase.
 - [ ] Revisar la experiencia completa en móvil, tablet y escritorio después de los nuevos logos y animaciones.
 - [ ] Revisar consistencia visual y microinteracciones.
 - [ ] Realizar una revisión final específica de UX antes de aprobar producción.
@@ -324,8 +324,8 @@ No utilizar barras de porcentaje para representar nivel de conocimientos.
 - [ ] El portafolio está pulido, accesible, rápido y preparado para producción.
 - [ ] No presenta errores visibles ni comportamientos inconsistentes.
 - [ ] La experiencia se siente agradable, clara, cuidada y profesional.
-- [ ] `npm run lint` finaliza sin warnings ni errores.
-- [ ] `npm run build` finaliza correctamente después de los cambios de Fase 6.
+- [x] `npm run lint` finaliza sin warnings ni errores.
+- [x] `npm run build` finaliza correctamente después de los cambios de Fase 6.
 
 ---
 
@@ -421,7 +421,8 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
   - el scroll programático deja de ser suave si el usuario reduce movimiento;
   - enlaces externos describen que abren una nueva pestaña;
   - se mantienen skip link y estados de foco visibles.
-- La Fase 6 queda implementada y pendiente de validación local de visuales, teclado, enlaces, rendimiento, lint y build.
+- Validación local completada parcialmente: animaciones, navegación por teclado, cierre con Escape, lint y build aprobados.
+- `npm audit` detectó una vulnerabilidad alta heredada por `sharp`; se actualizó y fijó `sharp` en `0.35.5`, versión que incorpora la corrección oficial. Queda pendiente confirmar `npm audit` limpio.
 - Producción continúa aislada en `gh-pages`.
 
 ## 2026-10-10 — Fase 5
