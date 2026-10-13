@@ -1072,15 +1072,25 @@ svg {
   letter-spacing: -0.05em;
 }
 
+.project-card--fleetpulse .project-card__body {
+  gap: 1.15rem;
+}
+
 .project-card--fleetpulse .project-card__body h3 {
   font-size: clamp(2.2rem, 3.4vw, 3.2rem);
+}
+
+.project-card--task-manager .project-card__body,
+.project-card--portfolio-education .project-card__body {
+  gap: 1.2rem;
 }
 
 .project-card__description {
   max-width: 680px;
   margin: 0.85rem 0 0;
   color: var(--muted);
-  line-height: 1.7;
+  font-size: 0.82rem;
+  line-height: 1.65;
 }
 
 .project-card__highlights {
@@ -1095,7 +1105,7 @@ svg {
   position: relative;
   padding-left: 1.15rem;
   color: var(--muted-strong);
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   line-height: 1.55;
 }
 
@@ -1128,8 +1138,9 @@ svg {
   gap: 0.42rem;
   color: var(--muted-strong);
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 0.62rem;
+  font-size: 0.66rem;
   font-weight: 700;
+  line-height: 1.4;
 }
 
 .project-card__architecture span:not(:last-child)::after {
@@ -1139,6 +1150,13 @@ svg {
 
 .project-card__technologies {
   margin-top: auto;
+  gap: 0.58rem;
+}
+
+.project-card__technologies .tech-pill {
+  padding: 0.48rem 0.68rem;
+  font-size: 0.72rem;
+  line-height: 1.2;
 }
 
 .project-card__private-note {
@@ -2099,6 +2117,15 @@ svg {
 
   .project-card__architecture {
     align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .project-card__architecture span {
+    font-size: 0.68rem;
+  }
+
+  .project-card__technologies .tech-pill {
+    font-size: 0.74rem;
   }
 
   .education-grid {
