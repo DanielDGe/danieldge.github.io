@@ -163,26 +163,31 @@ export const projectPreview = [
 
 export const educationPreview = [
   {
-    level: 'Grado',
+    level: 'Técnico + Grado',
     title: 'Licenciatura en Desarrollo de Software',
+    icon: 'code',
+    path: 'Trayectoria previa: Técnico en Desarrollo de Software',
     description:
-      'Universidad Tecnológica de Panamá. Formación base en análisis, diseño, programación y construcción de soluciones de software.',
+      'Universidad Tecnológica de Panamá. Formación progresiva en análisis, diseño, programación y construcción de soluciones de software.',
   },
   {
     level: 'Docencia',
     title: 'Profesorado de Segunda Enseñanza con especialización en Desarrollo de Software',
+    icon: 'bookOpen',
     description:
       'Especialización en Desarrollo de Software, complementando la formación técnica con fundamentos pedagógicos.',
   },
   {
     level: 'Posgrado · Completado',
     title: 'Especialización y Maestría en Ingeniería de Software',
+    icon: 'layers',
     description:
       'Universidad Tecnológica de Panamá. Formación avanzada en ingeniería de software, arquitectura, análisis, calidad y diseño de soluciones.',
   },
   {
     level: 'Posgrado · En curso',
     title: 'Maestría en Docencia Superior',
+    icon: 'graduationCap',
     description:
       'ISAE Universidad. Formación orientada a la educación superior, evaluación, investigación y práctica docente universitaria.',
   },
