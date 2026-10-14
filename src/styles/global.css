@@ -254,23 +254,27 @@ svg {
 }
 
 .brand:hover .brand-mark,
-.brand:focus-visible .brand-mark {
+.brand:focus-visible .brand-mark,
+.about-statement__signature:hover .brand-mark {
   filter: drop-shadow(0 0 8px rgba(74, 203, 255, 0.24));
 }
 
 .brand:hover .brand-mark__background,
-.brand:focus-visible .brand-mark__background {
+.brand:focus-visible .brand-mark__background,
+.about-statement__signature:hover .brand-mark__background {
   fill: #10243a;
 }
 
 .brand:hover .brand-mark__border,
-.brand:focus-visible .brand-mark__border {
+.brand:focus-visible .brand-mark__border,
+.about-statement__signature:hover .brand-mark__border {
   stroke: rgba(74, 203, 255, 0.96);
   stroke-width: 2.4;
 }
 
 .brand:hover .brand-mark__code,
-.brand:focus-visible .brand-mark__code {
+.brand:focus-visible .brand-mark__code,
+.about-statement__signature:hover .brand-mark__code {
   fill: #69d5ff;
 }
 
