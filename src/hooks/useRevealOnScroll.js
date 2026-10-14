@@ -25,7 +25,7 @@ function useRevealOnScroll() {
 
     elements.forEach((element, index) => {
       element.classList.add('reveal-item')
-      element.style.setProperty('--reveal-delay', (index % 4) * 55 + 'ms')
+      element.style.setProperty('--reveal-delay', (index % 4) * 70 + 'ms')
     })
 
     globalThis.document.documentElement.classList.add('reveal-enabled')
