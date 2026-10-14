@@ -13,7 +13,7 @@ function HeroSection() {
             Software Engineer · Analista Programador
           </div>
 
-          <p className="hero__kicker">SOFTWARE ENGINEERING · BACKEND · FRONTEND · SYSTEMS INTEGRATION</p>
+          <p className="hero__kicker">BACKEND · FRONTEND · ARCHITECTURE · SYSTEMS INTEGRATION</p>
 
           <h1>
             Construyo software que conecta
