@@ -356,6 +356,10 @@ Añadir vida y profundidad al sitio sin convertir la experiencia en una demostra
 - [x] Añadir glow dinámico que sigue el cursor en las tarjetas de proyectos.
 - [x] Mantener un estado de glow centrado para interacción mediante teclado.
 - [x] Añadir señales de actividad a FleetPulse: grid en movimiento, rutas activas, marcadores flotantes, métricas e indicadores vivos.
+- [x] Añadir dibujo progresivo de la línea y puntos del timeline de experiencia.
+- [x] Añadir entrada escalonada de chips/logos tecnológicos al mostrar cada grupo del stack.
+- [x] Añadir entrada escalonada y glow ambiental dinámico al bloque de contacto.
+- [x] Añadir estado compacto del header al hacer scroll, con mayor blur y sombra sutil.
 - [x] Implementar las interacciones sin dependencias adicionales.
 - [x] Respetar `prefers-reduced-motion` y evitar parallax en dispositivos sin puntero fino.
 - [x] Validar que las animaciones se sienten sutiles y no distraen del contenido.
@@ -456,6 +460,11 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
   - tarjeta y nodos reaccionan ligeramente al movimiento del puntero en escritorio.
 - Proyectos:
   - glow radial sigue el cursor y conserva feedback mediante `:focus-within`.
+- Recorrido de página:
+  - el timeline dibuja progresivamente su rail y puntos al entrar en viewport;
+  - el stack presenta tecnologías con stagger breve por grupo;
+  - contacto incorpora glow ambiental y entrada escalonada de canales;
+  - el header adopta una variante compacta y más definida después de iniciar el scroll.
 - FleetPulse:
   - grid interno en movimiento;
   - rutas con señal visual periódica;
