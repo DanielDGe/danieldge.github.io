@@ -27,7 +27,7 @@ function TechSection() {
                   <TechPill
                     key={item}
                     withLogo
-                    style={{ '--tech-delay': `${itemIndex * 55}ms` }}
+                    style={{ '--tech-delay': `${itemIndex * 90}ms` }}
                   >
                     {item}
                   </TechPill>
