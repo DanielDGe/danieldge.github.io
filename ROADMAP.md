@@ -293,6 +293,14 @@ No utilizar barras de porcentaje para representar nivel de conocimientos.
 - [x] Añadir `robots.txt`, robots metadata y `sitemap.xml`.
 - [x] Preparar la previsualización social para producción con PNG 1200×630; la validación visual en plataformas reales se realizará tras el despliegue público de la Fase 7.
 
+### Identidad visual personal
+
+- [x] Definir un monograma DG como símbolo principal de la identidad del portafolio.
+- [x] Unificar el mismo símbolo en header, firma de perfil, favicon y social preview.
+- [x] Eliminar el favicon ambiguo basado en “D + barra” y sustituirlo por un DG inequívoco.
+- [x] Mantener una geometría simple y legible a tamaños pequeños, con azul/cian y violeta como acentos.
+- [x] Implementar el logo del sitio como componente SVG reutilizable sin añadir dependencias.
+
 ### Iconografía y movimiento
 
 - [x] Incorporar logos en el stack tecnológico sin añadir una dependencia pesada al bundle.
@@ -402,12 +410,23 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
 
 # Registro de progreso
 
+## 2026-10-14 — Identidad visual DG
+
+- Se definió un monograma DG propio como identidad visual base del portafolio.
+- El símbolo utiliza un contenedor cuadrado redondeado oscuro, borde cian y letras D/G diferenciadas mediante los acentos cian y violeta del sistema visual.
+- Se creó el componente reutilizable `BrandMark` para evitar duplicar implementaciones dentro de React.
+- Header y firma de perfil utilizan ahora el mismo componente.
+- El favicon anterior “D + barra”, visualmente ambiguo, fue reemplazado por el monograma DG.
+- El social preview utiliza la misma construcción visual del símbolo.
+- El kicker del Hero se refinó a `BACKEND · FRONTEND · ARCHITECTURE · SYSTEMS INTEGRATION`.
+- Producción continúa aislada en `gh-pages`.
+
 ## 2026-10-14 — Refinamiento de posicionamiento
 
 - Se refinó el posicionamiento profesional antes de iniciar la Fase 7.
 - Hero:
   - el kicker dejó de presentar Java 17, Spring Boot y React como definición principal del perfil;
-  - ahora prioriza Software Engineering, Backend, Frontend y Systems Integration.
+  - ahora prioriza Backend, Frontend, Architecture y Systems Integration, evitando repetir “Software Engineer” inmediatamente arriba.
 - Perfil:
   - se sustituyó “Mi stack principal hoy gira alrededor de...” por una descripción basada en experiencia transversal;
   - tecnologías concretas continúan visibles en Stack, experiencia y proyectos, donde aportan contexto sin limitar la marca personal.
