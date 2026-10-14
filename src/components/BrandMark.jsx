@@ -30,7 +30,7 @@ function BrandMark({ size = 38, className = '' }) {
         y="39"
         textAnchor="middle"
       >
-        {'<DG />'}
+        {'<DG/>'}
       </text>
     </svg>
   )
