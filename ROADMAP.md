@@ -372,6 +372,8 @@ Añadir vida y profundidad al sitio sin convertir la experiencia en una demostra
 - [x] Convertir el `<DG/>` de Perfil en enlace real a Inicio, con navegación suave, cursor de enlace y soporte de teclado; el nombre y cargo permanecen como texto.
 - [x] Sustituir el `background-clip: text` multilínea del Hero por colores progresivos por palabra para evitar artefactos de clipping/reflow en Chromium y distintos niveles de zoom.
 - [x] Suavizar el `::selection` específico del título para que una selección parcial no parezca un recorte visual.
+- [x] Reforzar visualmente Formación con iconografía propia por tarjeta sin añadir dependencias.
+- [x] Integrar el Técnico en Desarrollo de Software como etapa previa dentro de la tarjeta de Licenciatura, preservando el layout 2×2.
 - [x] Implementar las interacciones sin dependencias adicionales.
 - [x] Respetar `prefers-reduced-motion` y evitar parallax en dispositivos sin puntero fino.
 - [ ] Validar que las animaciones se sienten sutiles y no distraen del contenido.
@@ -493,6 +495,10 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
   - el cambio de tema utiliza View Transitions cuando el navegador lo soporta y un fallback CSS cuando no;
   - el logo `<DG/>` incorpora glow y refuerzo de borde discretos en hover/focus;
   - el titular degradado dejó de depender de `background-clip: text` sobre un span multilínea y ahora conserva la progresión cromática mediante palabras coloreadas de forma estable.
+- Formación final:
+  - las cuatro tarjetas incorporan iconografía semántica propia;
+  - el número 01–04 pasa a ser un detalle secundario;
+  - el Técnico en Desarrollo de Software queda visible como trayectoria previa dentro de la Licenciatura sin crear una quinta tarjeta.
 - Primera validación local confirmó funcionamiento del Hero, proyectos y móvil. Se detectó que timeline, stack, contacto y transiciones generales requerían mayor sutileza; se redujo la distancia de desplazamiento, se aumentaron duraciones y stagger y se adoptó un easing más progresivo. Queda pendiente validar este refinamiento, además de `npm run lint` y `npm run build`.
 - Producción continúa aislada en `gh-pages`.
 
