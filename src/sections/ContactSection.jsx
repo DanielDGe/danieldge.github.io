@@ -20,7 +20,7 @@ function ContactSection() {
               <a
                 className="contact-link"
                 key={link.label}
-                style={{ '--contact-delay': `${index * 90}ms` }}
+                style={{ '--contact-delay': `${index * 130}ms` }}
                 href={link.href}
                 target={link.external ? '_blank' : undefined}
                 rel={link.external ? 'me noreferrer' : undefined}
