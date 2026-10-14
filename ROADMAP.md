@@ -369,7 +369,7 @@ Añadir vida y profundidad al sitio sin convertir la experiencia en una demostra
 - [x] Eliminar el flash inicial de tema aplicando la preferencia guardada antes del primer paint.
 - [x] Enriquecer el cambio claro ↔ oscuro con View Transition cuando está disponible y fallback progresivo sin dependencias.
 - [x] Añadir glow/borde suave al logo `<DG/>` en hover/focus.
-- [x] Hacer que la firma DG de Perfil comparta el mismo hover visual del header sin convertirla en un control interactivo.
+- [x] Convertir el `<DG/>` de Perfil en enlace real a Inicio, con navegación suave, cursor de enlace y soporte de teclado; el nombre y cargo permanecen como texto.
 - [x] Sustituir el `background-clip: text` multilínea del Hero por colores progresivos por palabra para evitar artefactos de clipping/reflow en Chromium y distintos niveles de zoom.
 - [x] Suavizar el `::selection` específico del título para que una selección parcial no parezca un recorte visual.
 - [x] Implementar las interacciones sin dependencias adicionales.
