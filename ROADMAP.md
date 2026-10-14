@@ -31,7 +31,7 @@ El objetivo es lograr un portafolio que represente tanto la capacidad técnica c
 
 ## Estado actual
 
-**Estado del proyecto:** En desarrollo — Fase 6.5 implementada, pendiente validación local  
+**Estado del proyecto:** En desarrollo — Fase 6.5 completada  
 **Sitio público actual:** Portafolio legacy  
 **Rama fuente actual:** `main`  
 **Rama activa de desarrollo:** `feature/portfolio-redesign-2026`  
@@ -339,7 +339,7 @@ No utilizar barras de porcentaje para representar nivel de conocimientos.
 
 ## Fase 6.5 — Motion & Delight
 
-**Estado:** 🟨 Implementada — pendiente validación local
+**Estado:** ✅ Completada
 
 ### Objetivo
 
@@ -376,15 +376,15 @@ Añadir vida y profundidad al sitio sin convertir la experiencia en una demostra
 - [x] Integrar el Técnico en Desarrollo de Software dentro del párrafo de la tarjeta de Licenciatura, sin crear una quinta tarjeta ni un elemento visual independiente.
 - [x] Implementar las interacciones sin dependencias adicionales.
 - [x] Respetar `prefers-reduced-motion` y evitar parallax en dispositivos sin puntero fino.
-- [ ] Validar que las animaciones se sienten sutiles y no distraen del contenido.
+- [x] Validar que las animaciones se sienten sutiles y no distraen del contenido.
 - [x] Validar Hero y proyectos en escritorio.
 - [x] Validar que móvil mantiene una experiencia fluida y sin exceso de movimiento.
-- [ ] Confirmar nuevamente `npm run lint` y `npm run build`.
+- [x] Confirmar nuevamente `npm run lint` y `npm run build`.
 
 ### Criterios de cierre
 
 - [x] El sitio se percibe más vivo sin sacrificar claridad ni profesionalismo.
-- [ ] El movimiento aporta profundidad o feedback, no decoración gratuita.
+- [x] El movimiento aporta profundidad o feedback, no decoración gratuita.
 - [x] No existen saltos de layout ni degradación visible de rendimiento.
 - [x] La experiencia reducida mediante `prefers-reduced-motion` permanece estable.
 
@@ -499,7 +499,16 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
   - las cuatro tarjetas incorporan iconografía semántica propia;
   - el número 01–04 pasa a ser un detalle secundario;
   - el Técnico en Desarrollo de Software queda integrado naturalmente en la descripción de la Licenciatura, sin pill ni quinta tarjeta.
-- Primera validación local confirmó funcionamiento del Hero, proyectos y móvil. Se detectó que timeline, stack, contacto y transiciones generales requerían mayor sutileza; se redujo la distancia de desplazamiento, se aumentaron duraciones y stagger y se adoptó un easing más progresivo. Queda pendiente validar este refinamiento, además de `npm run lint` y `npm run build`.
+- Primera validación local confirmó funcionamiento del Hero, proyectos y móvil. Se detectó que timeline, stack, contacto y transiciones generales requerían mayor sutileza; se redujo la distancia de desplazamiento, se aumentaron duraciones y stagger y se adoptó un easing más progresivo.
+- Validación final de Fase 6.5 completada:
+  - revisión visual aprobada nuevamente en escritorio y móvil;
+  - Formación validada con iconografía, layout 2×2 en escritorio y apilado correcto en móvil;
+  - movimiento general considerado sutil, coherente y orientado a feedback;
+  - `npm run lint`: 0 warnings y 0 errores sobre 25 archivos;
+  - `npm run build`: 39 módulos transformados y build de producción exitoso con Vite 8.3.3;
+  - social preview PNG generado correctamente en 1200×630 y 73.7 KB;
+  - bundle final: CSS 45.23 kB (9.43 kB gzip) y JS 258.74 kB (79.04 kB gzip).
+- La Fase 6.5 queda oficialmente completada.
 - Producción continúa aislada en `gh-pages`.
 
 ## 2026-10-14 — Identidad visual DG
