@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { navigationItems } from '../data/foundation'
+import { scrollToSection } from '../utils/scrollToSection'
 import Icon from './Icon'
 import BrandMark from './BrandMark'
 
@@ -10,38 +11,9 @@ function Navigation({ activeSection, theme, onToggleTheme }) {
   const handleSectionNavigation = (event, id) => {
     event.preventDefault()
 
-    const target = globalThis.document.getElementById(id)
-
-    if (!target) {
-      return
+    if (scrollToSection(id)) {
+      setIsMenuOpen(false)
     }
-
-    const header = globalThis.document.querySelector('.site-header')
-    const headerHeight = header?.getBoundingClientRect().height ?? 76
-    const sectionPaddingTop =
-      Number.parseFloat(globalThis.getComputedStyle(target).paddingTop) || 0
-    const desiredGap = 18
-
-    const top =
-      id === 'inicio'
-        ? 0
-        : target.getBoundingClientRect().top +
-          globalThis.scrollY +
-          sectionPaddingTop -
-          headerHeight -
-          desiredGap
-
-    const prefersReducedMotion = globalThis.matchMedia(
-      '(prefers-reduced-motion: reduce)',
-    ).matches
-
-    globalThis.scrollTo({
-      top: Math.max(0, top),
-      behavior: prefersReducedMotion ? 'auto' : 'smooth',
-    })
-
-    globalThis.history.replaceState(null, '', '#' + id)
-    setIsMenuOpen(false)
   }
 
   useEffect(() => {
