@@ -16,10 +16,11 @@ function ContactSection() {
           />
 
           <div className="contact-links">
-            {socialLinks.map((link) => (
+            {socialLinks.map((link, index) => (
               <a
                 className="contact-link"
                 key={link.label}
+                style={{ '--contact-delay': `${index * 90}ms` }}
                 href={link.href}
                 target={link.external ? '_blank' : undefined}
                 rel={link.external ? 'me noreferrer' : undefined}
