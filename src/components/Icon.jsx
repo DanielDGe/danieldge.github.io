@@ -63,6 +63,33 @@ function Icon({ name, size = 20 }) {
         <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41" />
       </svg>
     ),
+    code: (
+      <svg {...commonProps}>
+        <path d="m8 9-4 3 4 3" />
+        <path d="m16 9 4 3-4 3" />
+        <path d="m14 5-4 14" />
+      </svg>
+    ),
+    bookOpen: (
+      <svg {...commonProps}>
+        <path d="M2.5 5.5A3.5 3.5 0 0 1 6 2h4a2 2 0 0 1 2 2v16a2.5 2.5 0 0 0-2.5-2.5H6A3.5 3.5 0 0 0 2.5 21Z" />
+        <path d="M21.5 5.5A3.5 3.5 0 0 0 18 2h-4a2 2 0 0 0-2 2v16a2.5 2.5 0 0 1 2.5-2.5H18a3.5 3.5 0 0 1 3.5 3.5Z" />
+      </svg>
+    ),
+    layers: (
+      <svg {...commonProps}>
+        <path d="m12 2 9 5-9 5-9-5 9-5Z" />
+        <path d="m3 12 9 5 9-5" />
+        <path d="m3 17 9 5 9-5" />
+      </svg>
+    ),
+    graduationCap: (
+      <svg {...commonProps}>
+        <path d="m2 10 10-5 10 5-10 5L2 10Z" />
+        <path d="M6 12.5V17c2.7 2 9.3 2 12 0v-4.5" />
+        <path d="M22 10v6" />
+      </svg>
+    ),
   }
 
   return icons[name] ?? null
