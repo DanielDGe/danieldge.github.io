@@ -469,19 +469,38 @@ svg {
   font-size: 0.84rem;
   font-weight: 750;
   transition:
-    transform var(--transition),
+    transform 320ms cubic-bezier(0.22, 1, 0.36, 1),
     border-color var(--transition),
-    background var(--transition);
+    background var(--transition),
+    box-shadow 320ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.button__icon {
+  display: inline-flex;
+  transition: transform 360ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .button:hover {
   transform: translateY(-2px);
 }
 
+.button:hover .button__icon {
+  transform: translate(3px, -3px);
+}
+
+.button:active {
+  transform: translateY(0) scale(0.98);
+  transition-duration: 90ms;
+}
+
 .button--primary {
   background: linear-gradient(120deg, var(--accent), var(--accent-2));
   color: #06101d;
   box-shadow: 0 12px 30px rgba(74, 203, 255, 0.14);
+}
+
+.button--primary:hover {
+  box-shadow: 0 16px 34px rgba(74, 203, 255, 0.2);
 }
 
 :root[data-theme='light'] .button--primary {
@@ -697,8 +716,17 @@ svg {
   font-size: 0.67rem;
   font-weight: 700;
   letter-spacing: 0.08em;
+  opacity: var(--discover-opacity, 1);
   text-transform: uppercase;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(var(--discover-shift, 0px));
+  transition:
+    color var(--transition),
+    opacity 120ms linear;
+  will-change: opacity, transform;
+}
+
+.hero__scroll:hover {
+  color: var(--text-strong);
 }
 
 .section-heading {
@@ -1002,14 +1030,17 @@ svg {
 }
 
 .tech-pill:hover {
-  border-color: rgba(74, 203, 255, 0.28);
-  background: var(--accent-soft);
+  border-color: rgba(74, 203, 255, 0.34);
+  background:
+    radial-gradient(circle at 20% 50%, rgba(74, 203, 255, 0.1), transparent 62%),
+    var(--accent-soft);
   color: var(--text-strong);
+  box-shadow: 0 6px 18px rgba(74, 203, 255, 0.06);
   transform: translateY(-1px);
 }
 
 .tech-pill--with-logo:hover .tech-logo img {
-  transform: scale(1.08);
+  transform: scale(1.1) rotate(-2deg);
 }
 
 .projects-heading {
@@ -1817,6 +1848,10 @@ svg {
   padding: 1.4rem;
 }
 
+.reveal-enabled .education-card.reveal-item {
+  transition-delay: var(--education-delay, 0ms);
+}
+
 .education-card__index {
   display: grid;
   width: 42px;
@@ -1901,6 +1936,18 @@ svg {
   border-color: var(--line-strong);
   background: var(--accent-soft);
   transform: translateY(-3px);
+}
+
+.contact-link > svg {
+  transition: transform 360ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.contact-link:hover > svg {
+  transform: translate(3px, -3px);
+}
+
+.contact-link:active {
+  transform: translateY(-1px) scale(0.99);
 }
 
 .contact-link__icon {
