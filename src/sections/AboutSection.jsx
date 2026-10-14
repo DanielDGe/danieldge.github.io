@@ -1,8 +1,14 @@
 import SectionHeading from '../components/SectionHeading'
 import BrandMark from '../components/BrandMark'
 import { focusAreas } from '../data/foundation'
+import { scrollToSection } from '../utils/scrollToSection'
 
 function AboutSection() {
+  const handleLogoNavigation = (event) => {
+    event.preventDefault()
+    scrollToSection('inicio')
+  }
+
   return (
     <section className="section section--surface" id="sobre-mi">
       <div className="content-shell">
@@ -26,7 +32,14 @@ function AboutSection() {
             </p>
 
             <div className="about-statement__signature">
-              <BrandMark size={42} />
+              <a
+                className="about-statement__logo-link"
+                href="#inicio"
+                aria-label="Volver al inicio"
+                onClick={handleLogoNavigation}
+              >
+                <BrandMark size={42} />
+              </a>
               <div>
                 <strong>Daniel García</strong>
                 <small>Software Engineer · Programmer Analyst</small>
