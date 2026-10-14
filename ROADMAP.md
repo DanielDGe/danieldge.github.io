@@ -360,9 +360,10 @@ Añadir vida y profundidad al sitio sin convertir la experiencia en una demostra
 - [x] Añadir entrada escalonada de chips/logos tecnológicos al mostrar cada grupo del stack.
 - [x] Añadir entrada escalonada y glow ambiental dinámico al bloque de contacto.
 - [x] Añadir estado compacto del header al hacer scroll, con mayor blur y sombra sutil.
+- [x] Refinamiento de timing y easing: reveal general 760 ms, timeline más pausado, stagger perceptible en stack/contacto y transiciones del header suavizadas.
 - [x] Implementar las interacciones sin dependencias adicionales.
 - [x] Respetar `prefers-reduced-motion` y evitar parallax en dispositivos sin puntero fino.
-- [x] Validar que las animaciones se sienten sutiles y no distraen del contenido.
+- [ ] Validar que las animaciones se sienten sutiles y no distraen del contenido.
 - [x] Validar Hero y proyectos en escritorio.
 - [x] Validar que móvil mantiene una experiencia fluida y sin exceso de movimiento.
 - [ ] Confirmar nuevamente `npm run lint` y `npm run build`.
@@ -370,7 +371,7 @@ Añadir vida y profundidad al sitio sin convertir la experiencia en una demostra
 ### Criterios de cierre
 
 - [x] El sitio se percibe más vivo sin sacrificar claridad ni profesionalismo.
-- [x] El movimiento aporta profundidad o feedback, no decoración gratuita.
+- [ ] El movimiento aporta profundidad o feedback, no decoración gratuita.
 - [x] No existen saltos de layout ni degradación visible de rendimiento.
 - [x] La experiencia reducida mediante `prefers-reduced-motion` permanece estable.
 
@@ -471,7 +472,7 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
   - marcadores con flotación mínima;
   - indicadores online y determinadas métricas muestran actividad sutil.
 - Todas las animaciones continúan condicionadas por `prefers-reduced-motion`; el parallax también exige puntero fino.
-- Validación local visual completada: Hero con parallax, secuencia de `software.system`, glow interactivo en proyectos y experiencia móvil fluida confirmados. Quedan pendientes únicamente `npm run lint` y `npm run build`.
+- Primera validación local confirmó funcionamiento del Hero, proyectos y móvil. Se detectó que timeline, stack, contacto y transiciones generales requerían mayor sutileza; se redujo la distancia de desplazamiento, se aumentaron duraciones y stagger y se adoptó un easing más progresivo. Queda pendiente validar este refinamiento, además de `npm run lint` y `npm run build`.
 - Producción continúa aislada en `gh-pages`.
 
 ## 2026-10-14 — Identidad visual DG
