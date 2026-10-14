@@ -29,7 +29,6 @@ function EducationSection() {
               </div>
               <span className="education-card__level">{item.level}</span>
               <h3>{item.title}</h3>
-              {item.path ? <p className="education-card__path">{item.path}</p> : null}
               <p className="education-card__description">{item.description}</p>
             </article>
           ))}
