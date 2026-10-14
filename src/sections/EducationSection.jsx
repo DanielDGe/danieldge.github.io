@@ -13,7 +13,11 @@ function EducationSection() {
 
         <div className="education-grid">
           {educationPreview.map((item, index) => (
-            <article className="education-card" key={item.title}>
+            <article
+              className="education-card"
+              key={item.title}
+              style={{ '--education-delay': `${index * 120}ms` }}
+            >
               <div className="education-card__index">{String(index + 1).padStart(2, '0')}</div>
               <span className="education-card__level">{item.level}</span>
               <h3>{item.title}</h3>
