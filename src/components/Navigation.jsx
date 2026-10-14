@@ -5,6 +5,7 @@ import BrandMark from './BrandMark'
 
 function Navigation({ activeSection, theme, onToggleTheme }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(() => globalThis.scrollY > 40)
 
   const handleSectionNavigation = (event, id) => {
     event.preventDefault()
@@ -44,10 +45,19 @@ function Navigation({ activeSection, theme, onToggleTheme }) {
   }
 
   useEffect(() => {
+    let scrollFrame = 0
+
     const handleResize = () => {
       if (globalThis.innerWidth > 900) {
         setIsMenuOpen(false)
       }
+    }
+
+    const handleScroll = () => {
+      globalThis.cancelAnimationFrame(scrollFrame)
+      scrollFrame = globalThis.requestAnimationFrame(() => {
+        setIsScrolled(globalThis.scrollY > 40)
+      })
     }
 
     const handleKeyDown = (event) => {
@@ -57,16 +67,20 @@ function Navigation({ activeSection, theme, onToggleTheme }) {
     }
 
     globalThis.addEventListener('resize', handleResize)
+    globalThis.addEventListener('scroll', handleScroll, { passive: true })
     globalThis.addEventListener('keydown', handleKeyDown)
+    handleScroll()
 
     return () => {
+      globalThis.cancelAnimationFrame(scrollFrame)
       globalThis.removeEventListener('resize', handleResize)
+      globalThis.removeEventListener('scroll', handleScroll)
       globalThis.removeEventListener('keydown', handleKeyDown)
     }
   }, [])
 
   return (
-    <header className="site-header">
+    <header className={'site-header' + (isScrolled ? ' site-header--scrolled' : '')}>
       <div className="site-header__inner">
         <a
           className="brand"
