@@ -1,6 +1,7 @@
 import Navigation from './components/Navigation'
 import ScrollProgress from './components/ScrollProgress'
 import useActiveSection from './hooks/useActiveSection'
+import useMotionDelight from './hooks/useMotionDelight'
 import useRevealOnScroll from './hooks/useRevealOnScroll'
 import useTheme from './hooks/useTheme'
 import AboutSection from './sections/AboutSection'
@@ -27,6 +28,7 @@ function App() {
   const activeSection = useActiveSection(trackedSections)
 
   useRevealOnScroll()
+  useMotionDelight()
 
   return (
     <>
