@@ -31,7 +31,7 @@ El objetivo es lograr un portafolio que represente tanto la capacidad técnica c
 
 ## Estado actual
 
-**Estado del proyecto:** En desarrollo — Fase 6 completada  
+**Estado del proyecto:** En desarrollo — Fase 6.5 implementada, pendiente validación local  
 **Sitio público actual:** Portafolio legacy  
 **Rama fuente actual:** `main`  
 **Rama activa de desarrollo:** `feature/portfolio-redesign-2026`  
@@ -337,6 +337,41 @@ No utilizar barras de porcentaje para representar nivel de conocimientos.
 
 ---
 
+## Fase 6.5 — Motion & Delight
+
+**Estado:** 🟨 Implementada — pendiente validación local
+
+### Objetivo
+
+Añadir vida y profundidad al sitio sin convertir la experiencia en una demostración excesiva de animaciones. El movimiento debe reforzar jerarquía, interacción y sensación de producto cuidado.
+
+### Tareas
+
+- [x] Añadir movimiento ambiental lento a los halos del Hero.
+- [x] Animar sutilmente el grid y halo de la visual del Hero.
+- [x] Añadir una secuencia progresiva de inicialización a las líneas de la tarjeta `software.system`.
+- [x] Añadir pulso sutil a indicadores de estado.
+- [x] Evolucionar la flotación existente de los nodos API / EVENTS / UX.
+- [x] Añadir parallax ligero controlado por puntero únicamente en dispositivos con puntero fino.
+- [x] Añadir glow dinámico que sigue el cursor en las tarjetas de proyectos.
+- [x] Mantener un estado de glow centrado para interacción mediante teclado.
+- [x] Añadir señales de actividad a FleetPulse: grid en movimiento, rutas activas, marcadores flotantes, métricas e indicadores vivos.
+- [x] Implementar las interacciones sin dependencias adicionales.
+- [x] Respetar `prefers-reduced-motion` y evitar parallax en dispositivos sin puntero fino.
+- [ ] Validar que las animaciones se sienten sutiles y no distraen del contenido.
+- [ ] Validar Hero y proyectos en escritorio.
+- [ ] Validar que móvil mantiene una experiencia fluida y sin exceso de movimiento.
+- [ ] Confirmar nuevamente `npm run lint` y `npm run build`.
+
+### Criterios de cierre
+
+- [ ] El sitio se percibe más vivo sin sacrificar claridad ni profesionalismo.
+- [ ] El movimiento aporta profundidad o feedback, no decoración gratuita.
+- [ ] No existen saltos de layout ni degradación visible de rendimiento.
+- [ ] La experiencia reducida mediante `prefers-reduced-motion` permanece estable.
+
+---
+
 ## Fase 7 — Modernización del despliegue en GitHub Pages
 
 **Estado:** ⬜ Pendiente
@@ -409,6 +444,26 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
 ---
 
 # Registro de progreso
+
+## 2026-10-14 — Fase 6.5 · Motion & Delight
+
+- Se añadió `useMotionDelight` para interacciones de puntero sin dependencias externas.
+- Hero:
+  - halos ambientales con desplazamiento lento;
+  - grid con deriva sutil y halo respirando;
+  - líneas de `software.system` aparecen secuencialmente como inicialización;
+  - estado saludable y otros indicadores incorporan pulso discreto;
+  - tarjeta y nodos reaccionan ligeramente al movimiento del puntero en escritorio.
+- Proyectos:
+  - glow radial sigue el cursor y conserva feedback mediante `:focus-within`.
+- FleetPulse:
+  - grid interno en movimiento;
+  - rutas con señal visual periódica;
+  - marcadores con flotación mínima;
+  - indicadores online y determinadas métricas muestran actividad sutil.
+- Todas las animaciones continúan condicionadas por `prefers-reduced-motion`; el parallax también exige puntero fino.
+- Queda pendiente validación local visual, responsive, lint y build.
+- Producción continúa aislada en `gh-pages`.
 
 ## 2026-10-14 — Identidad visual DG
 
