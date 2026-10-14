@@ -402,6 +402,22 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
 
 # Registro de progreso
 
+## 2026-10-14 — Refinamiento de posicionamiento
+
+- Se refinó el posicionamiento profesional antes de iniciar la Fase 7.
+- Hero:
+  - el kicker dejó de presentar Java 17, Spring Boot y React como definición principal del perfil;
+  - ahora prioriza Software Engineering, Backend, Frontend y Systems Integration.
+- Perfil:
+  - se sustituyó “Mi stack principal hoy gira alrededor de...” por una descripción basada en experiencia transversal;
+  - tecnologías concretas continúan visibles en Stack, experiencia y proyectos, donde aportan contexto sin limitar la marca personal.
+- Social preview y metadata:
+  - se reemplazó la enumeración de tecnologías por Backend, Frontend, APIs, Architecture y Systems Integration;
+  - description, Open Graph, Twitter Card y JSON-LD se alinearon con el nuevo posicionamiento.
+- No se modificó el diseño visual ni la estructura del sitio; el cambio es exclusivamente de narrativa profesional y metadata.
+- Producción continúa aislada en `gh-pages`.
+
+
 ## 2026-10-13 — Fase 6
 
 - SEO y metadata:
@@ -472,7 +488,7 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
 ## 2026-10-10 — Fase 4
 
 - Se sustituyó el contenido provisional por el perfil profesional actualizado de 2026.
-- Hero actualizado para reflejar el perfil de Software Engineer / Analista Programador y el stack principal Java 17, Spring Boot y React.
+- Hero actualizado para reflejar el perfil de Software Engineer / Analista Programador con un posicionamiento basado en capacidades: backend, frontend, arquitectura e integración de sistemas.
 - Perfil actualizado con enfoque en backend, frontend, microservicios, APIs, RabbitMQ, Keycloak, bases de datos, Docker, arquitectura e integración de sistemas.
 - Experiencia profesional actualizada con:
   - ZTECH SOLUTIONS | Grupo ZM S.A. — Analista Programador, junio de 2024 a la actualidad.
