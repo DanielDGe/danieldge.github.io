@@ -23,8 +23,14 @@ function TechSection() {
                 </div>
               </div>
               <div className="tech-card__items">
-                {group.items.map((item) => (
-                  <TechPill key={item} withLogo>{item}</TechPill>
+                {group.items.map((item, itemIndex) => (
+                  <TechPill
+                    key={item}
+                    withLogo
+                    style={{ '--tech-delay': `${itemIndex * 55}ms` }}
+                  >
+                    {item}
+                  </TechPill>
                 ))}
               </div>
             </article>
