@@ -362,7 +362,7 @@ Añadir vida y profundidad al sitio sin convertir la experiencia en una demostra
 - [x] Añadir estado compacto del header al hacer scroll, con mayor blur y sombra sutil.
 - [x] Añadir stagger específico a las tarjetas de Formación para mantener continuidad con Stack y Contacto.
 - [x] Añadir microinteracción de flecha, elevación y presión a botones principales y enlaces de contacto.
-- [x] Hacer que el indicador “Descubrir” permanezca visible al inicio y desaparezca progresivamente al avanzar dentro del Hero.
+- [x] Mantener “Descubrir” visible durante la mayor parte del Hero y desvanecerlo únicamente entre ~70% y ~95% del recorrido.
 - [x] Unificar la navegación interna de menú, CTAs del Hero y “Descubrir” mediante un único cálculo de scroll y offset.
 - [x] Refinar el hover de tecnologías con glow mínimo y respuesta más orgánica del logo.
 - [x] Refinamiento de timing y easing: reveal general 760 ms, timeline más pausado, stagger perceptible en stack/contacto y transiciones del header suavizadas.
@@ -472,7 +472,7 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
   - contacto incorpora glow ambiental y entrada escalonada de canales;
   - Formación incorpora stagger propio para las cuatro tarjetas;
   - los botones principales y enlaces de contacto responden con movimiento direccional y presión;
-  - “Descubrir” permanece visible al inicio y se desvanece de forma proporcional a la altura real del Hero;
+  - “Descubrir” permanece visible durante casi todo el Hero y solo se desvanece cerca de la transición hacia Perfil;
   - el header adopta una variante compacta y más definida después de iniciar el scroll.
 - FleetPulse:
   - grid interno en movimiento;
@@ -480,7 +480,7 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
   - marcadores con flotación mínima;
   - indicadores online y determinadas métricas muestran actividad sutil.
 - Todas las animaciones continúan condicionadas por `prefers-reduced-motion`; el parallax exige puntero fino y “Descubrir” usa un ocultamiento sin desplazamiento cuando el usuario reduce movimiento.
-- Se corrigió el fade de “Descubrir”: dejó de depender de un umbral fijo de 180 px y ahora calcula su visibilidad según la altura real del Hero, evitando que desaparezca demasiado pronto.
+- Se corrigió el fade de “Descubrir”: dejó de depender de un umbral fijo y ahora se mantiene completamente visible hasta ~70% del Hero, desvaneciéndose suavemente hasta ~95% para evitar un vacío visual prematuro.
 - Navegación interna unificada: menú, `Explorar proyectos`, `Conocer mi perfil` y `Descubrir` reutilizan el mismo helper de scroll, por lo que aterrizan con el mismo offset visual.
 - Primera validación local confirmó funcionamiento del Hero, proyectos y móvil. Se detectó que timeline, stack, contacto y transiciones generales requerían mayor sutileza; se redujo la distancia de desplazamiento, se aumentaron duraciones y stagger y se adoptó un easing más progresivo. Queda pendiente validar este refinamiento, además de `npm run lint` y `npm run build`.
 - Producción continúa aislada en `gh-pages`.
