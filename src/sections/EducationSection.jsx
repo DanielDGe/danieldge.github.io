@@ -1,4 +1,5 @@
 import SectionHeading from '../components/SectionHeading'
+import Icon from '../components/Icon'
 import { educationPreview } from '../data/foundation'
 
 function EducationSection() {
@@ -18,10 +19,18 @@ function EducationSection() {
               key={item.title}
               style={{ '--education-delay': `${index * 120}ms` }}
             >
-              <div className="education-card__index">{String(index + 1).padStart(2, '0')}</div>
+              <div className="education-card__top">
+                <span className="education-card__icon" aria-hidden="true">
+                  <Icon name={item.icon} size={22} />
+                </span>
+                <span className="education-card__index">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+              </div>
               <span className="education-card__level">{item.level}</span>
               <h3>{item.title}</h3>
-              <p>{item.description}</p>
+              {item.path ? <p className="education-card__path">{item.path}</p> : null}
+              <p className="education-card__description">{item.description}</p>
             </article>
           ))}
         </div>
