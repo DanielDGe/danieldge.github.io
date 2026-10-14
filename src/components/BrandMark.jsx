@@ -25,18 +25,12 @@ function BrandMark({ size = 38, className = '' }) {
         rx="16"
       />
       <text
-        className="brand-mark__letter brand-mark__letter--d"
-        x="13"
-        y="40"
+        className="brand-mark__code"
+        x="32"
+        y="39"
+        textAnchor="middle"
       >
-        D
-      </text>
-      <text
-        className="brand-mark__letter brand-mark__letter--g"
-        x="34"
-        y="40"
-      >
-        G
+        {'<DG />'}
       </text>
     </svg>
   )
