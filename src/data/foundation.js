@@ -163,12 +163,11 @@ export const projectPreview = [
 
 export const educationPreview = [
   {
-    level: 'Técnico + Grado',
+    level: 'Grado',
     title: 'Licenciatura en Desarrollo de Software',
     icon: 'code',
-    path: 'Trayectoria previa: Técnico en Desarrollo de Software',
     description:
-      'Universidad Tecnológica de Panamá. Formación progresiva en análisis, diseño, programación y construcción de soluciones de software.',
+      'Universidad Tecnológica de Panamá. Antes de la Licenciatura completé el Técnico en Desarrollo de Software, consolidando una formación progresiva en análisis, diseño, programación y construcción de soluciones de software.',
   },
   {
     level: 'Docencia',
