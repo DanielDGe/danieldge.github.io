@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { navigationItems } from '../data/foundation'
 import Icon from './Icon'
+import BrandMark from './BrandMark'
 
 function Navigation({ activeSection, theme, onToggleTheme }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -73,7 +74,7 @@ function Navigation({ activeSection, theme, onToggleTheme }) {
           aria-label="Daniel García — Inicio"
           onClick={(event) => handleSectionNavigation(event, 'inicio')}
         >
-          <span className="brand__mark" aria-hidden="true">DG</span>
+          <BrandMark size={38} />
           <span className="brand__text">
             <strong>Daniel García</strong>
             <small>Software Engineer</small>
