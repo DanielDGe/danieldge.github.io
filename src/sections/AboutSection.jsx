@@ -1,4 +1,5 @@
 import SectionHeading from '../components/SectionHeading'
+import BrandMark from '../components/BrandMark'
 import { focusAreas } from '../data/foundation'
 
 function AboutSection() {
@@ -25,7 +26,7 @@ function AboutSection() {
             </p>
 
             <div className="about-statement__signature">
-              <span aria-hidden="true">DG</span>
+              <BrandMark size={42} />
               <div>
                 <strong>Daniel García</strong>
                 <small>Software Engineer · Programmer Analyst</small>
