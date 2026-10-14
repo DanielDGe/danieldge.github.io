@@ -13,7 +13,11 @@ function ExperienceSection() {
 
         <div className="timeline">
           {experiencePreview.map((experience, index) => (
-            <article className="timeline-item" key={experience.eyebrow}>
+            <article
+              className="timeline-item"
+              key={experience.eyebrow}
+              style={{ '--timeline-delay': `${index * 90}ms` }}
+            >
               <div className="timeline-item__rail" aria-hidden="true">
                 <span>{String(index + 1).padStart(2, '0')}</span>
                 <i />
