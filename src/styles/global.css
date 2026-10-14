@@ -255,26 +255,26 @@ svg {
 
 .brand:hover .brand-mark,
 .brand:focus-visible .brand-mark,
-.about-statement__signature:hover .brand-mark {
+.about-statement__logo-link:hover .brand-mark {
   filter: drop-shadow(0 0 8px rgba(74, 203, 255, 0.24));
 }
 
 .brand:hover .brand-mark__background,
 .brand:focus-visible .brand-mark__background,
-.about-statement__signature:hover .brand-mark__background {
+.about-statement__logo-link:hover .brand-mark__background {
   fill: #10243a;
 }
 
 .brand:hover .brand-mark__border,
 .brand:focus-visible .brand-mark__border,
-.about-statement__signature:hover .brand-mark__border {
+.about-statement__logo-link:hover .brand-mark__border {
   stroke: rgba(74, 203, 255, 0.96);
   stroke-width: 2.4;
 }
 
 .brand:hover .brand-mark__code,
 .brand:focus-visible .brand-mark__code,
-.about-statement__signature:hover .brand-mark__code {
+.about-statement__logo-link:hover .brand-mark__code {
   fill: #69d5ff;
 }
 
@@ -836,9 +836,36 @@ svg {
   margin-top: 2rem;
 }
 
-.about-statement__signature .brand-mark {
+.about-statement__logo-link {
+  display: inline-flex;
+  border-radius: 13px;
+}
+
+.about-statement__logo-link .brand-mark {
   width: 42px;
   height: 42px;
+}
+
+.about-statement__logo-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.about-statement__logo-link:focus-visible .brand-mark {
+  filter: drop-shadow(0 0 8px rgba(74, 203, 255, 0.24));
+}
+
+.about-statement__logo-link:focus-visible .brand-mark__background {
+  fill: #10243a;
+}
+
+.about-statement__logo-link:focus-visible .brand-mark__border {
+  stroke: rgba(74, 203, 255, 0.96);
+  stroke-width: 2.4;
+}
+
+.about-statement__logo-link:focus-visible .brand-mark__code {
+  fill: #69d5ff;
 }
 
 .about-statement__signature div {
