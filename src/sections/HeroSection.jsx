@@ -23,7 +23,13 @@ function HeroSection() {
 
           <h1>
             Construyo software que conecta
-            <span> sistemas, datos y experiencias.</span>
+            <span className="hero__headline-accent">
+              {' '}
+              <span className="hero__headline-word hero__headline-word--one">sistemas,</span>{' '}
+              <span className="hero__headline-word hero__headline-word--two">datos</span>{' '}
+              <span className="hero__headline-word hero__headline-word--three">y</span>{' '}
+              <span className="hero__headline-word hero__headline-word--four">experiencias.</span>
+            </span>
           </h1>
 
           <p className="hero__description">
