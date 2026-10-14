@@ -5,35 +5,52 @@ function useMotionDelight() {
     const reducedMotion = globalThis.matchMedia('(prefers-reduced-motion: reduce)')
     const finePointer = globalThis.matchMedia('(pointer: fine)')
     const heroScroll = globalThis.document.querySelector('.hero__scroll')
+    const heroSection = globalThis.document.querySelector('.hero')
     const cleanup = []
     let scrollFrame = 0
     let heroFrame = 0
 
-    if (heroScroll) {
+    if (heroScroll && heroSection) {
       const updateDiscover = () => {
         globalThis.cancelAnimationFrame(scrollFrame)
         scrollFrame = globalThis.requestAnimationFrame(() => {
+          const heroHeight = Math.max(heroSection.getBoundingClientRect().height, 1)
+          const heroTop = heroSection.offsetTop
+          const scrollInsideHero = Math.min(
+            Math.max(globalThis.scrollY - heroTop, 0),
+            heroHeight,
+          )
+
           if (reducedMotion.matches) {
-            const hidden = globalThis.scrollY > 80
+            const hidden = scrollInsideHero > heroHeight * 0.58
             heroScroll.style.setProperty('--discover-opacity', hidden ? '0' : '1')
             heroScroll.style.setProperty('--discover-shift', '0px')
             heroScroll.style.pointerEvents = hidden ? 'none' : ''
             return
           }
 
-          const progress = Math.min(Math.max(globalThis.scrollY / 180, 0), 1)
+          const fadeStart = Math.min(Math.max(heroHeight * 0.12, 90), 140)
+          const fadeEnd = Math.max(fadeStart + 220, heroHeight * 0.62)
+          const linearProgress = Math.min(
+            Math.max((scrollInsideHero - fadeStart) / (fadeEnd - fadeStart), 0),
+            1,
+          )
+          const progress = linearProgress * linearProgress * (3 - 2 * linearProgress)
+
           heroScroll.style.setProperty('--discover-opacity', (1 - progress).toFixed(3))
-          heroScroll.style.setProperty('--discover-shift', (progress * 10).toFixed(2) + 'px')
-          heroScroll.style.pointerEvents = progress > 0.85 ? 'none' : ''
+          heroScroll.style.setProperty('--discover-shift', (progress * 8).toFixed(2) + 'px')
+          heroScroll.style.pointerEvents = progress > 0.92 ? 'none' : ''
         })
       }
 
       globalThis.addEventListener('scroll', updateDiscover, { passive: true })
+      globalThis.addEventListener('resize', updateDiscover)
       updateDiscover()
 
       cleanup.push(() => {
         globalThis.cancelAnimationFrame(scrollFrame)
         globalThis.removeEventListener('scroll', updateDiscover)
+        globalThis.removeEventListener('resize', updateDiscover)
         heroScroll.style.removeProperty('--discover-opacity')
         heroScroll.style.removeProperty('--discover-shift')
         heroScroll.style.pointerEvents = ''
