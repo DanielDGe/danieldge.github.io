@@ -29,8 +29,8 @@ function useMotionDelight() {
             return
           }
 
-          const fadeStart = Math.min(Math.max(heroHeight * 0.12, 90), 140)
-          const fadeEnd = Math.max(fadeStart + 220, heroHeight * 0.62)
+          const fadeStart = heroHeight * 0.7
+          const fadeEnd = heroHeight * 0.95
           const linearProgress = Math.min(
             Math.max((scrollInsideHero - fadeStart) / (fadeEnd - fadeStart), 0),
             1,
@@ -38,8 +38,8 @@ function useMotionDelight() {
           const progress = linearProgress * linearProgress * (3 - 2 * linearProgress)
 
           heroScroll.style.setProperty('--discover-opacity', (1 - progress).toFixed(3))
-          heroScroll.style.setProperty('--discover-shift', (progress * 8).toFixed(2) + 'px')
-          heroScroll.style.pointerEvents = progress > 0.92 ? 'none' : ''
+          heroScroll.style.setProperty('--discover-shift', (progress * 6).toFixed(2) + 'px')
+          heroScroll.style.pointerEvents = progress > 0.96 ? 'none' : ''
         })
       }
 
