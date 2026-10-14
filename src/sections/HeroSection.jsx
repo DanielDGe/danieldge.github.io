@@ -29,7 +29,9 @@ function HeroSection() {
           <div className="hero__actions">
             <a className="button button--primary" href="#proyectos">
               Explorar proyectos
-              <Icon name="arrowUpRight" size={18} />
+              <span className="button__icon" aria-hidden="true">
+                <Icon name="arrowUpRight" size={18} />
+              </span>
             </a>
             <a className="button button--ghost" href="#sobre-mi">
               Conocer mi perfil
