@@ -5,8 +5,8 @@ function BrandMark({ size = 38, className = '' }) {
       width={size}
       height={size}
       viewBox="0 0 64 64"
-      role="img"
-      aria-label="Monograma DG de Daniel García"
+      aria-hidden="true"
+      focusable="false"
     >
       <rect
         className="brand-mark__background"
