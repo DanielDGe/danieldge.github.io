@@ -13,7 +13,7 @@ function HeroSection() {
             Software Engineer · Analista Programador
           </div>
 
-          <p className="hero__kicker">JAVA 17 · SPRING BOOT · REACT · SYSTEMS INTEGRATION</p>
+          <p className="hero__kicker">SOFTWARE ENGINEERING · BACKEND · FRONTEND · SYSTEMS INTEGRATION</p>
 
           <h1>
             Construyo software que conecta
