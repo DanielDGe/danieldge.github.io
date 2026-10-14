@@ -178,9 +178,9 @@ svg {
   background: var(--header-bg);
   backdrop-filter: blur(20px);
   transition:
-    background 220ms ease,
-    box-shadow 220ms ease,
-    backdrop-filter 220ms ease;
+    background 340ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 340ms cubic-bezier(0.22, 1, 0.36, 1),
+    backdrop-filter 340ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .site-header--scrolled {
@@ -206,7 +206,7 @@ svg {
   margin-inline: auto;
   align-items: center;
   gap: 2rem;
-  transition: min-height 220ms ease;
+  transition: min-height 340ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .site-header--scrolled .site-header__inner {
@@ -574,7 +574,7 @@ svg {
     translate3d(var(--hero-shift-x, 0px), var(--hero-shift-y, 0px), 0)
     rotateY(calc(-5deg + var(--hero-tilt-y, 0deg)))
     rotateX(calc(2deg + var(--hero-tilt-x, 0deg)));
-  transition: transform 180ms ease-out;
+  transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .system-card__header,
@@ -665,7 +665,7 @@ svg {
   background: var(--surface-solid);
   box-shadow: var(--shadow-soft);
   transition:
-    translate 180ms ease-out,
+    translate 220ms cubic-bezier(0.22, 1, 0.36, 1),
     border-color var(--transition),
     box-shadow var(--transition);
 }
@@ -2251,10 +2251,10 @@ svg {
 @media (prefers-reduced-motion: no-preference) {
   .reveal-enabled .reveal-item {
     opacity: 0;
-    translate: 0 18px;
+    translate: 0 12px;
     transition:
-      opacity 560ms cubic-bezier(0.2, 0.8, 0.2, 1),
-      translate 560ms cubic-bezier(0.2, 0.8, 0.2, 1);
+      opacity 760ms cubic-bezier(0.22, 1, 0.36, 1),
+      translate 760ms cubic-bezier(0.22, 1, 0.36, 1);
     transition-delay: var(--reveal-delay, 0ms);
   }
 
@@ -2558,37 +2558,37 @@ svg {
   }
 
   .reveal-enabled .timeline-item.reveal-item.is-visible .timeline-item__rail > span {
-    animation: timeline-dot-in 420ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-    animation-delay: calc(120ms + var(--timeline-delay, 0ms));
+    animation: timeline-dot-in 560ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: calc(160ms + var(--timeline-delay, 0ms));
   }
 
   .reveal-enabled .timeline-item.reveal-item.is-visible .timeline-item__rail i {
-    animation: timeline-line-draw 760ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-    animation-delay: calc(220ms + var(--timeline-delay, 0ms));
+    animation: timeline-line-draw 1150ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: calc(280ms + var(--timeline-delay, 0ms));
   }
 
   .reveal-enabled .tech-card.reveal-item .tech-pill {
     opacity: 0;
-    transform: translateY(8px) scale(0.96);
+    transform: translateY(6px) scale(0.98);
   }
 
   .reveal-enabled .tech-card.reveal-item.is-visible .tech-pill {
-    animation: tech-pill-in 460ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-    animation-delay: calc(150ms + var(--tech-delay, 0ms));
+    animation: tech-pill-in 640ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: calc(200ms + var(--tech-delay, 0ms));
   }
 
   .reveal-enabled .contact-card.reveal-item .contact-link {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(8px);
   }
 
   .reveal-enabled .contact-card.reveal-item.is-visible .contact-link {
-    animation: contact-link-in 520ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-    animation-delay: calc(180ms + var(--contact-delay, 0ms));
+    animation: contact-link-in 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: calc(220ms + var(--contact-delay, 0ms));
   }
 
   .contact-card__ambient {
-    animation: contact-ambient-drift 10s ease-in-out infinite alternate;
+    animation: contact-ambient-drift 16s ease-in-out infinite alternate;
   }
 
   .contact-card:hover .contact-card__ambient,
@@ -2625,7 +2625,7 @@ svg {
 @keyframes tech-pill-in {
   from {
     opacity: 0;
-    transform: translateY(8px) scale(0.96);
+    transform: translateY(6px) scale(0.98);
   }
 
   to {
@@ -2637,7 +2637,7 @@ svg {
 @keyframes contact-link-in {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(8px);
   }
 
   to {
