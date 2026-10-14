@@ -358,17 +358,17 @@ Añadir vida y profundidad al sitio sin convertir la experiencia en una demostra
 - [x] Añadir señales de actividad a FleetPulse: grid en movimiento, rutas activas, marcadores flotantes, métricas e indicadores vivos.
 - [x] Implementar las interacciones sin dependencias adicionales.
 - [x] Respetar `prefers-reduced-motion` y evitar parallax en dispositivos sin puntero fino.
-- [ ] Validar que las animaciones se sienten sutiles y no distraen del contenido.
-- [ ] Validar Hero y proyectos en escritorio.
-- [ ] Validar que móvil mantiene una experiencia fluida y sin exceso de movimiento.
+- [x] Validar que las animaciones se sienten sutiles y no distraen del contenido.
+- [x] Validar Hero y proyectos en escritorio.
+- [x] Validar que móvil mantiene una experiencia fluida y sin exceso de movimiento.
 - [ ] Confirmar nuevamente `npm run lint` y `npm run build`.
 
 ### Criterios de cierre
 
-- [ ] El sitio se percibe más vivo sin sacrificar claridad ni profesionalismo.
-- [ ] El movimiento aporta profundidad o feedback, no decoración gratuita.
-- [ ] No existen saltos de layout ni degradación visible de rendimiento.
-- [ ] La experiencia reducida mediante `prefers-reduced-motion` permanece estable.
+- [x] El sitio se percibe más vivo sin sacrificar claridad ni profesionalismo.
+- [x] El movimiento aporta profundidad o feedback, no decoración gratuita.
+- [x] No existen saltos de layout ni degradación visible de rendimiento.
+- [x] La experiencia reducida mediante `prefers-reduced-motion` permanece estable.
 
 ---
 
@@ -462,7 +462,7 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
   - marcadores con flotación mínima;
   - indicadores online y determinadas métricas muestran actividad sutil.
 - Todas las animaciones continúan condicionadas por `prefers-reduced-motion`; el parallax también exige puntero fino.
-- Queda pendiente validación local visual, responsive, lint y build.
+- Validación local visual completada: Hero con parallax, secuencia de `software.system`, glow interactivo en proyectos y experiencia móvil fluida confirmados. Quedan pendientes únicamente `npm run lint` y `npm run build`.
 - Producción continúa aislada en `gh-pages`.
 
 ## 2026-10-14 — Identidad visual DG
