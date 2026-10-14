@@ -298,7 +298,7 @@ No utilizar barras de porcentaje para representar nivel de conocimientos.
 - [x] Definir un monograma DG como símbolo principal de la identidad del portafolio.
 - [x] Unificar el mismo símbolo en header, firma de perfil, favicon y social preview.
 - [x] Eliminar el favicon ambiguo basado en “D + barra” y sustituirlo por un DG inequívoco.
-- [x] Mantener una geometría simple y legible a tamaños pequeños, con azul/cian y violeta como acentos.
+- [x] Mantener una geometría simple y legible con identidad monocromática cian sobre fondo azul oscuro.
 - [x] Implementar el logo del sitio como componente SVG reutilizable sin añadir dependencias.
 
 ### Iconografía y movimiento
@@ -412,12 +412,12 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
 
 ## 2026-10-14 — Identidad visual DG
 
-- Se definió un monograma DG propio como identidad visual base del portafolio.
-- El símbolo utiliza un contenedor cuadrado redondeado oscuro, borde cian y letras D/G diferenciadas mediante los acentos cian y violeta del sistema visual.
+- Se definió una firma visual `<DG />` como identidad principal del portafolio, manteniendo `DG` como variante reducida para favicon.
+- El símbolo utiliza un contenedor cuadrado redondeado oscuro, borde cian y la firma monoespaciada `<DG />` en cian, sin introducir un segundo color dentro del logo.
 - Se creó el componente reutilizable `BrandMark` para evitar duplicar implementaciones dentro de React.
-- Header y firma de perfil utilizan ahora el mismo componente.
-- El favicon anterior “D + barra”, visualmente ambiguo, fue reemplazado por el monograma DG.
-- El social preview utiliza la misma construcción visual del símbolo.
+- Header y firma de perfil utilizan ahora el mismo componente `<DG />`; el favicon conserva una variante `DG` simplificada para asegurar legibilidad a 16–32 px.
+- El favicon anterior “D + barra”, visualmente ambiguo, fue reemplazado por una variante `DG` monocromática coherente con la identidad principal.
+- El social preview utiliza la firma `<DG />` monocromática del sistema de identidad.
 - El kicker del Hero se refinó a `BACKEND · FRONTEND · ARCHITECTURE · SYSTEMS INTEGRATION`.
 - Producción continúa aislada en `gh-pages`.
 
