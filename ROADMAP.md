@@ -412,12 +412,13 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
 
 ## 2026-10-14 — Identidad visual DG
 
-- Se definió una firma visual `<DG />` como identidad principal del portafolio, manteniendo `DG` como variante reducida para favicon.
-- El símbolo utiliza un contenedor cuadrado redondeado oscuro, borde cian y la firma monoespaciada `<DG />` en cian, sin introducir un segundo color dentro del logo.
+- Se definió una firma visual `<DG/>` como identidad principal del portafolio, manteniendo `DG` como variante reducida para favicon.
+- El símbolo utiliza un contenedor cuadrado redondeado oscuro, borde cian y la firma monoespaciada `<DG/>` en cian, sin introducir un segundo color dentro del logo.
 - Se creó el componente reutilizable `BrandMark` para evitar duplicar implementaciones dentro de React.
-- Header y firma de perfil utilizan ahora el mismo componente `<DG />`; el favicon conserva una variante `DG` simplificada para asegurar legibilidad a 16–32 px.
+- Header y firma de perfil utilizan ahora el mismo componente `<DG/>`; el favicon conserva una variante `DG` simplificada para asegurar legibilidad a 16–32 px.
 - El favicon anterior “D + barra”, visualmente ambiguo, fue reemplazado por una variante `DG` monocromática coherente con la identidad principal.
-- El social preview utiliza la firma `<DG />` monocromática del sistema de identidad.
+- El social preview utiliza la firma `<DG/>` monocromática del sistema de identidad.
+- Se eliminó el espacio interno antes de `/>` para lograr una firma más compacta y se aumentó el espaciado óptico de `DG` en el favicon.
 - El kicker del Hero se refinó a `BACKEND · FRONTEND · ARCHITECTURE · SYSTEMS INTEGRATION`.
 - Producción continúa aislada en `gh-pages`.
 
