@@ -555,7 +555,11 @@ svg {
     var(--surface);
   box-shadow: var(--shadow);
   backdrop-filter: blur(20px);
-  transform: rotateY(-5deg) rotateX(2deg);
+  transform:
+    translate3d(var(--hero-shift-x, 0px), var(--hero-shift-y, 0px), 0)
+    rotateY(calc(-5deg + var(--hero-tilt-y, 0deg)))
+    rotateX(calc(2deg + var(--hero-tilt-x, 0deg)));
+  transition: transform 180ms ease-out;
 }
 
 .system-card__header,
@@ -645,6 +649,10 @@ svg {
   border-radius: 13px;
   background: var(--surface-solid);
   box-shadow: var(--shadow-soft);
+  transition:
+    translate 180ms ease-out,
+    border-color var(--transition),
+    box-shadow var(--transition);
 }
 
 .floating-node span {
@@ -1027,6 +1035,41 @@ svg {
     transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
     border-color var(--transition),
     box-shadow var(--transition);
+}
+
+.project-card::after {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background:
+    radial-gradient(
+      260px circle at var(--glow-x, 50%) var(--glow-y, 50%),
+      rgba(74, 203, 255, 0.14),
+      transparent 68%
+    );
+  content: '';
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 240ms ease;
+}
+
+.project-card--fleetpulse::after {
+  background:
+    radial-gradient(
+      300px circle at var(--glow-x, 50%) var(--glow-y, 50%),
+      rgba(92, 230, 178, 0.13),
+      transparent 70%
+    );
+}
+
+.project-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.project-card:hover::after,
+.project-card:focus-within::after {
+  opacity: 1;
 }
 
 .project-card:hover {
@@ -2272,6 +2315,217 @@ svg {
 
   50% {
     transform: translateY(4px);
+  }
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero__ambient--one {
+    animation: ambient-drift-one 16s ease-in-out infinite alternate;
+  }
+
+  .hero__ambient--two {
+    animation: ambient-drift-two 19s ease-in-out infinite alternate;
+  }
+
+  .hero-visual__grid {
+    animation: grid-drift 18s linear infinite;
+  }
+
+  .hero-visual__halo {
+    animation: halo-breathe 6.5s ease-in-out infinite;
+  }
+
+  .system-card__content > span,
+  .system-card__content > p {
+    opacity: 0;
+    animation: system-line-in 520ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  }
+
+  .system-card__content > :nth-child(1),
+  .system-card__content > :nth-child(2) {
+    animation-delay: 520ms;
+  }
+
+  .system-card__content > :nth-child(3),
+  .system-card__content > :nth-child(4) {
+    animation-delay: 760ms;
+  }
+
+  .system-card__content > :nth-child(5),
+  .system-card__content > :nth-child(6) {
+    animation-delay: 1s;
+  }
+
+  .system-card__status {
+    opacity: 0;
+    animation: system-status-in 460ms 1.22s ease forwards;
+  }
+
+  .system-card__status i,
+  .availability__dot,
+  .fleet-dashboard__live i,
+  .fleet-dashboard__vehicle > i:not(.is-muted) {
+    animation: status-pulse 2.8s ease-out infinite;
+  }
+
+  .fleet-dashboard__map-grid {
+    animation: fleet-grid-drift 16s linear infinite;
+  }
+
+  .fleet-dashboard__route {
+    animation: fleet-route-live 3.8s ease-in-out infinite;
+  }
+
+  .fleet-dashboard__route--two {
+    animation-delay: 1.15s;
+  }
+
+  .fleet-dashboard__marker--one {
+    animation: fleet-marker-float 4.2s ease-in-out infinite;
+  }
+
+  .fleet-dashboard__marker--two {
+    animation: fleet-marker-float 4.8s 0.7s ease-in-out infinite;
+  }
+
+  .fleet-dashboard__marker--three {
+    animation: fleet-marker-float 5.1s 1.25s ease-in-out infinite;
+  }
+
+  .fleet-dashboard__metrics article:nth-child(1) {
+    animation: fleet-metric-live 6s ease-in-out infinite;
+  }
+
+  .fleet-dashboard__metrics article:nth-child(4) {
+    animation: fleet-metric-live 6s 2.2s ease-in-out infinite;
+  }
+}
+
+@keyframes ambient-drift-one {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.96);
+  }
+
+  100% {
+    transform: translate3d(-36px, 30px, 0) scale(1.08);
+  }
+}
+
+@keyframes ambient-drift-two {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  100% {
+    transform: translate3d(42px, -24px, 0) scale(1.1);
+  }
+}
+
+@keyframes grid-drift {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 32px 32px;
+  }
+}
+
+@keyframes halo-breathe {
+  0%,
+  100% {
+    opacity: 0.72;
+    scale: 0.98;
+  }
+
+  50% {
+    opacity: 1;
+    scale: 1.04;
+  }
+}
+
+@keyframes system-line-in {
+  from {
+    opacity: 0;
+    translate: 0 8px;
+    filter: blur(3px);
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+    filter: blur(0);
+  }
+}
+
+@keyframes system-status-in {
+  from {
+    opacity: 0;
+    translate: 0 5px;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes status-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(92, 230, 178, 0.2);
+  }
+
+  55% {
+    box-shadow: 0 0 0 5px rgba(92, 230, 178, 0.04);
+  }
+}
+
+@keyframes fleet-grid-drift {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 20px 20px;
+  }
+}
+
+@keyframes fleet-route-live {
+  0%,
+  100% {
+    opacity: 0.58;
+    filter: drop-shadow(0 0 0 rgba(34, 211, 166, 0));
+  }
+
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 5px rgba(34, 211, 166, 0.48));
+  }
+}
+
+@keyframes fleet-marker-float {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -4px;
+  }
+}
+
+@keyframes fleet-metric-live {
+  0%,
+  100% {
+    border-color: #1c2b3f;
+    box-shadow: none;
+  }
+
+  50% {
+    border-color: rgba(34, 211, 166, 0.28);
+    box-shadow: 0 0 18px rgba(34, 211, 166, 0.05);
   }
 }
 
