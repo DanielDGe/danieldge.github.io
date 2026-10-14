@@ -366,6 +366,11 @@ Añadir vida y profundidad al sitio sin convertir la experiencia en una demostra
 - [x] Unificar la navegación interna de menú, CTAs del Hero y “Descubrir” mediante un único cálculo de scroll y offset.
 - [x] Refinar el hover de tecnologías con glow mínimo y respuesta más orgánica del logo.
 - [x] Refinamiento de timing y easing: reveal general 760 ms, timeline más pausado, stagger perceptible en stack/contacto y transiciones del header suavizadas.
+- [x] Eliminar el flash inicial de tema aplicando la preferencia guardada antes del primer paint.
+- [x] Enriquecer el cambio claro ↔ oscuro con View Transition cuando está disponible y fallback progresivo sin dependencias.
+- [x] Añadir glow/borde suave al logo `<DG/>` en hover/focus.
+- [x] Sustituir el `background-clip: text` multilínea del Hero por colores progresivos por palabra para evitar artefactos de clipping/reflow en Chromium y distintos niveles de zoom.
+- [x] Suavizar el `::selection` específico del título para que una selección parcial no parezca un recorte visual.
 - [x] Implementar las interacciones sin dependencias adicionales.
 - [x] Respetar `prefers-reduced-motion` y evitar parallax en dispositivos sin puntero fino.
 - [ ] Validar que las animaciones se sienten sutiles y no distraen del contenido.
@@ -482,6 +487,11 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
 - Todas las animaciones continúan condicionadas por `prefers-reduced-motion`; el parallax exige puntero fino y “Descubrir” usa un ocultamiento sin desplazamiento cuando el usuario reduce movimiento.
 - Se corrigió el fade de “Descubrir”: dejó de depender de un umbral fijo y ahora se mantiene completamente visible hasta ~70% del Hero, desvaneciéndose suavemente hasta ~95% para evitar un vacío visual prematuro.
 - Navegación interna unificada: menú, `Explorar proyectos`, `Conocer mi perfil` y `Descubrir` reutilizan el mismo helper de scroll, por lo que aterrizan con el mismo offset visual.
+- Tema y renderizado final:
+  - el tema guardado se aplica desde `index.html` antes de React para evitar el flash oscuro/claro al recargar;
+  - el cambio de tema utiliza View Transitions cuando el navegador lo soporta y un fallback CSS cuando no;
+  - el logo `<DG/>` incorpora glow y refuerzo de borde discretos en hover/focus;
+  - el titular degradado dejó de depender de `background-clip: text` sobre un span multilínea y ahora conserva la progresión cromática mediante palabras coloreadas de forma estable.
 - Primera validación local confirmó funcionamiento del Hero, proyectos y móvil. Se detectó que timeline, stack, contacto y transiciones generales requerían mayor sutileza; se redujo la distancia de desplazamiento, se aumentaron duraciones y stagger y se adoptó un easing más progresivo. Queda pendiente validar este refinamiento, además de `npm run lint` y `npm run build`.
 - Producción continúa aislada en `gh-pages`.
 
