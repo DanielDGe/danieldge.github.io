@@ -721,7 +721,8 @@ svg {
   transform: translateX(-50%) translateY(var(--discover-shift, 0px));
   transition:
     color var(--transition),
-    opacity 120ms linear;
+    opacity 180ms linear,
+    transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
   will-change: opacity, transform;
 }
 
