@@ -1,6 +1,12 @@
 import Icon from '../components/Icon'
+import { scrollToSection } from '../utils/scrollToSection'
 
 function HeroSection() {
+  const handleSectionNavigation = (event, id) => {
+    event.preventDefault()
+    scrollToSection(id)
+  }
+
   return (
     <section className="hero" id="inicio">
       <div className="hero__ambient hero__ambient--one" aria-hidden="true" />
@@ -27,13 +33,13 @@ function HeroSection() {
           </p>
 
           <div className="hero__actions">
-            <a className="button button--primary" href="#proyectos">
+            <a className="button button--primary" href="#proyectos" onClick={(event) => handleSectionNavigation(event, 'proyectos')}>
               Explorar proyectos
               <span className="button__icon" aria-hidden="true">
                 <Icon name="arrowUpRight" size={18} />
               </span>
             </a>
-            <a className="button button--ghost" href="#sobre-mi">
+            <a className="button button--ghost" href="#sobre-mi" onClick={(event) => handleSectionNavigation(event, 'sobre-mi')}>
               Conocer mi perfil
             </a>
           </div>
@@ -78,7 +84,7 @@ function HeroSection() {
         </div>
       </div>
 
-      <a className="hero__scroll" href="#sobre-mi" aria-label="Ir a la siguiente sección">
+      <a className="hero__scroll" href="#sobre-mi" aria-label="Ir a la siguiente sección" onClick={(event) => handleSectionNavigation(event, 'sobre-mi')}>
         <span>Descubrir</span>
         <Icon name="chevronDown" size={17} />
       </a>
