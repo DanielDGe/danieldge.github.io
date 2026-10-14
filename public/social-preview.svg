@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">Daniel García — Software Engineer</title>
-  <desc id="desc">Portafolio profesional de Daniel García, enfocado en Java, Spring Boot, React, APIs, microservicios e integración de sistemas.</desc>
+  <desc id="desc">Portafolio profesional de Daniel García, Software Engineer enfocado en backend, frontend, arquitectura e integración de sistemas.</desc>
   <defs>
     <radialGradient id="glow1" cx="0" cy="0" r="1" gradientTransform="translate(1040 80) rotate(135) scale(430)" gradientUnits="userSpaceOnUse">
       <stop stop-color="#4ACBFF" stop-opacity=".34"/>
@@ -31,7 +31,7 @@
   <text x="82" y="282" fill="#FFFFFF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="64" font-weight="800">Construyo software que conecta</text>
   <text x="82" y="362" fill="url(#accent)" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="64" font-weight="800">sistemas, datos y experiencias.</text>
 
-  <text x="84" y="438" fill="#BDC9D8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="25">Java 17 · Spring Boot · React · APIs · Microservices · Systems Integration</text>
+  <text x="84" y="438" fill="#BDC9D8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="25">Backend · Frontend · APIs · Architecture · Systems Integration</text>
 
   <rect x="780" y="492" width="330" height="88" rx="18" fill="#0E1D30" stroke="#94B4D8" stroke-opacity=".18"/>
   <text x="810" y="526" fill="#4ACBFF" font-family="ui-monospace,Consolas,monospace" font-size="21">build('reliable')</text>
