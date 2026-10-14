@@ -14,13 +14,13 @@ function AboutSection() {
         <div className="about-layout">
           <div className="about-statement">
             <p className="about-statement__lead">
-              Mi stack principal hoy gira alrededor de Java 17, Spring Boot y React.
+              Mi experiencia combina backend, frontend e integración de sistemas.
             </p>
             <p>
-              He participado en APIs REST, microservicios, mensajería con RabbitMQ,
-              autenticación y autorización con Keycloak, bases de datos relacionales y
-              despliegues con Docker. Me interesa seguir creciendo en arquitectura de
-              aplicaciones e integración de sistemas, sin perder de vista la experiencia
+              He trabajado en APIs REST, microservicios, aplicaciones web, mensajería,
+              seguridad, bases de datos relacionales y entornos contenerizados. Me interesa
+              seguir creciendo en arquitectura de aplicaciones e integración de sistemas,
+              manteniendo el foco en la calidad técnica, la mantenibilidad y la experiencia
               final del usuario.
             </p>
 
