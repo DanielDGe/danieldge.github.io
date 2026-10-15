@@ -31,18 +31,18 @@ El objetivo es lograr un portafolio que represente tanto la capacidad técnica c
 
 ## Estado actual
 
-**Estado del proyecto:** En desarrollo — Fase 6.5 completada  
-**Sitio público actual:** Portafolio legacy  
+**Estado del proyecto:** En producción — Fase 7 prácticamente completada  
+**Sitio público actual:** Nuevo portafolio 2026  
 **Rama fuente actual:** `main`  
-**Rama activa de desarrollo:** `feature/portfolio-redesign-2026`  
+**Rama activa de desarrollo:** `main`  
 **Rama de respaldo legacy:** `legacy-portfolio-2022`  
-**Rama de despliegue actual:** `gh-pages`  
+**Despliegue actual:** GitHub Actions + GitHub Pages  
 **Stack objetivo:** React + Vite  
-**Despliegue objetivo:** GitHub Actions + GitHub Pages
+**Despliegue objetivo:** ✅ GitHub Actions + GitHub Pages
 
-El portafolio actual fue creado originalmente con Create React App y desplegado mediante el paquete npm `gh-pages`.
+El portafolio legacy fue creado originalmente con Create React App y desplegado mediante el paquete npm `gh-pages`.
 
-El rediseño conservará el repositorio y la URL pública actuales, pero reemplazará la implementación legacy por una versión moderna.
+El rediseño 2026 ya reemplazó la implementación legacy en producción, conservando el repositorio y la URL pública.
 
 ---
 
@@ -260,7 +260,7 @@ No utilizar barras de porcentaje para representar nivel de conocimientos.
 
 #### Portafolio profesional
 
-- [ ] El nuevo portafolio podrá presentarse como proyecto propio una vez publicado.
+- [x] El nuevo portafolio ya está publicado y puede presentarse como proyecto propio.
 
 ### Mejoras posteriores
 
@@ -392,7 +392,7 @@ Añadir vida y profundidad al sitio sin convertir la experiencia en una demostra
 
 ## Fase 7 — Modernización del despliegue en GitHub Pages
 
-**Estado:** 🟨 En desarrollo — workflow preparado en rama feature
+**Estado:** 🟨 Publicada — pendiente validación final de enlaces y social preview
 
 ### Tareas
 
@@ -401,20 +401,20 @@ Añadir vida y profundidad al sitio sin convertir la experiencia en una demostra
 - [x] Evitar despliegues desde pull requests; únicamente `main` o ejecución manual pueden publicar.
 - [x] Preparar artefacto de Pages desde `dist/` usando las acciones oficiales de GitHub Pages.
 - [x] Mantener `base: '/'` en Vite por tratarse del sitio de usuario `danieldge.github.io`.
-- [ ] Configurar GitHub Pages para desplegar mediante Actions.
-- [ ] Validar el artefacto de producción.
-- [ ] Integrar el rediseño aprobado en `main`.
-- [ ] Cambiar GitHub Pages al nuevo sistema de despliegue mediante Actions.
-- [ ] Confirmar que `https://danieldge.github.io/` muestra el nuevo portafolio.
-- [ ] Probar navegación directa y refresh de rutas.
-- [ ] Validar el sitio publicado desde escritorio y móvil.
+- [x] Configurar GitHub Pages para desplegar mediante Actions.
+- [x] Validar el artefacto de producción.
+- [x] Integrar el rediseño aprobado en `main`.
+- [x] Cambiar GitHub Pages al nuevo sistema de despliegue mediante Actions.
+- [x] Confirmar que `https://danieldge.github.io/` muestra el nuevo portafolio.
+- [x] Probar navegación directa y refresh de rutas.
+- [x] Validar el sitio publicado desde escritorio y móvil.
 - [ ] Comprobar en producción todos los enlaces externos y la previsualización Open Graph / Twitter Card en plataformas reales.
 
 ### Criterios de cierre
 
-- Cada actualización aprobada de `main` puede desplegarse automáticamente.
-- La URL pública permanece igual.
-- El nuevo portafolio está publicado y estable.
+- [x] Cada actualización aprobada de `main` puede desplegarse automáticamente.
+- [x] La URL pública permanece igual.
+- [x] El nuevo portafolio está publicado y estable.
 
 ---
 
@@ -466,6 +466,24 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
 ---
 
 # Registro de progreso
+
+## 2026-10-15 — Fase 7 · Publicación en producción
+
+- GitHub Pages quedó configurado con `Source: GitHub Actions`.
+- El PR #1 `feat: publish portfolio redesign 2026` pasó la validación automática y fue integrado correctamente en `main`.
+- El workflow de producción completó con éxito:
+  - checkout;
+  - Node.js 22;
+  - `npm ci`;
+  - `npm run lint`;
+  - `npm run build`;
+  - configuración de GitHub Pages;
+  - carga del artefacto `dist/`;
+  - despliegue a GitHub Pages.
+- El nuevo portafolio quedó publicado en `https://danieldge.github.io/`.
+- La validación manual en producción fue confirmada en escritorio y móvil, incluyendo refresh directo.
+- La rama `main` pasa a ser la fuente activa del portafolio publicado.
+- Queda pendiente únicamente comprobar todos los enlaces externos desde producción y validar la previsualización Open Graph / Twitter Card en plataformas reales antes de cerrar formalmente la Fase 7.
 
 ## 2026-10-15 — Fase 7 · Preparación de despliegue
 
