@@ -486,7 +486,7 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
   - `npm run build`: 39 módulos transformados y build exitoso con Vite 8.3.3;
   - social preview PNG generado en 1200×630 y 73.7 KB.
 - Producción sigue intacta: no se modificaron `main`, `gh-pages` ni la configuración actual de GitHub Pages.
-- Antes de integrar se detectó que `feature/portfolio-redesign-2026` está 170 commits por delante y 1 commit por detrás de `main`; la diferencia exclusiva de `main` afecta únicamente `ROADMAP.md` y deberá reconciliarse al integrar.
+- La historia se reconcilió con `main` antes del PR. El único commit exclusivo de `main` era documentación de Fase 1 ya contenida y superada por el roadmap actual; se preservó el contenido más reciente de la feature.
 
 ## 2026-10-14 — Fase 6.5 · Motion & Delight
 
