@@ -392,11 +392,15 @@ Añadir vida y profundidad al sitio sin convertir la experiencia en una demostra
 
 ## Fase 7 — Modernización del despliegue en GitHub Pages
 
-**Estado:** ⬜ Pendiente
+**Estado:** 🟨 En desarrollo — workflow preparado en rama feature
 
 ### Tareas
 
-- [ ] Añadir workflow de GitHub Actions para el build de Vite.
+- [x] Añadir workflow de GitHub Actions para validar y construir Vite.
+- [x] Validar `lint` y build en CI antes de cualquier despliegue.
+- [x] Evitar despliegues desde pull requests; únicamente `main` o ejecución manual pueden publicar.
+- [x] Preparar artefacto de Pages desde `dist/` usando las acciones oficiales de GitHub Pages.
+- [x] Mantener `base: '/'` en Vite por tratarse del sitio de usuario `danieldge.github.io`.
 - [ ] Configurar GitHub Pages para desplegar mediante Actions.
 - [ ] Validar el artefacto de producción.
 - [ ] Integrar el rediseño aprobado en `main`.
@@ -462,6 +466,23 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
 ---
 
 # Registro de progreso
+
+## 2026-10-15 — Fase 7 · Preparación de despliegue
+
+- Se añadió `.github/workflows/deploy-pages.yml`.
+- El workflow:
+  - se ejecuta en pushes a `main`, pull requests hacia `main` y manualmente mediante `workflow_dispatch`;
+  - usa Node.js 22, compatible con el requisito actual del proyecto;
+  - instala dependencias, ejecuta `npm run lint` y genera el build de producción antes de publicar;
+  - los pull requests solo validan y nunca despliegan;
+  - para despliegue configura GitHub Pages, sube `dist/` como artefacto y publica mediante `actions/deploy-pages`;
+  - limita los permisos de escritura de Pages e ID token al job de despliegue;
+  - usa concurrencia exclusiva para evitar despliegues simultáneos.
+- Las acciones de GitHub se fijaron a commits de las versiones recomendadas actualmente por la guía oficial de Vite/GitHub Pages.
+- `vite.config.js` conserva `base: '/'`, correcto para `https://danieldge.github.io/`.
+- El repositorio no tiene `package-lock.json` versionado en la rama feature; por ello el workflow utiliza `npm install` en lugar de `npm ci` para no fallar antes de la publicación.
+- Producción sigue intacta: no se modificaron `main`, `gh-pages` ni la configuración actual de GitHub Pages.
+- Antes de integrar se detectó que `feature/portfolio-redesign-2026` está 170 commits por delante y 1 commit por detrás de `main`; la diferencia exclusiva de `main` afecta únicamente `ROADMAP.md` y deberá reconciliarse al integrar.
 
 ## 2026-10-14 — Fase 6.5 · Motion & Delight
 
