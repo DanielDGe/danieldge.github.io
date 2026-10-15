@@ -1,0 +1,44 @@
+import SectionHeading from '../components/SectionHeading'
+import TechPill from '../components/TechPill'
+import { techGroups } from '../data/foundation'
+
+function TechSection() {
+  return (
+    <section className="section section--surface" id="tecnologias">
+      <div className="content-shell">
+        <SectionHeading
+          eyebrow="03 · STACK"
+          title="Herramientas elegidas por lo que permiten construir."
+          description="Stack tecnológico con el que construyo, integro y mantengo soluciones de software."
+        />
+
+        <div className="tech-grid">
+          {techGroups.map((group, index) => (
+            <article className="tech-card" key={group.title}>
+              <div className="tech-card__header">
+                <span>{String(index + 1).padStart(2, '0')}</span>
+                <div>
+                  <h3>{group.title}</h3>
+                  <p>{group.description}</p>
+                </div>
+              </div>
+              <div className="tech-card__items">
+                {group.items.map((item, itemIndex) => (
+                  <TechPill
+                    key={item}
+                    withLogo
+                    style={{ '--tech-delay': `${itemIndex * 90}ms` }}
+                  >
+                    {item}
+                  </TechPill>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default TechSection

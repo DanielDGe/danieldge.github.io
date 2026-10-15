@@ -1,0 +1,17 @@
+{
+  "name": "Daniel García — Software Engineer",
+  "short_name": "Daniel García",
+  "description": "Portafolio profesional de Daniel García, Software Engineer y Analista Programador.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07111f",
+  "theme_color": "#07111f",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

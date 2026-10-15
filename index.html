@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <script>
+      (() => {
+        const storageKey = 'daniel-portfolio-theme'
+        let theme
+
+        try {
+          const savedTheme = localStorage.getItem(storageKey)
+          theme =
+            savedTheme === 'light' || savedTheme === 'dark'
+              ? savedTheme
+              : matchMedia('(prefers-color-scheme: light)').matches
+                ? 'light'
+                : 'dark'
+        } catch {
+          theme = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
+        }
+
+        document.documentElement.dataset.theme = theme
+        document.documentElement.style.colorScheme = theme
+      })()
+    </script>
+    <meta
+      name="description"
+      content="Portafolio profesional de Daniel García, Software Engineer y Analista Programador con experiencia en backend, frontend, APIs, arquitectura e integración de sistemas."
+    />
+    <meta
+      name="keywords"
+      content="Daniel García, Software Engineer, Analista Programador, desarrollo backend, desarrollo frontend, APIs REST, arquitectura de software, microservicios, integración de sistemas, Panamá"
+    />
+    <meta name="author" content="Daniel García" />
+    <meta name="robots" content="index, follow" />
+
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#07111f" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#eef4fa" />
+
+    <link rel="canonical" href="https://danieldge.github.io/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_PA" />
+    <meta property="og:site_name" content="Daniel García · Software Engineer" />
+    <meta property="og:title" content="Daniel García | Software Engineer" />
+    <meta
+      property="og:description"
+      content="Software Engineer con experiencia en backend, frontend, APIs, arquitectura e integración de sistemas."
+    />
+    <meta property="og:url" content="https://danieldge.github.io/" />
+    <meta property="og:image" content="https://danieldge.github.io/social-preview.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Daniel García — Software Engineer" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Daniel García | Software Engineer" />
+    <meta
+      name="twitter:description"
+      content="Backend · Frontend · APIs · Architecture · Systems Integration"
+    />
+    <meta name="twitter:image" content="https://danieldge.github.io/social-preview.png" />
+
+    <title>Daniel García | Software Engineer</title>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Daniel García",
+        "url": "https://danieldge.github.io/",
+        "sameAs": [
+          "https://github.com/DanielDGe",
+          "https://www.linkedin.com/in/danielgarcia-dev"
+        ],
+        "jobTitle": "Software Engineer · Analista Programador",
+        "knowsAbout": [
+          "Backend Development",
+          "Frontend Development",
+          "REST APIs",
+          "Microservices",
+          "Software Architecture",
+          "Systems Integration",
+          "Event-Driven Systems",
+          "Application Security",
+          "Relational Databases",
+          "Containerization"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
