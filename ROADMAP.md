@@ -480,7 +480,11 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
   - usa concurrencia exclusiva para evitar despliegues simultáneos.
 - Las acciones de GitHub se fijaron a commits de las versiones recomendadas actualmente por la guía oficial de Vite/GitHub Pages.
 - `vite.config.js` conserva `base: '/'`, correcto para `https://danieldge.github.io/`.
-- El repositorio no tiene `package-lock.json` versionado en la rama feature; por ello el workflow utiliza `npm install` en lugar de `npm ci` para no fallar antes de la publicación.
+- `package-lock.json` quedó versionado en la rama feature; el workflow usa `npm ci` y caché de npm para instalaciones reproducibles y más rápidas.
+- Validación local del workflow preparado:
+  - `npm run lint`: 0 warnings y 0 errores sobre 25 archivos;
+  - `npm run build`: 39 módulos transformados y build exitoso con Vite 8.3.3;
+  - social preview PNG generado en 1200×630 y 73.7 KB.
 - Producción sigue intacta: no se modificaron `main`, `gh-pages` ni la configuración actual de GitHub Pages.
 - Antes de integrar se detectó que `feature/portfolio-redesign-2026` está 170 commits por delante y 1 commit por detrás de `main`; la diferencia exclusiva de `main` afecta únicamente `ROADMAP.md` y deberá reconciliarse al integrar.
 
