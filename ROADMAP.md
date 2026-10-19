@@ -420,7 +420,7 @@ Añadir vida y profundidad al sitio sin convertir la experiencia en una demostra
 
 ## Fase 8 — Limpieza legacy y documentación
 
-**Estado:** 🟨 Integrada en `main` — pendientes referencias externas y rama legacy
+**Estado:** 🟨 Integrada en `main` — solo pendiente eliminación de `gh-pages`
 
 ### Tareas
 
@@ -432,7 +432,7 @@ Añadir vida y profundidad al sitio sin convertir la experiencia en una demostra
 - [x] Documentar desarrollo local, CI/CD, validaciones de producción y recuperación en `docs/DEPLOYMENT.md`.
 - [x] Limitar los despliegues manuales de GitHub Actions exclusivamente a `main`.
 - [x] Eliminar el marcador vacío `src/assets/.gitkeep`, sin uso en la versión actual.
-- [ ] Comprobar que los perfiles públicos de GitHub y LinkedIn apuntan a `https://danieldge.github.io/`.
+- [x] Comprobar que los perfiles públicos de GitHub y LinkedIn apuntan a `https://danieldge.github.io/` (confirmación del propietario).
 - [x] Validar en local `npm ci`, `npm run lint`, `npm run build` y el inicio de `npm run preview`; confirmar el CI del PR #2.
 - [x] Confirmar la revisión visual del sitio servido por `npm run preview` antes de integrar el PR.
 
@@ -441,7 +441,8 @@ Añadir vida y profundidad al sitio sin convertir la experiencia en una demostra
 - [x] La base activa está libre de dependencias y scripts de despliegue legacy.
 - [x] El respaldo histórico `legacy-portfolio-2022` continúa disponible.
 - [x] El flujo y la recuperación del despliegue están documentados.
-- [ ] Las referencias de perfiles y la decisión final sobre `gh-pages` están resueltas.
+- [x] Los enlaces de los perfiles de GitHub y LinkedIn están validados y se aprobó retirar `gh-pages`.
+- [ ] Confirmar la eliminación efectiva de `gh-pages`, conservando `legacy-portfolio-2022`.
 - [x] La integración en `main` está aprobada y el pipeline de build posterior al merge terminó correctamente.
 
 ---
@@ -466,6 +467,7 @@ Se mantienen como criterios constantes la correctitud técnica, la calidad visua
 
 ## 2026-10-19 — Fase 8 · Limpieza y documentación
 
+- Verificación final: enlaces desde GitHub y LinkedIn confirmados por el propietario. Solicitó la eliminación de `gh-pages`; la rama todavía existe y no se marcará eliminada hasta comprobarlo en remoto.
 - El portafolio 2026 ya está publicado desde `main`; la validación de escritorio, móvil, enlaces externos, WhatsApp y LinkedIn se completó en Fase 7.
 - Se confirmó que los despliegues de GitHub Actions desde `main` habían finalizado correctamente.
 - Se verificó que `legacy-portfolio-2022` conserva el respaldo en `b0d5d942313296d7dd78cfff292c3ca458d92d6c` y que `gh-pages` continúa presente sin participar del despliegue.
@@ -484,7 +486,8 @@ Se mantienen como criterios constantes la correctitud técnica, la calidad visua
 - El usuario confirmó que el sitio se ve correctamente en el navegador con `npm run preview`.
 - Los enlaces públicos del portafolio ya habían sido validados en Fase 7; sigue pendiente verificar si los perfiles personales de GitHub y LinkedIn incluyen enlaces de regreso a la web.
 - El PR #2 fue integrado a `main` (commit `bb197d97c3e02f0295a59cf5415ee3ab22a927e8`). No se ha eliminado la rama `gh-pages`.
-- Pendientes de cierre: verificar referencias al sitio en los perfiles personales de GitHub y LinkedIn y decidir si retirar o conservar archivada la rama `gh-pages`.
+- El propietario confirmó que ambos perfiles enlazan bien a la web y autorizó eliminar la rama antigua `gh-pages`.
+- Eliminación aún pendiente de ejecución; `legacy-portfolio-2022` debe permanecer como respaldo.
 
 ## 2026-10-15 — Fase 7 · Publicación en producción
 
