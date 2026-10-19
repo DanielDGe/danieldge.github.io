@@ -433,7 +433,8 @@ Añadir vida y profundidad al sitio sin convertir la experiencia en una demostra
 - [x] Limitar los despliegues manuales de GitHub Actions exclusivamente a `main`.
 - [x] Eliminar el marcador vacío `src/assets/.gitkeep`, sin uso en la versión actual.
 - [ ] Comprobar que los perfiles públicos de GitHub y LinkedIn apuntan a `https://danieldge.github.io/`.
-- [ ] Validar en local `npm ci`, `npm run lint`, `npm run build` y `npm run preview`; revisar el PR de Fase 8 antes de integrarlo.
+- [x] Validar en local `npm ci`, `npm run lint`, `npm run build` y el inicio de `npm run preview`; confirmar el CI del PR #2.
+- [ ] Confirmar la revisión visual del sitio servido por `npm run preview` antes de integrar el PR.
 
 ### Criterios de cierre
 
@@ -472,8 +473,15 @@ Se mantienen como criterios constantes la correctitud técnica, la calidad visua
 - El workflow ahora impide desplegar manualmente desde una rama distinta de `main`; en las demás ramas permite validaciones sin publicar.
 - Se eliminó un único archivo marcador vacío de `src/assets`.
 - No se detectaron dependencias ni scripts legacy de CRA/`gh-pages` en `package.json` ni en el árbol activo.
-- Cambios preparados en `chore/phase-8-cleanup-docs` para validación local antes del PR y del merge.
-- Pendientes de cierre: verificar referencias al sitio en perfiles GitHub y LinkedIn, decidir el retiro de la rama `gh-pages` y aprobar la integración.
+- Cambios preparados en `chore/phase-8-cleanup-docs` y PR #2 abierto en borrador.
+- Validación local del 19/10 confirmada por el usuario:
+  - `npm ci`: 28 paquetes instalados, 29 auditados, 0 vulnerabilidades;
+  - `npm run lint`: 0 errores, 0 warnings, 25 archivos;
+  - `npm run build`: Vite 8.3.3, 39 módulos, completado en 399 ms;
+  - `npm run preview`: servidor iniciado en `http://localhost:4173/` (pendiente confirmación visual en navegador);
+  - workflow de validación del PR #2: `success`.
+- Todavía no se ha integrado el PR #2 a `main`, ni se ha eliminado la rama `gh-pages`.
+- Pendientes de cierre: confirmar preview visual, verificar referencias al sitio en perfiles GitHub y LinkedIn, decidir el retiro de la rama `gh-pages` y aprobar la integración.
 
 ## 2026-10-15 — Fase 7 · Publicación en producción
 
