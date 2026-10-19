@@ -434,7 +434,7 @@ Añadir vida y profundidad al sitio sin convertir la experiencia en una demostra
 - [x] Eliminar el marcador vacío `src/assets/.gitkeep`, sin uso en la versión actual.
 - [ ] Comprobar que los perfiles públicos de GitHub y LinkedIn apuntan a `https://danieldge.github.io/`.
 - [x] Validar en local `npm ci`, `npm run lint`, `npm run build` y el inicio de `npm run preview`; confirmar el CI del PR #2.
-- [ ] Confirmar la revisión visual del sitio servido por `npm run preview` antes de integrar el PR.
+- [x] Confirmar la revisión visual del sitio servido por `npm run preview` antes de integrar el PR.
 
 ### Criterios de cierre
 
@@ -480,6 +480,8 @@ Se mantienen como criterios constantes la correctitud técnica, la calidad visua
   - `npm run build`: Vite 8.3.3, 39 módulos, completado en 399 ms;
   - `npm run preview`: servidor iniciado en `http://localhost:4173/` (pendiente confirmación visual en navegador);
   - workflow de validación del PR #2: `success`.
+- El usuario confirmó que el sitio se ve correctamente en el navegador con `npm run preview`.
+- Los enlaces públicos del portafolio ya habían sido validados en Fase 7; sigue pendiente verificar si los perfiles personales de GitHub y LinkedIn incluyen enlaces de regreso a la web.
 - Todavía no se ha integrado el PR #2 a `main`, ni se ha eliminado la rama `gh-pages`.
 - Pendientes de cierre: confirmar preview visual, verificar referencias al sitio en perfiles GitHub y LinkedIn, decidir el retiro de la rama `gh-pages` y aprobar la integración.
 
