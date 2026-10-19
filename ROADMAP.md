@@ -31,14 +31,14 @@ El objetivo es lograr un portafolio que represente tanto la capacidad técnica c
 
 ## Estado actual
 
-**Estado del proyecto:** En producción — Fase 7 completada  
+**Estado del proyecto:** En producción — Fase 8 en validación  
 **Sitio público actual:** Nuevo portafolio 2026  
 **Rama fuente actual:** `main`  
-**Rama activa de desarrollo:** `main`  
+**Rama activa de desarrollo:** `chore/phase-8-cleanup-docs` (Fase 8; pendiente de integración)  
 **Rama de respaldo legacy:** `legacy-portfolio-2022`  
 **Despliegue actual:** GitHub Actions + GitHub Pages  
-**Stack objetivo:** React + Vite  
-**Despliegue objetivo:** ✅ GitHub Actions + GitHub Pages
+**Stack actual:** React + Vite  
+**Despliegue:** ✅ GitHub Actions + GitHub Pages
 
 El portafolio legacy fue creado originalmente con Create React App y desplegado mediante el paquete npm `gh-pages`.
 
@@ -420,52 +420,60 @@ Añadir vida y profundidad al sitio sin convertir la experiencia en una demostra
 
 ## Fase 8 — Limpieza legacy y documentación
 
-**Estado:** ⬜ Pendiente
+**Estado:** 🟨 Implementada en rama de trabajo — pendiente validación y cierre seguro
 
 ### Tareas
 
-- [ ] Confirmar estabilidad en producción antes de eliminar recursos antiguos.
-- [ ] Mantener `legacy-portfolio-2022` como respaldo histórico.
-- [ ] Eliminar la rama antigua `gh-pages` únicamente después de confirmar el nuevo despliegue.
-- [ ] Eliminar dependencias y scripts antiguos de despliegue.
-- [ ] Reemplazar el README por defecto de Create React App por documentación real del proyecto.
-- [ ] Documentar desarrollo local y despliegue.
-- [ ] Verificar enlaces desde el perfil de GitHub y LinkedIn.
+- [x] Confirmar estabilidad en producción antes de limpiar recursos antiguos; despliegues de Actions completados y experiencia validada en escritorio/móvil.
+- [x] Preservar `legacy-portfolio-2022` como respaldo histórico y comprobar que la rama sigue disponible.
+- [ ] Retirar la rama antigua `gh-pages` solo tras validar esta fase y confirmar que ningún flujo depende de ella; no es necesaria para el despliegue actual.
+- [x] Confirmar que el proyecto activo no incluye dependencias ni scripts de despliegue de CRA o `gh-pages`.
+- [x] Sustituir el README desactualizado por documentación de la versión publicada, comandos, estructura y automatización.
+- [x] Documentar desarrollo local, CI/CD, validaciones de producción y recuperación en `docs/DEPLOYMENT.md`.
+- [x] Limitar los despliegues manuales de GitHub Actions exclusivamente a `main`.
+- [x] Eliminar el marcador vacío `src/assets/.gitkeep`, sin uso en la versión actual.
+- [ ] Comprobar que los perfiles públicos de GitHub y LinkedIn apuntan a `https://danieldge.github.io/`.
+- [ ] Validar en local `npm ci`, `npm run lint`, `npm run build` y `npm run preview`; revisar el PR de Fase 8 antes de integrarlo.
 
 ### Criterios de cierre
 
-- El repositorio contiene una estructura moderna y limpia.
-- La versión legacy continúa siendo recuperable.
-- El desarrollo y el despliegue están correctamente documentados.
+- [x] La base activa está libre de dependencias y scripts de despliegue legacy.
+- [x] El respaldo histórico `legacy-portfolio-2022` continúa disponible.
+- [x] El flujo y la recuperación del despliegue están documentados.
+- [ ] La limpieza final de ramas, las referencias de perfiles y la validación de la integración están resueltas.
 
 ---
 
 # Flujo de trabajo
 
-El rediseño se implementará de forma incremental.
+El portafolio 2026 ya se encuentra en producción. Cada mejora posterior seguirá este flujo:
 
-Para cada etapa:
+1. Crear una rama de trabajo desde `main`.
+2. Implementar un cambio enfocado y subirlo a GitHub.
+3. Descargar la rama en local y comprobar `npm ci`, `npm run lint` y `npm run build`.
+4. Revisar funcionalidad, experiencia, accesibilidad y comportamiento responsive según el cambio.
+5. Abrir un PR hacia `main` y comprobar los checks automáticos.
+6. Integrar el PR validado y verificar el despliegue de Actions y el sitio público.
+7. Registrar en este roadmap el resultado y los hitos completados.
 
-1. Implementar un cambio enfocado en `feature/portfolio-redesign-2026`.
-2. Subir el cambio a GitHub.
-3. Descargar / hacer pull de la rama en local.
-4. Ejecutar y probar el portafolio localmente.
-5. Revisar comportamiento, diseño y experiencia mediante capturas y pruebas.
-6. Aplicar correcciones.
-7. Marcar en este roadmap las tareas completadas.
-8. Continuar con el siguiente hito.
-
-Durante el desarrollo se evaluará cada entrega con tres criterios simultáneos:
-
-- **Correctitud técnica:** debe funcionar sin errores.
-- **Calidad visual:** debe verse profesional, coherente y diferenciador.
-- **Experiencia de usuario:** debe ser intuitivo, agradable y satisfactorio de utilizar.
-
-El sitio público actual debe permanecer sin cambios hasta que el rediseño haya sido revisado y aprobado.
+Se mantienen como criterios constantes la correctitud técnica, la calidad visual y una buena experiencia de usuario. `main` es la fuente de producción; no es necesario volver a publicar mediante `gh-pages`.
 
 ---
 
 # Registro de progreso
+
+## 2026-10-19 — Fase 8 · Limpieza y documentación
+
+- El portafolio 2026 ya está publicado desde `main`; la validación de escritorio, móvil, enlaces externos, WhatsApp y LinkedIn se completó en Fase 7.
+- Se confirmó que los despliegues de GitHub Actions desde `main` habían finalizado correctamente.
+- Se verificó que `legacy-portfolio-2022` conserva el respaldo en `b0d5d942313296d7dd78cfff292c3ca458d92d6c` y que `gh-pages` continúa presente sin participar del despliegue.
+- Se actualizó `README.md` con estado de producción, tecnologías, comandos, estructura y automatización.
+- Se añadió `docs/DEPLOYMENT.md` con flujo de cambios, publicación, controles de producción, rollback y política de ramas antiguas.
+- El workflow ahora impide desplegar manualmente desde una rama distinta de `main`; en las demás ramas permite validaciones sin publicar.
+- Se eliminó un único archivo marcador vacío de `src/assets`.
+- No se detectaron dependencias ni scripts legacy de CRA/`gh-pages` en `package.json` ni en el árbol activo.
+- Cambios preparados en `chore/phase-8-cleanup-docs` para validación local antes del PR y del merge.
+- Pendientes de cierre: verificar referencias al sitio en perfiles GitHub y LinkedIn, decidir el retiro de la rama `gh-pages` y aprobar la integración.
 
 ## 2026-10-15 — Fase 7 · Publicación en producción
 
