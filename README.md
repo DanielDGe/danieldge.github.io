@@ -78,7 +78,7 @@ Consulta [la guía de desarrollo, despliegue y recuperación](./docs/DEPLOYMENT.
 
 - `main`: código del portafolio actual, fuente de producción.
 - `legacy-portfolio-2022`: respaldo histórico del portafolio anterior; **no eliminar**.
-- `gh-pages`: antigua rama de despliegue, obsoleta desde el paso a Actions; conservar hasta finalizar la limpieza segura.
+- `gh-pages`: antigua rama de despliegue, eliminada tras confirmar la publicación mediante GitHub Actions.
 - `feature/portfolio-redesign-2026`: rama histórica del rediseño terminado.
 
 La evolución y los criterios de aceptación están documentados en [ROADMAP.md](./ROADMAP.md).

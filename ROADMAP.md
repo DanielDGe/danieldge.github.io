@@ -31,7 +31,7 @@ El objetivo es lograr un portafolio que represente tanto la capacidad técnica c
 
 ## Estado actual
 
-**Estado del proyecto:** En producción — Fase 8 integrada, cierre pendiente  
+**Estado del proyecto:** En producción — Fase 8 completada  
 **Sitio público actual:** Nuevo portafolio 2026  
 **Rama fuente actual:** `main`  
 **Rama activa de desarrollo:** `main` (integración Fase 8 realizada)  
@@ -420,13 +420,13 @@ Añadir vida y profundidad al sitio sin convertir la experiencia en una demostra
 
 ## Fase 8 — Limpieza legacy y documentación
 
-**Estado:** 🟨 Integrada en `main` — solo pendiente eliminación de `gh-pages`
+**Estado:** ✅ Completada
 
 ### Tareas
 
 - [x] Confirmar estabilidad en producción antes de limpiar recursos antiguos; despliegues de Actions completados y experiencia validada en escritorio/móvil.
 - [x] Preservar `legacy-portfolio-2022` como respaldo histórico y comprobar que la rama sigue disponible.
-- [ ] Retirar la rama antigua `gh-pages` solo tras validar esta fase y confirmar que ningún flujo depende de ella; no es necesaria para el despliegue actual.
+- [x] Retirar la rama antigua `gh-pages` tras confirmar despliegue mediante GitHub Actions y respaldo histórico independiente.
 - [x] Confirmar que el proyecto activo no incluye dependencias ni scripts de despliegue de CRA o `gh-pages`.
 - [x] Sustituir el README desactualizado por documentación de la versión publicada, comandos, estructura y automatización.
 - [x] Documentar desarrollo local, CI/CD, validaciones de producción y recuperación en `docs/DEPLOYMENT.md`.
@@ -442,7 +442,7 @@ Añadir vida y profundidad al sitio sin convertir la experiencia en una demostra
 - [x] El respaldo histórico `legacy-portfolio-2022` continúa disponible.
 - [x] El flujo y la recuperación del despliegue están documentados.
 - [x] Los enlaces de los perfiles de GitHub y LinkedIn están validados y se aprobó retirar `gh-pages`.
-- [ ] Confirmar la eliminación efectiva de `gh-pages`, conservando `legacy-portfolio-2022`.
+- [x] Confirmar la eliminación efectiva de `gh-pages`, conservando `legacy-portfolio-2022`.
 - [x] La integración en `main` está aprobada y el pipeline de build posterior al merge terminó correctamente.
 
 ---
@@ -467,6 +467,7 @@ Se mantienen como criterios constantes la correctitud técnica, la calidad visua
 
 ## 2026-10-19 — Fase 8 · Limpieza y documentación
 
+- **Cierre oficial:** se confirmó la eliminación remota de `gh-pages`, la continuidad de `legacy-portfolio-2022`, los enlaces desde los perfiles y el despliegue automatizado desde `main`. La Fase 8 queda completada.
 - Verificación final: enlaces desde GitHub y LinkedIn confirmados por el propietario. Solicitó la eliminación de `gh-pages`; la rama todavía existe y no se marcará eliminada hasta comprobarlo en remoto.
 - El portafolio 2026 ya está publicado desde `main`; la validación de escritorio, móvil, enlaces externos, WhatsApp y LinkedIn se completó en Fase 7.
 - Se confirmó que los despliegues de GitHub Actions desde `main` habían finalizado correctamente.
@@ -487,7 +488,7 @@ Se mantienen como criterios constantes la correctitud técnica, la calidad visua
 - Los enlaces públicos del portafolio ya habían sido validados en Fase 7; sigue pendiente verificar si los perfiles personales de GitHub y LinkedIn incluyen enlaces de regreso a la web.
 - El PR #2 fue integrado a `main` (commit `bb197d97c3e02f0295a59cf5415ee3ab22a927e8`). No se ha eliminado la rama `gh-pages`.
 - El propietario confirmó que ambos perfiles enlazan bien a la web y autorizó eliminar la rama antigua `gh-pages`.
-- Eliminación aún pendiente de ejecución; `legacy-portfolio-2022` debe permanecer como respaldo.
+- La rama `gh-pages` fue eliminada por el propietario mediante `git push origin --delete gh-pages`; la eliminación se verificó en GitHub (404 para la rama y ausencia en el listado). `legacy-portfolio-2022` permanece en `b0d5d942313296d7dd78cfff292c3ca458d92d6c`.
 
 ## 2026-10-15 — Fase 7 · Publicación en producción
 

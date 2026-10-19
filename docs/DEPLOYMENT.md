@@ -54,13 +54,13 @@ Este portafolio es una sola página basada en anclas, no en rutas de React Route
 - Si falla un job, **no des por válida la publicación**. Inspecciona los logs de Actions.
 - Si un cambio ya integrado rompe producción, revierte el commit o el merge problemático en `main` mediante un nuevo commit/PR, valida lint y build y vuelve a desplegar. Así `main` y lo publicado siguen sincronizados.
 - Para volver a ejecutar el workflow sin cambios, utiliza `Actions → Validate and deploy portfolio → Run workflow`, seleccionando **`main`**.
-- No restaures el sitio antiguo cambiando accidentalmente la fuente de Pages a la rama `gh-pages`. Esa rama es histórica, no una segunda vía activa de publicación.
+- No restaures el sitio antiguo cambiando la fuente de Pages a una rama: `gh-pages` fue eliminada y el mecanismo activo es exclusivamente GitHub Actions.
 
 ## Política de ramas históricas
 
 - **Conservar `legacy-portfolio-2022`**: respaldo del sitio anterior.
-- **No usar `gh-pages` para desplegar**: GitHub Pages está configurado para GitHub Actions.
-- **Eliminar `gh-pages` solo después de verificar estabilidad y, si se decide retirarla, revisar previamente que no quede ningún flujo externo que dependa de esa rama.** La eliminación se realiza en GitHub → Settings → Branches (o en la lista de ramas de GitHub) y no forma parte del workflow.
+- **`gh-pages` eliminada**: la antigua rama de despliegue se retiró tras confirmar GitHub Actions como fuente activa.
+- **No volver a crear `gh-pages`**: cualquier cambio futuro debe publicarse desde `main` por el workflow de Actions.
 - La rama histórica `feature/portfolio-redesign-2026` puede conservarse como referencia sin intervenir en producción.
 
 ## Archivos generados
