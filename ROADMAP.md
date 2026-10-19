@@ -31,10 +31,10 @@ El objetivo es lograr un portafolio que represente tanto la capacidad técnica c
 
 ## Estado actual
 
-**Estado del proyecto:** En producción — Fase 8 en validación  
+**Estado del proyecto:** En producción — Fase 8 integrada, cierre pendiente  
 **Sitio público actual:** Nuevo portafolio 2026  
 **Rama fuente actual:** `main`  
-**Rama activa de desarrollo:** `chore/phase-8-cleanup-docs` (Fase 8; pendiente de integración)  
+**Rama activa de desarrollo:** `main` (integración Fase 8 realizada)  
 **Rama de respaldo legacy:** `legacy-portfolio-2022`  
 **Despliegue actual:** GitHub Actions + GitHub Pages  
 **Stack actual:** React + Vite  
@@ -420,7 +420,7 @@ Añadir vida y profundidad al sitio sin convertir la experiencia en una demostra
 
 ## Fase 8 — Limpieza legacy y documentación
 
-**Estado:** 🟨 Implementada en rama de trabajo — pendiente validación y cierre seguro
+**Estado:** 🟨 Integrada en `main` — pendientes referencias externas y rama legacy
 
 ### Tareas
 
@@ -441,7 +441,8 @@ Añadir vida y profundidad al sitio sin convertir la experiencia en una demostra
 - [x] La base activa está libre de dependencias y scripts de despliegue legacy.
 - [x] El respaldo histórico `legacy-portfolio-2022` continúa disponible.
 - [x] El flujo y la recuperación del despliegue están documentados.
-- [ ] La limpieza final de ramas, las referencias de perfiles y la validación de la integración están resueltas.
+- [ ] Las referencias de perfiles y la decisión final sobre `gh-pages` están resueltas.
+- [x] La integración en `main` está aprobada y el pipeline de build posterior al merge terminó correctamente.
 
 ---
 
@@ -473,7 +474,7 @@ Se mantienen como criterios constantes la correctitud técnica, la calidad visua
 - El workflow ahora impide desplegar manualmente desde una rama distinta de `main`; en las demás ramas permite validaciones sin publicar.
 - Se eliminó un único archivo marcador vacío de `src/assets`.
 - No se detectaron dependencias ni scripts legacy de CRA/`gh-pages` en `package.json` ni en el árbol activo.
-- Cambios preparados en `chore/phase-8-cleanup-docs` y PR #2 abierto en borrador.
+- Los cambios de `chore/phase-8-cleanup-docs` se integraron en `main` mediante el PR #2, después de aprobación local y CI exitoso.
 - Validación local del 19/10 confirmada por el usuario:
   - `npm ci`: 28 paquetes instalados, 29 auditados, 0 vulnerabilidades;
   - `npm run lint`: 0 errores, 0 warnings, 25 archivos;
@@ -482,8 +483,8 @@ Se mantienen como criterios constantes la correctitud técnica, la calidad visua
   - workflow de validación del PR #2: `success`.
 - El usuario confirmó que el sitio se ve correctamente en el navegador con `npm run preview`.
 - Los enlaces públicos del portafolio ya habían sido validados en Fase 7; sigue pendiente verificar si los perfiles personales de GitHub y LinkedIn incluyen enlaces de regreso a la web.
-- Todavía no se ha integrado el PR #2 a `main`, ni se ha eliminado la rama `gh-pages`.
-- Pendientes de cierre: confirmar preview visual, verificar referencias al sitio en perfiles GitHub y LinkedIn, decidir el retiro de la rama `gh-pages` y aprobar la integración.
+- El PR #2 fue integrado a `main` (commit `bb197d97c3e02f0295a59cf5415ee3ab22a927e8`). No se ha eliminado la rama `gh-pages`.
+- Pendientes de cierre: verificar referencias al sitio en los perfiles personales de GitHub y LinkedIn y decidir si retirar o conservar archivada la rama `gh-pages`.
 
 ## 2026-10-15 — Fase 7 · Publicación en producción
 
