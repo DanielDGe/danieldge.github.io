@@ -31,7 +31,7 @@ El objetivo es lograr un portafolio que represente tanto la capacidad técnica c
 
 ## Estado actual
 
-**Estado del proyecto:** En producción — Fase 7 prácticamente completada  
+**Estado del proyecto:** En producción — Fase 7 completada  
 **Sitio público actual:** Nuevo portafolio 2026  
 **Rama fuente actual:** `main`  
 **Rama activa de desarrollo:** `main`  
@@ -392,7 +392,7 @@ Añadir vida y profundidad al sitio sin convertir la experiencia en una demostra
 
 ## Fase 7 — Modernización del despliegue en GitHub Pages
 
-**Estado:** 🟨 Publicada — pendiente validación final de enlaces y social preview
+**Estado:** ✅ Completada
 
 ### Tareas
 
@@ -408,7 +408,7 @@ Añadir vida y profundidad al sitio sin convertir la experiencia en una demostra
 - [x] Confirmar que `https://danieldge.github.io/` muestra el nuevo portafolio.
 - [x] Probar navegación directa y refresh de rutas.
 - [x] Validar el sitio publicado desde escritorio y móvil.
-- [ ] Comprobar en producción todos los enlaces externos y la previsualización Open Graph / Twitter Card en plataformas reales.
+- [x] Comprobar en producción todos los enlaces externos y la previsualización Open Graph / Twitter Card en plataformas reales.
 
 ### Criterios de cierre
 
@@ -483,7 +483,11 @@ El sitio público actual debe permanecer sin cambios hasta que el rediseño haya
 - El nuevo portafolio quedó publicado en `https://danieldge.github.io/`.
 - La validación manual en producción fue confirmada en escritorio y móvil, incluyendo refresh directo.
 - La rama `main` pasa a ser la fuente activa del portafolio publicado.
-- Queda pendiente únicamente comprobar todos los enlaces externos desde producción y validar la previsualización Open Graph / Twitter Card en plataformas reales antes de cerrar formalmente la Fase 7.
+- Validación final de producción completada:
+  - todos los enlaces externos abren correctamente y en una pestaña nueva;
+  - WhatsApp interpreta correctamente la imagen social, el título y la descripción;
+  - LinkedIn actualizó su caché y muestra correctamente la tarjeta con imagen y título del portafolio.
+- La Fase 7 queda oficialmente completada.
 
 ## 2026-10-15 — Fase 7 · Preparación de despliegue
 
